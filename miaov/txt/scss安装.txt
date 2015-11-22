@@ -1,0 +1,14 @@
+1. 安装Ruby
+http://www.rubyinstaller.org/，去这里下载，然后安装。
+2. 安装Sass
+安装好Ruby后，打开CMD命令，输入：
+gem install sass
+注意：
+这里有可能安装没反应或提示网络错误什么的。解决办法是使用淘宝的Ruby gem镜像：
+$ gem sources --remove https://rubygems.org/
+$ gem sources -a https://ruby.taobao.org/
+$ gem sources -l
+*** CURRENT SOURCES ***
+https://ruby.taobao.org
+# 请确保只有 ruby.taobao.org
+$ gem install sass

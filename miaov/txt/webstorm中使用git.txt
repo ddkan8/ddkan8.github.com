@@ -1,0 +1,26 @@
+﻿git的安装与配置略过
+
+1.在webstorm中选择VCS==>Checkout from Version Control==>Git
+
+Git Repository URL: git@xx.xx.xx.xx:项目名称
+
+Parent Directory:本地要存放地址的父目录
+
+Directory Name:项目名称
+
+2.VCS==>Enabling Version Control
+
+3.VCS中出现Git就完成了
+
+
+git pull：相当于是从远程获取最新版本并merge到本地
+git pull origin master
+
+1.在项目上建立git仓（我是直接将项目地址作为git仓的地址的）：
+
+2.使用Git Bash切换到刚才创建好的git仓中，然后使用下面的命令（如果你是用的Gitblit搭建的远程仓的话，新建好的仓库Gitblit会告诉你使用哪些命令的，在Gitblit的新建的空白仓库的主页面上可以看到）
+git remote add origin https://github.com/ddkan8/ddkan8.git
+git push -u origin --all
+git push -u origin --tags
+
+3.然后刷新项目就可以push/pull了

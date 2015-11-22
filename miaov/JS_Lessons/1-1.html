@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>图片轮播的两种方式</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		#controls{
+			margin: 0 auto;
+			width: 420px;
+			height:50px;
+			line-height:50px;
+			text-align: center;
+		}
+		#box{
+			position: relative;
+			margin: 0 auto;
+			border: 10px solid #ccc;
+			width: 400px;
+			height: 400px;
+			background: url(img-1/loading.gif) center no-repeat #999;
+		}
+		#box p,
+		#box span{
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#box span{
+			top: 0;
+		}
+		#box p{
+			bottom: 0;
+		}
+		#box a{
+			position: absolute;
+			top: 180px;
+			border-radius: 40px;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			font-family: simsun;
+			font-size: 20px;
+			font-weight: 700;
+			color: rgba(255, 255, 255, 0.5);
+			text-decoration: none;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#box a:hover{
+			color: rgba(255, 255, 255, 1);
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+		.prev{
+			left: 10px;
+		}
+		.next{
+			right: 10px;
+		}
+		#box img{
+			width: 400px;
+			height: 400px;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var aInput = document.getElementsByTagName('input'),
+			    oBox = document.getElementById('box'),
+			    oP = oBox.getElementsByTagName('p')[0],
+			    oSpan = oBox.getElementsByTagName('span')[0],
+			    oImg = oBox.getElementsByTagName('img')[0],
+			    oPrev = oBox.getElementsByTagName('a')[0],
+			    oNext = oBox.getElementsByTagName('a')[1],
+			    json = {
+				    arrImg : [
+					    'img-1/1.jpg',
+					    'img-1/2.jpg',
+					    'img-1/3.jpg',
+					    'img-1/4.jpg'
+				    ],
+				    arrText : [
+					    '文字描述1',
+					    '文字描述2',
+					    '文字描述3',
+					    '文字描述4'
+				    ]
+			    },
+			    flag = true,
+			    iNum = 0;
+
+			aInput[0].onclick = function(){
+				flag = true;
+			};
+
+			aInput[1].onclick = function(){
+				flag = false;
+			};
+
+			function tab(){
+				oP.innerHTML = json.arrText[iNum];
+				oSpan.innerHTML = 1 + iNum + '/' + json.arrImg.length;
+				oImg.src = json.arrImg[iNum];
+			}
+			tab();
+
+			oPrev.onclick = function(){
+				iNum--;
+				if(iNum < 0 && flag){
+					iNum = json.arrImg.length - 1;
+				}else if(iNum < 0 && !flag){
+					iNum = 0;
+					alert('已经是第一张啦！');
+				}
+
+				tab();
+				return false;
+			};
+			oNext.onclick = function(){
+				iNum++;
+				if(iNum == json.arrImg.length && flag){
+					iNum = 0;
+				}else if(iNum == json.arrImg.length && !flag){
+					iNum = json.arrImg.length - 1;
+					alert('已经是最后一张啦！');
+				}
+
+				tab();
+				return false;
+			};
+		};
+	</script>
+</head>
+<body>
+<div id="controls">
+	<input type="button" value="循环播放"/>
+	<input type="button" value="顺序播放"/>
+</div>
+<div id="box">
+	<p>正在加载图片描述</p>
+	<span>正在加载图片数量</span>
+	<img alt=""/>
+	<a href="" class="prev">&lt;</a>
+	<a href="" class="next">&gt;</a>
+</div>
+</body>
+</html>

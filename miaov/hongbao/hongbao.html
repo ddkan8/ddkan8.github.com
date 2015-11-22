@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.hongbao{
+			margin: 10px auto;
+			width: 100px;
+			height: 185px;
+		}
+		.ani1{
+			background:url(img/hongbao.png) no-repeat 0 0;
+			-webkit-animation:num_ani 1s steps(1,start) infinite;/*效果1*/
+			-moz-animation:num_ani 1s steps(1,start) infinite;/*效果1*/
+			animation:num_ani 1s steps(1,start) infinite;/*效果1*/
+		}
+		.ani2{
+			background:url(img/hongbao.png) no-repeat 0 0;
+			-webkit-animation:num_ani 1s steps(1) infinite;/*效果2*/
+			-moz-animation:num_ani 1s steps(1) infinite;/*效果2*/
+			animation:num_ani 1s steps(1) infinite;/*效果2*/
+		}
+		.ani3{
+			background:url(img/hongbao.png) no-repeat 0 0;
+			-webkit-animation:flag_ani 1s steps(8) infinite;
+			-moz-animation:flag_ani 1s steps(8) infinite;
+			animation:flag_ani 1s steps(8) infinite;
+		}
+		@-webkit-keyframes num_ani{
+			0% {
+				background-position:0;
+			}
+			12.5% {
+				background-position:-100px 0;
+			}
+			25% {
+				background-position:-200px 0;
+			}
+			37.5% {
+				background-position:-300px 0;
+			}
+			50% {
+				background-position:-400px 0;
+			}
+			62.5% {
+				background-position:-500px 0;
+			}
+			75% {
+				background-position:-600px 0;
+			}
+			87.5% {
+				background-position:-700px 0;
+			}
+			100% {
+				background-position:-800px 0;
+			}
+		}
+		@-moz-keyframes num_ani{
+			0% {
+				background-position:0;
+			}
+			12.5% {
+				background-position:-100px 0;
+			}
+			25% {
+				background-position:-200px 0;
+			}
+			37.5% {
+				background-position:-300px 0;
+			}
+			50% {
+				background-position:-400px 0;
+			}
+			62.5% {
+				background-position:-500px 0;
+			}
+			75% {
+				background-position:-600px 0;
+			}
+			87.5% {
+				background-position:-700px 0;
+			}
+			100% {
+				background-position:-800px 0;
+			}
+		}
+		@keyframes num_ani{
+			0% {
+				background-position:0;
+			}
+			12.5% {
+				background-position:-100px 0;
+			}
+			25% {
+				background-position:-200px 0;
+			}
+			37.5% {
+				background-position:-300px 0;
+			}
+			50% {
+				background-position:-400px 0;
+			}
+			62.5% {
+				background-position:-500px 0;
+			}
+			75% {
+				background-position:-600px 0;
+			}
+			87.5% {
+				background-position:-700px 0;
+			}
+			100% {
+				background-position:-800px 0;
+			}
+		}
+
+		@-webkit-keyframes flag_ani{
+			100% {
+				background-position:-800px 0;
+			}
+		}
+		@-moz-keyframes flag_ani{
+			100% {
+				background-position:-800px 0;
+			}
+		}
+		@keyframes flag_ani{
+			100% {
+				background-position:-800px 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+<div class="hongbao ani1"></div>
+<div class="hongbao ani2"></div>
+<div class="hongbao ani3"></div>
+</body>
+</html>

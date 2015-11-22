@@ -1,0 +1,89 @@
+react WebPack babel backbone node
+
+WebPack  是一个模块打包工具，你可以使用WebPack管理你的模块依赖，并编绎输出模块们所需的静态文件。
+它有两种模块加载模式 同步加载模式： CommonJS (Node.JS)的模式 异步加载模式：即 AMD 模式，与require.js相同
+如果你用过webpack，你就不会用require.js去组织你的代码。
+webpack的优势：
+- require.js的所有功能它都有
+- 编绎过程更快，因为require.js会去处理不需要的文件
+
+Grunt  使用Grunt完成前端工程化，从构建项目，到打包压缩项目，到优化项目
+
+backbone、angularJS、reactJS、canJS、vueJS
+
+css less sass
+
+nodeJS
+
+github
+
+React一端代码多端运行
+
+coolie 分为两部分，一部分是前端模块加载器，另一部分是前端发布工具。
+
+
+
+
+
+var commands = {};
+
+commands["现在几点"] = function () {
+  return (new Date).toLocaleString();
+};
+
+commands["我问你几点"] = function () {
+  setTimeout(function (){
+    console.log("%c现在是" + (new Date).toLocaleTimeString(), "color:#c00");
+  }, 1000);
+  return "额...";
+};
+commands["w我问你几点"] = commands["我问你几点"]; // 兼容配置
+
+commands["晚饭吃点什么"] = function () {
+  setTimeout(function (){
+    $("#kw").val("附近美食");
+  }, 300);
+  setTimeout(function (){
+    console.log("%c已为你推送 “附近美食” 请您挑选，我的教主大人。", "color:#c00");
+  }, 1000);
+  return "我是机器人，我不用吃饭。";
+};
+commands["w晚饭吃点什么"] = commands["晚饭吃点什么"]; // 兼容配置
+
+for (var k in commands) { // 添加到 get 下。
+  commands[k] = {get: commands[k]};
+}
+Object.defineProperties(this, commands); // 添加到 window
+
+
+remote
+origin
+fetch
+recomm
+state
+Intermediary
+Lesson
+Count
+fail
+succ
+phone
+flip
+replace
+splice
+split
+
+远程
+起源
+取
+推荐
+状态
+中介
+课
+计数
+失败
+成功
+电话
+翻转
+更换
+剪接
+分裂

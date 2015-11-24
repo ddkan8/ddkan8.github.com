@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>自动生成10个LI</title>
+	<style>
+		ul{list-style:none;}
+		li{
+			position:absolute;
+			top:50px;
+			border-radius:50px;
+			width:50px;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			color:#fff;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var oList = document.getElementById('list'),
+			    oBtn = document.getElementById('btn'),
+			    arrColor = ['#f00', '#68B6EE', '#8FE27B', '#3F3F3F'],
+			    len = 10,
+			    str = '';
+
+			oBtn.onclick = function(){
+
+				for(var i=0; i<len; i++){
+					str += '<li style="left:'+ (i*60+8) +'px;background-color:'+ arrColor[i%arrColor.length] +'">'+ (i+1) +'</li>';
+				}
+				oList.innerHTML = str;
+
+			};
+		};
+	</script>
+</head>
+
+<body>
+<input id="btn" type="button" value="自动生成10个LI"/>
+<ul id="list"></ul>
+</body>
+</html>

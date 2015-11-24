@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>自动生成10个LI</title>
+	<style>
+		ul{
+			list-style:none;
+			position: relative;
+			display: block;
+			margin-left: 8px;
+			margin-top: 8px;
+			width: 500px;
+			height: 500px;
+		}
+		li{
+			position:absolute;
+			border-radius:50px;
+			width:50px;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			color:#fff;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var oList = document.getElementById('list'),
+				oList2 = document.getElementById('list2'),
+				oBtn = document.getElementById('btn'),
+				arrColor = ['#f00', '#68B6EE', '#8FE27B', '#3F3F3F', '#EA8B22', '#AE8BC0'],
+				len = 100,
+				str = '',
+				str2 = '';
+
+			oBtn.onclick = function(){
+				str = '',str2 = '',oList.innerHTML = '',oList2.innerHTML = '';
+				for(var i=0; i<len; i++){
+					str += '<li style="left:'+ (i%10*50) +'px;top:'+ (Math.floor(i/10)*50) +'px;background-color:'+ arrColor[i%arrColor.length] +'">'+ (i+1) +'</li>'; //横排
+					str2 += '<li style="left:'+ (Math.floor(i/10)*50) +'px;top:'+ (Math.floor(i%10)*50) +'px;background-color:'+ arrColor[i%arrColor.length] +'">'+ (i+1) +'</li>'; //竖排
+				}
+				oList.innerHTML = str;
+				oList2.innerHTML = str2;
+			};
+		};
+	</script>
+</head>
+
+<body>
+<input id="btn" type="button" value="自动生成100个LI"/> 横排和竖排
+<ul id="list"></ul>
+<ul id="list2"></ul>
+</body>
+</html>

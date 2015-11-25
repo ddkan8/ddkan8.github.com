@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>图片随鼠标不断展现</title>
+	<style>
+		body,ul,li{margin: 0;padding: 0;}
+		ul{
+			list-style: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		ul li{
+			position:absolute;
+			z-index: 1;
+			width:50px;
+			height:50px;
+			background-image:url(img-2/pic.jpg);
+			opacity:0.2;
+			transition: 0.3s;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var oUl = document.getElementsByTagName('ul')[0],
+			    aLi = oUl.getElementsByTagName('li'),
+			    len = 110,
+			    index = 1,
+			    str = '';
+
+			for(var i=0; i<len; i++){
+
+				str += '<li style="left:'+ i%10*51 +'px;top:'+ Math.floor(i/10)*51 +'px;background-position:'+ (-i%10*51) +'px '+ (-Math.floor(i/10)*51) +'px;"></li>';
+
+			}
+			oUl.innerHTML = str;
+
+			for(var i=0; i<aLi.length; i++){
+
+				aLi[i].onmouseover = function(){
+					index++;
+					this.style.zIndex = index;
+					this.style.opacity = 1;
+					this.style.transform = 'scale(1.2)';
+
+				};
+
+				aLi[i].onmouseout = function(){
+
+					this.style.transform = 'scale(1)';
+
+				};
+			}
+
+		};
+	</script>
+</head>
+
+<body>
+<ul></ul>
+</body>
+</html>

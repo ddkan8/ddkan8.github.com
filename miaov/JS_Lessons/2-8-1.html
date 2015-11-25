@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		body { background: #ccc; }
+		p { text-align:center; }
+		input { font-size:30px; color:gray; padding:20px; box-shadow:3px 3px 13px rgba(0,0,0,0.3); }
+		p .active { border:2px solid #667ca1; color:#667ca1;}
+		#box { width: 800px; margin: 0 auto; border:1px solid #fff; overflow: hidden; border-bottom:none; border-right:1px solid #999; box-shadow:3px 3px 13px rgba(0,0,0,0.3); }
+		#box ul { padding:0; margin:0; float: left; width: 200px; }
+		#box li { list-style: none; height: 99px; border-bottom:1px solid #999; background: #f1f1f1; text-align: center; cursor: pointer; font:40px/99px 'arial'; }
+		#box .active { background: #667ca1; color:#fff; }
+		#box img { float: left; width: 400px; height: 300px; }
+	</style>
+</head>
+
+<body>
+<p>
+	<input type="button" value="下一张" />
+	<input class="active" type="button" value="交叉走" />
+	<input type="button" value="同步走" />
+</p>
+<div id="box">
+	<ul>
+		<li class="active">0</li>
+		<li>1</li>
+		<li>2</li>
+	</ul>
+	<img src="img-2/r1.jpg" />
+	<ul>
+		<li>3</li>
+		<li>4</li>
+		<li class="active">5</li>
+	</ul>
+</div>
+
+</body>
+</html>

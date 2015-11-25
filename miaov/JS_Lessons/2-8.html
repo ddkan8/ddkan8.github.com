@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>交叉走、同步走的选项卡扩展</title>
+	<style>
+		#wrapper {
+			overflow: hidden;
+			border: 1px solid black;
+			width: 480px;
+		}
+		#wrapper img {
+			width: 240px;
+			height: 323px;
+			float: left;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			float: left;
+			width: 120px;
+
+		}
+		li {
+			list-style: none;
+			border-bottom: 1px solid #fff;
+			height: 80px;
+			background: #e7e7e7;
+			line-height: 80px;
+			text-align: center;
+			cursor: pointer;
+		}
+		li:last-child {
+			border-bottom: none;
+		}
+		#rightNav {
+			float: left;
+		}
+		li.active {
+			background: green;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var aInput = document.getElementsByTagName('input'),
+			    aLi = document.getElementsByTagName('li'),
+			    oImg = document.getElementsByTagName('img')[0],
+			    arrImg = ['img-2/1.png', 'img-2/2.png', 'img-2/3.png', 'img-2/4.png'],
+			    onOff = true,
+			    iNum = 0;
+
+			aInput[0].onclick = function(){
+				iNum++;
+				iNum %= 4;
+				onOff ? cross() : synch();
+			};
+
+			aInput[1].onclick = function(){
+				onOff = true;
+				cross();
+			};
+
+			aInput[2].onclick = function(){
+				onOff = false;
+				synch();
+			};
+
+			for(var i=0; i<aLi.length; i++){
+
+				aLi[i].index = i;
+
+				aLi[i].onclick = function(){
+
+					iNum = this.index;
+
+					onOff ? cross() : synch();
+
+				};
+
+			}
+
+			function synch(){
+
+				clear();
+
+				if(iNum < 4){
+					aLi[iNum].className = 'active';
+					aLi[iNum + 4].className = 'active';
+				}else{
+					aLi[iNum].className = 'active';
+					aLi[iNum - 4].className = 'active';
+				}
+
+				oImg.src = arrImg[iNum%arrImg.length];
+
+			}
+
+			function cross(){
+
+				clear();
+
+				aLi[iNum].className = 'active';
+				aLi[7 - iNum].className = 'active';
+
+				if(iNum < 4){
+					oImg.src = arrImg[iNum];
+				}else{
+					oImg.src = arrImg[iNum%arrImg.length];
+				}
+
+			}
+
+			function clear(){
+				for(var i=0; i<aLi.length; i++){
+					aLi[i].className = '';
+				}
+			}
+
+		};
+	</script>
+</head>
+<body>
+<input type="button" value="下一张">
+<input type="button" value="交叉">
+<input type="button" value="同步">
+<div id="wrapper">
+	<ul id="leftNav">
+		<li class="active">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+	<img src="img-2/1.png" height="479" width="391" alt="">
+	<ul id="rightNav">
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li class="active">8</li>
+	</ul>
+</div>
+</body>
+</html>

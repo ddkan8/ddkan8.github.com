@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>自动生成V字形(提高版)</title>
+	<style>
+		ul{
+			list-style: none;
+		}
+		li{
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			color: #fff;
+			background-color: #f00;
+		}
+	</style>
+	<script>
+		window.onload = function(){
+
+			var oBtn = document.getElementById('btn'),
+			    oBox = document.getElementById('box'),
+			    arrText = ['我变', '我再变', '我再再变', '我还变'],
+			    len = 5,
+			    cen = Math.floor(len/2),
+			    iNum = 0,
+			    str = '';
+
+			oBtn.onclick = function(){
+
+				this.value = arrText[iNum];
+
+				if(iNum == 0){
+					iNum++;
+					str = '';
+					for(var i=0; i<len; i++){
+						if(i <= cen){
+							str += '<li style="left:'+ i*50 +'px;top:'+ (i*50+50) +'px;">'+ (i+1) +'</li>';
+						}else{
+							str += '<li style="left:'+ i*50 +'px;top:'+ ((len-1-i)*50+50) +'px;">'+ (i+1) +'</li>';
+						}
+					}
+				}else if(iNum == 1){
+					iNum++;
+					str = '';
+					for(var i=0; i<len; i++){
+						if(i <= cen){
+							str += '<li style="left:'+ (cen-i)*50 +'px;top:'+ (i*50+50) +'px;">'+ (i+1) +'</li>';
+						}else{
+							str += '<li style="left:'+ (i-cen)*50 +'px;top:'+ (i*50+50) +'px;">'+ (i+1) +'</li>';
+						}
+					}
+				}else if(iNum == 2){
+					iNum++;
+					str = '';
+					for(var i=0; i<len; i++){
+						if(i <= cen){
+							str += '<li style="left:'+ i*50 +'px;top:'+ ((cen-i)*50+50) +'px;">'+ (i+1) +'</li>';
+						}else{
+							str += '<li style="left:'+ i*50 +'px;top:'+ ((i-cen)*50+50) +'px;">'+ (i+1) +'</li>';
+						}
+					}
+				}else{
+					iNum = 0;
+					str = '';
+					for(var i=0; i<len; i++){
+						if(i <= cen){
+							str += '<li style="left:'+ i*50 +'px;top:'+ (i*50+50) +'px;">'+ (i+1) +'</li>';
+						}else{
+							str += '<li style="left:'+ (len-1-i)*50 +'px;top:'+ (i*50+50) +'px;">'+ (i+1) +'</li>';
+						}
+					}
+				}
+
+				oBox.innerHTML = str;
+
+			};
+
+		};
+	</script>
+</head>
+
+<body>
+<input id="btn" type="button" value="点我"/>
+<ul id="box"></ul>
+</body>
+</html>

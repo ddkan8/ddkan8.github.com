@@ -1,17 +1,17 @@
-/**
- * »ñÈ¡ÔªËØµÄÕæÊµÊôĞÔÖµ getStyle(obj, attr)
- * obj Òª»ñÈ¡µÄÔªËØÃû³Æ
- * attr Òª»ñÈ¡µÄÊôĞÔÃû³Æ
- * return ÊôĞÔÖµ
+ï»¿/**
+ * è·å–å…ƒç´ çš„çœŸå®å±æ€§å€¼ getStyle(obj, attr)
+ * obj è¦è·å–çš„å…ƒç´ åç§°
+ * attr è¦è·å–çš„å±æ€§åç§°
+ * return å±æ€§å€¼
  */
 function getStyle(obj, attr){
   return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
 }
 
 /**
- * »ñÈ¡ÔªËØ¾à×ó±ßºÍÉÏ±ßµÄ¾àÀë getPos(obj)
- * obj Òª»ñÈ¡µÄÔªËØÃû³Æ
- * return json¼¯ºÏ getPos(obj).left getPos(obj).top
+ * è·å–å…ƒç´ è·å·¦è¾¹å’Œä¸Šè¾¹çš„è·ç¦» getPos(obj)
+ * obj è¦è·å–çš„å…ƒç´ åç§°
+ * return jsoné›†åˆ getPos(obj).left getPos(obj).top
  */
 function getPos(obj){
   var pos = {left : 0, top : 0};
@@ -24,10 +24,10 @@ function getPos(obj){
 }
 
 /**
- * Ä£Äâ×Ö·û´®º¯ÊıindexOf()£¬»ñÈ¡Ä³¸öÖµÔÚÊı×éÖĞµÄË÷ÒıÎ»ÖÃ arrIndexOf(arr, v)
- * arr ÒªÅĞ¶ÏµÄÊı×é
- * v ÒªÅĞ¶ÏµÄÄ³¸öÖµ
- * return Ä³¸öÖµÔÚÊı×éÖĞµÄË÷ÒıÎ»ÖÃi£¬Ã»ÓĞÎª-1
+ * æ¨¡æ‹Ÿå­—ç¬¦ä¸²å‡½æ•°indexOf()ï¼Œè·å–æŸä¸ªå€¼åœ¨æ•°ç»„ä¸­çš„ç´¢å¼•ä½ç½® arrIndexOf(arr, v)
+ * arr è¦åˆ¤æ–­çš„æ•°ç»„
+ * v è¦åˆ¤æ–­çš„æŸä¸ªå€¼
+ * return æŸä¸ªå€¼åœ¨æ•°ç»„ä¸­çš„ç´¢å¼•ä½ç½®iï¼Œæ²¡æœ‰ä¸º-1
  */
 function arrIndexOf(arr, v){
   for(var i=0; i<arr.length; i++){
@@ -39,11 +39,11 @@ function arrIndexOf(arr, v){
 }
 
 /**
- * »ñÈ¡Ö¸¶¨ÀàÃûµÄÔªËØ¼¯ºÏ getClass(parent, tagName, className)
- * parent Òª»ñÈ¡Ö¸¶¨ÀàÃûµÄ¸¸ÔªËØ
- * tagName Òª»ñÈ¡¸¸ÔªËØÏÂµÄÖ¸¶¨ÔªËØ
- * className Òª»ñÈ¡µÄÀàÃû³Æ
- * return Ö¸¶¨¸¸ÔªËØÏÂµÄÖ¸¶¨×ÓÔªËØ²¢º¬ÓĞÖ¸¶¨ÀàÃû³ÆµÄ¼¯ºÏ
+ * è·å–æŒ‡å®šç±»åçš„å…ƒç´ é›†åˆ getClass(parent, tagName, className)
+ * parent è¦è·å–æŒ‡å®šç±»åçš„çˆ¶å…ƒç´ 
+ * tagName è¦è·å–çˆ¶å…ƒç´ ä¸‹çš„æŒ‡å®šå…ƒç´ 
+ * className è¦è·å–çš„ç±»åç§°
+ * return æŒ‡å®šçˆ¶å…ƒç´ ä¸‹çš„æŒ‡å®šå­å…ƒç´ å¹¶å«æœ‰æŒ‡å®šç±»åç§°çš„é›†åˆ
  */
 function getClass(parent, tagName, className){
   var aEls = parent.getElementsByTagName(tagName),
@@ -59,9 +59,9 @@ function getClass(parent, tagName, className){
 }
 
 /**
- * Ìí¼ÓÀàÃû addClass(obj, className)
- * obj ÒªÌí¼ÓÀàÃûµÄÔªËØ
- * className ÒªÌí¼ÓµÄÀàÃû³Æ
+ * æ·»åŠ ç±»å addClass(obj, className)
+ * obj è¦æ·»åŠ ç±»åçš„å…ƒç´ 
+ * className è¦æ·»åŠ çš„ç±»åç§°
  */
 function addClass(obj, className){
   if(!obj.className){
@@ -76,9 +76,9 @@ function addClass(obj, className){
 }
 
 /**
- * ÒÆ³ıÀàÃû removeClass(obj, className)
- * obj ÒªÒÆ³ıÀàÃûµÄÔªËØ
- * className ÒªÒÆ³ıµÄÀàÃû³Æ
+ * ç§»é™¤ç±»å removeClass(obj, className)
+ * obj è¦ç§»é™¤ç±»åçš„å…ƒç´ 
+ * className è¦ç§»é™¤çš„ç±»åç§°
  */
 function removeClass(obj, className){
   if(obj.className){
@@ -91,17 +91,17 @@ function removeClass(obj, className){
 }
 
 /**
- * °ó¶¨ÊÂ¼ş(¼æÈİIEºÍ±ê×¼ä¯ÀÀÆ÷) bind(obj, evname, fn)
- * obj Òª°ó¶¨ÊÂ¼şµÄÔªËØ
- * evname Òª°ó¶¨ÊÂ¼şµÄÊÂ¼şÃû³Æ
- * fn °ó¶¨ÊÂ¼şÒªÖ´ĞĞµÄº¯Êı
+ * ç»‘å®šäº‹ä»¶(å…¼å®¹IEå’Œæ ‡å‡†æµè§ˆå™¨) bind(obj, evname, fn)
+ * obj è¦ç»‘å®šäº‹ä»¶çš„å…ƒç´ 
+ * evname è¦ç»‘å®šäº‹ä»¶çš„äº‹ä»¶åç§°
+ * fn ç»‘å®šäº‹ä»¶è¦æ‰§è¡Œçš„å‡½æ•°
  */
 function bind(obj, evname, fn){
   if(obj.addEventListener){
     obj.addEventListener(evname, fn, false);
   }else{
     obj.attachEvent('on' + evname, function(){
-      fn.call(obj); //callµÄµÚÒ»¸ö²ÎÊıÊÇÈÃº¯ÊıµÄthisÖ¸ÏòÕâ¸ö²ÎÊı
+      fn.call(obj); //callçš„ç¬¬ä¸€ä¸ªå‚æ•°æ˜¯è®©å‡½æ•°çš„thisæŒ‡å‘è¿™ä¸ªå‚æ•°
     });
   }
 }

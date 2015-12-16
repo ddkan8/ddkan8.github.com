@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>图书详情</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrap-page fixed-btm-down">
+  <div class="mod-detail detail-web cf">
+    <div class="cover"><img src="http://rm2.kingreader.com/book/27253/m/[480]_乡村邪少.jpg"></div>
+    <div class="book-info">
+      <h3 class="book-tit"><span class="tit ell">西游日记</span></h3>
+      <div class="book-ext ell"><span class="fenlei">豪门</span> | 今何在</div>
+      <div class="book-ext ell">111万字  已完结222章</div>
+      <div class="book-ext2 ell"><em></em><span class="c1">99万</span> 人已读过　<em></em><span class="c1">77.74%</span> 读者留存</div>
+    </div>
+    <ul class="bookdetailbtns flex">
+      <li class="flex-1"><span class="btn2 link">免费阅读</span></li>
+    </ul>
+    <div class="mod-bd desc-txt">
+      <p>杜家嫡女，嫁入燕王府为妃。十月怀胎，一朝分娩，却被诬红杏出墙。七年结发情，敌不过美人两滴泪。只落得断手剜目，母子同赴黄泉！重生于十年前未嫁失身，清白被毁之夜。她才终于明白，前世所有天灾皆是人祸！杀人偿命，欠债还钱！杜蘅对天发誓，要以牙还牙，以眼还眼！前世承受的所有苦痛...</p>
+    </div>
+  </div>
+</div>
+<div class="fixed-down download"><p id="download"><img src="../img/download-web.png" alt=""></p></div>
+<div id="mark_ios"></div>
+<div id="mark_android"></div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/global.js"></script>
+<script>
+  $(function(){
+    if(browser() == "ios"){
+      $('#download').attr('url', 'http://um0.cn/a8FSe/');
+    }
+    if(browser() == "android"){
+        $('#download').attr('url', 'http://www.kingreader.com/dl/android/KingReaderAppV7.13.apk');
+    }
+    
+    $('#download').click(function(){
+      if (navigator.userAgent.toLowerCase().indexOf("micromessenger") > -1) {
+        if(browser() == "ios"){
+          $('#mark_ios').show();
+          return false;
+        }
+        if(browser() == "android"){
+          $('#mark_android').show();
+          return false;
+        }
+      } else {
+        location.href = this.getAttribute('url');
+      }
+    });
+    
+  });
+  function browser() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs) {
+      return "ios";
+    } else if (bIsMidp || bIsUc7 || bIsUc || bIsAndroid) {
+      return "android";
+    } else if (bIsCE || bIsWM) {
+      return "wp";
+    } else {
+      return "pc";
+    }
+  }
+</script>
+</body>
+</html>

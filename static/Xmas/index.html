@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>旋转圣诞夜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="keywords" content="旋转圣诞夜" />
+	<meta name="description" content="旋转圣诞夜" />
+	<link rel="stylesheet" href="css/style.min.css" />
+	<link rel="stylesheet" href="css/jq.layer.css" />
+</head>
+
+<body>
+<div class="page-wrap">
+  <div class="main">
+    
+    <div class="slogan abs"></div>
+    <div class="SantaClaus abs"></div>
+    <div class="top abs"></div>
+    <div class="point abs"></div>
+
+    <div class="plate_main abs">
+      <div class="ly_plate">
+        <div class="rotate"><img src="images/ly_plate.png" id="lotteryImg" alt=""></div>
+        <div id="lottery_star" class="lottery_star"><div></div></div>
+      </div>
+      <div class="share_boxs">
+        <h2>今日剩余次数 X 次</h2>
+        <p>成功分享后又能转一次哦~</p>
+        <a href="javascript:void(0);" class="btn_share"></a>
+      </div>
+    </div>
+
+    <div class="rule_box abs">
+      <div class="title1"></div>
+      <div class="cont1">
+        <em>1</em>12月25日至1月1日，活动期间第一次登入漫画岛APP即有1次<br>
+        　 小游戏机会，之后每天将活动分享至朋友圈，QQ空间，微博即<br>
+        　 可增加1次机会（每日仅限分享1次）<br>
+        <em>2</em>抽选到到对应圣诞礼物，即可点击“我的圣诞礼物”进行奖品<br>　 兑换<br>
+        <em>3</em>漫画岛运营团队拥有本次活动解释权
+      </div>
+      <div class="title2"></div>
+      <div class="cont2">
+        小游戏结束后，将公布获得奖品的清单，获奖用户填写联系方式<br>和手机号，奖品会在活动结束后15天内发放。
+      </div>
+    </div>
+
+  </div>
+
+  <div class="prize_box">
+    <div class="title"></div>
+    <ul class="prize clearfix">
+      <li><img src="images/prize1.png" alt=""></li>
+      <li><img src="images/prize2.png" alt=""></li>
+      <li><img src="images/prize3.png" alt=""></li>
+      <li><img src="images/prize4.png" alt=""></li>
+      <li><img src="images/prize5.png" alt=""></li>
+      <li><img src="images/prize6.png" alt=""></li>
+      <li><img src="images/prize7.png" alt=""></li>
+    </ul>
+    <div class="btn_myprize abs"></div>
+  </div>
+  
+</div>
+
+<!--  弹层  -->
+<div id="pop_box2" style="display:none;">
+  <div class="pBox pBox1">
+    <h3>转到（奖品名X）的<br>小孩运气都不会太差！</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">领取礼物</a></div>
+  </div>
+</div>
+
+<div id="pop_box3" style="display:none;">
+  <div class="pBox pBox1">
+    <h3>这个圣诞节，有了(奖品名X)<br>再也不用吃土了！</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">领取礼物</a></div>
+  </div>
+</div>
+
+<div id="pop_box4" style="display:none;">
+  <div class="pBox pBox2">
+    <h3>麋鹿妹妹又送了你1次抽选机会哦~</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">马上去试试</a></div>
+  </div>
+</div>
+
+<div id="pop_box5" style="display:none;">
+  <div class="pBox pBox2">
+    <h3>分享成功啦！</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">确定</a></div>
+  </div>
+</div>
+
+<div id="pop_box6" style="display:none;">
+  <div class="pBox pBox2">
+    <h3>今天的次数已经用完了，明天再来吧！</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">确定</a></div>
+  </div>
+</div>
+
+<div id="pop_box7" style="display:none;">
+  <div class="pBox pBox3">
+    <h3>碰了一鼻子壁炉灰也没有礼物呢，<br>摸摸头~</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">立即分享</a><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">关闭</a></div>
+  </div>
+</div>
+
+<div id="pop_box8" style="display:none;">
+  <div class="pBox pBox3">
+    <h3>圣诞老人说你已经过了拿礼物的年纪了<br>（sad）</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">立即分享</a><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">关闭</a></div>
+  </div>
+</div>
+
+<div id="pop_box9" style="display:none;">
+  <div class="pBox pBox4">
+    <h3>童鞋，你的信息已经登记啦~<br>活动结束后会统一发放奖品哦</h3>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">明白啦！</a></div>
+  </div>
+</div>
+
+<div id="pop_box10" style="display:none;">
+  <div class="pBox pBox5">
+    <h3>请填写你的有效联系方式<br>领取圣诞老人的礼物哦！</h3>
+    <ul class="form_box">
+      <li><input type="text" value="" class="pop_inp" placeholder="收件人："></li>
+      <li><input type="text" value="" class="pop_inp" placeholder="联系QQ："></li>
+      <li><input type="text" value="" class="pop_inp" placeholder="联系电话："></li>
+      <li><input type="text" value="" class="pop_inp" placeholder="收件地址："></li>
+    </ul>
+    <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">登记完毕</a></div>
+  </div>
+</div>
+
+<div id="pop_box11" style="display:none;">
+  <div class="pBox pBox6">
+    <div class="pop-close" onclick="$.LAYER.close();"></div>
+    <ul class="rec_list">
+      <li><a href="" class="btn2">领取礼物</a>索尼PS3*1</li>
+      <li><a href="" class="btn2">领取礼物</a>大猫抱枕*1</li>
+      <li><a href="" class="btn2">领取礼物</a>小埋抱枕*1</li>
+      <li><a href="" class="btn2">领取礼物</a>海贼王拼图*1</li>
+      <li><a href="" class="btn2">领取礼物</a>小黄人棉拖*1</li>
+      <li><a href="" class="btn2">领取礼物</a>漫画特效鼠标*1</li>
+      <li><a href="" class="btn2">领取礼物</a>垫颜文字口罩*1</li>
+    </ul>
+  </div>
+</div>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jQueryRotate.2.2.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jq.layer.js" ></script>
+<script>
+$('.btn_share').click(function(){
+  $.LAYER.show({id:'pop_box5',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}})
+});
+
+$('.btn_myprize').click(function(){
+  $.LAYER.show({id:'pop_box11',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}})
+});
+
+$(function(){
+  var timeOut = function(){  //超时函数
+    $("#lotteryImg").rotate({
+      angle:0, 
+      duration: 10000, 
+      animateTo: 2160,  //这里是设置请求超时后返回的角度，所以应该还是回到最原始的位置，2160是因为我要让它转6圈，就是360*6得来的
+      callback:function(){
+        alert('网络超时')
+      }
+    });
+  }; 
+  var rotateFunc = function(awards,angle,text){  //awards:奖项，angle:奖项对应的角度，text:提示文字
+    $('#lotteryImg').stopRotate();
+    $("#lotteryImg").rotate({
+      angle:0, 
+      duration: 5000, 
+      animateTo: angle+1440, //angle是图片上各奖项对应的角度，1440是我要让指针旋转4圈。所以最后的结束的角度就是这样子^^
+      callback:function(){
+        alert(text)
+      }
+    }); 
+  };
+  
+  $("#lottery_star div").rotate({ 
+    bind: 
+      { 
+        click: function(){
+          var time = [0,1];
+            time = time[Math.floor(Math.random()*time.length)];
+          if(time==0){
+            timeOut(); //网络超时
+          }
+          if(time==1){
+            var data = [1,2,3,4,5,6,7,0]; //返回的数组
+              data = data[Math.floor(Math.random()*data.length)];
+            if(data==1){
+              rotateFunc(1,22,'索尼PS3');
+            }
+            if(data==2){
+              rotateFunc(2,67,'颜文字口罩');
+            }
+            if(data==3){
+              rotateFunc(3,112,'漫画特效鼠标垫');
+            }
+            if(data==4){
+              rotateFunc(4,202,'小黄人棉拖');
+            }
+            if(data==5){
+              rotateFunc(5,337,'大猫抱枕');
+            }
+            if(data==6){
+              rotateFunc(6,247,'海贼王拼图');
+            }
+            if(data==7){
+              rotateFunc(7,292,'小埋抱枕');
+            }
+            if(data==0){
+              // var angle = [240,300];
+              // angle = angle[Math.floor(Math.random()*angle.length)];
+              // rotateFunc(0,angle,'很遗憾，这次您未抽中奖');
+              rotateFunc(0,157,'未中奖');
+            }
+          }
+        }
+      } 
+     
+  });
+    
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>秋膘养成记！雷柏键盘转出来！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="keywords" content="秋膘养成记！雷柏键盘转出来！" />
+	<meta name="description" content="秋膘养成记！雷柏键盘转出来！" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/jq.layer.css" />
+</head>
+
+<body>
+<div class="page-wrap">
+  <div class="top">
+    <img src="images/top.png" alt="">
+    <div class="top-text">
+      <div class="text">
+        <h2>雷柏键盘转出来</h2>
+        <p>8月29日9:00—8月30日24:00</p>
+      </div>
+    </div>
+  </div>
+  <div class="plate_box">
+      <div class="plate_main">
+          <div class="t1"></div>
+          <div class="ly_plate">
+              <div class="rotate"><img src="images/ly_plate.png" id="lotteryImg" alt=""></div>
+              <div id="lottery_star" class="lottery_star"><div></div></div>
+          </div>
+          <div class="share_boxs">
+            <h2>今日剩余次数 X 次</h2>
+            <p>成功分享后又能抽取奖品哦~</p>
+            <a href="javascript:void(0);" class="btn_share">分享加次数</a>
+            <a href="" class="btn_dj">我要兑奖</a>
+          </div>         
+      </div>
+  </div>
+  <div class="rule_text">
+    <h2><span>参与方式</span></h2>
+    <p>
+    1、活动期间登陆追书，每人皆得一次抽取养膘奖品机会；<br>
+    2、分享活动到朋友圈、QQ空间和微博即可多加一次（共3次）
+    </p>
+  </div>
+  <div class="win-list">
+    <h2>中奖名单</h2>
+    <div id="scroll" class="scroll">
+      <ul>
+        <li>XX:XX(时间)　136****2592获得雷柏键盘</li>
+        <li>XX:XX(时间)　136****2592获得5元话费</li>
+        <li>XX:XX(时间)　136****2592获得led台灯</li>
+        <li>XX:XX(时间)　136****2592获得拉杆箱</li>
+      </ul>
+    </div>
+  </div>
+  <div class="rule_text">
+    <h2><span>活动规则</span></h2>
+    <p>
+    1、以参与者填写的联系方式寄出奖品，请填写能收到奖品的正确的联系地址；<br>
+    2、获奖名单将于9月2日在官方活动论坛贴公布；<br>
+    3、奖品将与9月2日开始陆续寄出，因奖品巨多，请所有中奖用户耐心等待;<br>
+    4、该活动最后解释权归追书神器团队。
+    </p>
+  </div>
+</div>
+
+<div class="pop_box" id="pop_box1" style="display:none;">
+  <h2>分享领取抽奖次数</h2>
+  <div class="share_api"><a href="" class="weibo"></a><a href="" class="qzone"></a><a href="" class="weixin"></a></div>
+</div>
+<div class="pop_box" id="pop_box2" style="display:none;">
+  <h3>本次活动转盘次数全耗尽啦，<br>养养膘，下次等你哦</h3>
+  <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">确认</a></div>
+</div>
+<div class="pop_box" id="pop_box3" style="display:none;">
+  <div class="suc"></div>
+  <h3>请填写你的有效联系方式来领奖喔~<br>我们会尽快联系你的！</h3>
+  <ul class="form_box">
+    <li><input type="text" value="" class="pop_inp" placeholder="收件人："></li>
+    <li><input type="text" value="" class="pop_inp" placeholder="联系QQ："></li>
+    <li><input type="text" value="" class="pop_inp" placeholder="联系电话："></li>
+    <li><input type="text" value="" class="pop_inp" placeholder="收件地址："></li>
+  </ul>
+  <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">确认</a></div>
+</div>
+<div class="pop_box" id="pop_box4" style="display:none;">
+  <h3>
+    <div class="txt">获得</div>
+    <div class="prize">5元话费</div>
+    <p>话费精灵降临！5元虽小，但还是能替你挽救快停机的命运~吼吼吼~</p>
+  </h3>
+  <div class="pop_btn"><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btn1">点击领取</a></div>
+</div>
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jQueryRotate.2.2.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jq.layer.js" ></script>
+<script>
+$('.btn_share').click(function(){
+  $.LAYER.show({id:'pop_box1',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}})
+});
+
+$(function(){
+    var timeOut = function(){  //超时函数
+        $("#lotteryImg").rotate({
+            angle:0, 
+            duration: 10000, 
+            animateTo: 2191,  //这里是设置请求超时后返回的角度，所以应该还是回到最原始的位置，2160是因为我要让它转6圈，就是360*6得来的
+            callback:function(){
+                alert('网络超时')
+            }
+        }); 
+    }; 
+    var rotateFunc = function(awards,angle,text){  //awards:奖项，angle:奖项对应的角度，text:提示文字
+        $('#lotteryImg').stopRotate();
+        $("#lotteryImg").rotate({
+            angle:0, 
+            duration: 5000, 
+            animateTo: angle+1440, //angle是图片上各奖项对应的角度，1440是我要让指针旋转4圈。所以最后的结束的角度就是这样子^^
+            callback:function(){
+                alert(text)
+            }
+        }); 
+    };
+    
+    $("#lottery_star div").rotate({ 
+       bind: 
+         { 
+            click: function(){
+                var time = [0,1];
+                    time = time[Math.floor(Math.random()*time.length)];
+                if(time==0){
+                    timeOut(); //网络超时
+                }
+                if(time==1){
+                    var data = [1,2,3,0]; //返回的数组
+                        data = data[Math.floor(Math.random()*data.length)];
+                    if(data==1){
+                        rotateFunc(1,60,'恭喜您抽中的一等奖')
+                    }
+                    if(data==2){
+                        rotateFunc(2,120,'恭喜您抽中的二等奖')
+                    }
+                    if(data==3){
+                        rotateFunc(3,180,'恭喜您抽中的三等奖')
+                    }
+                    if(data==0){
+                        var angle = [240,300];
+                            angle = angle[Math.floor(Math.random()*angle.length)]
+                        rotateFunc(0,angle,'很遗憾，这次您未抽中奖')
+                    }
+                }
+            }
+         } 
+       
+    });
+    
+});
+
+$(function(){
+  var scroll = $("#scroll");
+  var scrollTimer;
+  scroll.hover(function(){
+    clearInterval(scrollTimer);
+   },function(){
+    scrollTimer = setInterval(function(){
+      scrollNews( scroll );
+    }, 2000 );
+  }).trigger("mouseout");
+});
+function scrollNews(obj){
+  var $self = obj.find("ul:first");
+  var lineHeight = $self.find("li:first").height();  
+  $self.animate({ "margin-top" : -lineHeight +"px" },600 , function(){
+    $self.css({"margin-top":"0px"}).find("li:first").appendTo($self);
+  });
+}
+</script>
+</body>
+</html>

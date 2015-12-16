@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>短信充值</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<div id="container">
+<header class="m-header">
+  <section class="read-top flex flex-ac flex-pj">
+    <div class="m-return"></div>
+    <div class="m-tit flex-1">短信充值</div>
+    <div class="m-home"></div>
+  </section>
+</header>
+<div class="wrap-page">
+<div class="wrap">  
+    
+    <div class="cash-item">
+   
+      <ul class="cash-form pay-sms-form">
+        <li class="cf">
+          <label>手机号</label>
+          <p><input type="text" value="" placeholder="请输入本机或其他手机号" class="inputCash"></p>
+        </li>
+        <li class="cf">
+          <label>验证码</label>
+          <p><input type="text" value="" placeholder="请输入验证码" class="inputCash-code"><em class="btns-code">获取验证码</em></p>
+        </li>
+        <li class="cf">
+          <label>验证码</label>
+          <p><input type="text" value="" placeholder="请输入验证码" class="inputCash-code"><em class="btns-code state-dis">重新获取(52)</em></p>
+        </li>
+      </ul>
+      <div class="btns cash-btn state-dis2">提交</div>
+    </div>
+      
+    <div class="cash-cue">温馨提示：<br>由于运营商的相关规定，不同地区有充值次数的限制；若无法充值，请使用其他充值方式。</div>
+  
+</div>   
+</div>
+<footer class="m-footer">
+  <ul class="m-nav-btm flex">
+    <li>开卷首页</li>
+    <li>书籍分类</li>
+    <li>客户端下载</li>
+    <li>客服咨询</li>
+  </ul>
+  <p>ICP:沪ICP备15007044号<br>Copyright &copy; 2013 All rights reserved.</p>
+</footer>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/global.js"></script>
+<script type="text/javascript">
+  $('.tabs-cash .hd li').click(function(){
+    $(this).siblings('li').removeClass('active');
+    $(this).addClass('active');
+    var index = $(this).index();
+    $('.tabs-cash .bd>div').hide()
+    $('.tabs-cash .bd>div').eq(index).show();
+  });	
+</script>
+</body>
+</html>

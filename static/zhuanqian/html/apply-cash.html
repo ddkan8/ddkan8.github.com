@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>提现申请</title>
+<link rel="stylesheet" href="../css/style.min.css">
+<link rel="stylesheet" href="../css/jq.layer.css">
+</head>
+
+<body>
+<div class="m-nav flex flex-ac flex-pj">
+  <div class="m-return" onclick="javascript :history.back(-1);"></div>
+  <div class="m-tit flex-1">提现信息</div>
+</div>  
+<div class="wrap-page apply-form">
+	<ul class="apply-way">
+		<li><span id="weixin-edit" class="btn-edit">修改</span><em class="api-weixin"></em>微信钱包（名字）</li>
+		<li><span id="alipay-edit" class="btn-edit">修改</span><em class="api-alipay"></em>支付宝（1234555555）</li>
+	</ul>
+	<ul class="mod-form">
+		<li>可提现金额： ¥ 10.00元</li>
+		<li>申请提现金额： <input type="text" value="" class="mod-input"></li>
+	</ul>
+	<div class="prompt-txt3">
+		<p>备注：申请提现完成后，我们会在<span class="c2">24小时</span>内汇款</p>
+	</div>
+	<div class="prompt-txt5">
+		<p>现金金额必须是10的倍数</p>
+	</div>
+	<div class="btn-box3">
+		<span class="btns btn-ewm">确认提现</span>
+	</div>
+</div>
+<div id="pop-noBind" class="pop-box" style="display: none">
+	<section class="pop-section">
+		<div class="pop-txt2">请绑定您的提现信息</div>
+		<div class="btn-box"><a class="btns btn-ewm btn-bind">绑定提现</a></div>
+	</section>
+</div>
+<div id="pop-weixin" class="pop-box" style="display: none">
+	<section class="pop-section">
+		<div class="pop-applyWay"><em class="api-weixin"></em>微信钱包</div>
+		<div class="pop-txt2">请填写您绑定微信钱包的银行卡姓名</div>
+		<ul class="mod-form2">
+			<li><input type="text" value="" placeholder="收款人姓名" class="mod-input"></li>
+		</ul>
+		<div class="btn-box"><span class="btns btn-state2 btn-cancel">取消</span><span class="btns btn-state3 ml">确定</span></div>
+	</section>
+</div>
+<div id="pop-alipay" class="pop-box" style="display: none">
+	<section class="pop-section">
+		<div class="pop-applyWay"><em class="api-alipay"></em>支付宝</div>
+		<div class="pop-txt2">绑定实名认证过的支付宝账号才能收款</div>
+		<ul class="mod-form2">
+			<li><input type="text" value="" placeholder="支付宝收款人姓名" class="mod-input"></li>
+			<li><input type="text" value="" placeholder="支付宝收款人账号" class="mod-input"></li>
+		</ul>
+		<div class="btn-box"><span class="btns btn-state2 btn-cancel">取消</span><span class="btns btn-state3 ml">确定</span></div>
+	</section>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jq.layer.js"></script>
+<script src="../js/global.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$.LAYER.show({id:'pop-noBind',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}});
+
+		$('.btn-bind').click(function(){
+			$.LAYER.close();
+		});
+	});
+</script>
+</body>
+</html>

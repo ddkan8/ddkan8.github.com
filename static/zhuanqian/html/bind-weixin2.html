@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title></title>
+<link rel="stylesheet" href="../css/style.min.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/jq.layer.css">
+</head>
+
+<body>
+<div class="m-nav flex flex-ac flex-pj">
+  <div class="m-return" onclick="javascript :history.back(-1);"></div>
+  <div class="m-tit flex-1">绑定微信</div>
+</div>
+<div class="m-main">
+  <section class="bind-box mBtm20">
+    <div class="lineBtm bind-hd">为了您的账号安全，请先进行微信号绑定，完成绑定即可安心兑换。</div>
+    <div class="bind-step lineBtm">
+      <p><span class="f15 c-t2">步骤一：</span>长按并储存以下二维码图片，打开微信扫一<br>　　　　　扫识别该二维码，<span class="c-t3">关注爱玩客69K服务号。</span></p>
+      <p class="ewm"><img src="../img/ewm2.png" alt=""></p>
+      <p><span class="f15 c-t2">步骤二：</span>关注成功后，在微信中点击“绑定账号”，<br>　　　　　获取验证码。</p>
+      <p><span class="f15 c-t2">步骤三：</span>在下方输入从爱玩客69K微信公众号中获得<br>　　　　　的验证码：</p>
+    </div>
+  </section>
+  <div class="formItem pLR44 lineTB">
+    <input type="text" class="inputText2" placeholder="请输入微信验证码">
+  </div>
+  <div class="btnBox mTop20"><div class="btns langBtn">提交</div></div>
+</div>
+
+<div id="pop1" class="pop-box" style="display: none">
+  <section class="pop-section">
+    <div class="validate-cont2"><img src="../img/icon_suc.png" alt=""><em>提交成功</em></div>
+  </section>
+</div>
+
+<div id="pop2" class="pop-box" style="display: none">
+  <section class="pop-section">
+    <div class="validate-cont2"><img src="../img/icon_fail.png" alt=""><em>该验证码已过期，请核对验证码正确性</em></div>
+  </section>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jq.layer.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/global.min.js"></script>
+<script>
+$('.langBtn').click(function(){
+  $.LAYER.show({id:'pop2',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}});
+
+});
+</script>
+</body>
+</html>

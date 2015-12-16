@@ -1,0 +1,168 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>开卷有益推广管理系统-开卷有益</title>
+  <meta name="keywords" content="开卷有益推广管理系统" />
+  <meta name="description" content="开卷有益推广管理系统" />
+  <style>
+    body,div,ul,li{margin:0;padding:0;}
+    ul{list-style:none;}
+    :focus {outline:0}
+    /* 清除浮动 */
+    .cf {*zoom: 1;}
+    .cf:before,
+    .cf:after {
+      display: table;
+      line-height: 0;
+      content: "";
+    }
+    .cf:after {clear: both;}
+    .fl{float:left;}
+    .fr{float:right;}
+    body{background:url(img/bg.jpg) no-repeat;background-size:100%;font-size:12px;}
+    .module-login{
+      position:absolute;
+      left:50%;
+      top:50%;
+      margin-left:-150px;
+      margin-top:-240px;
+      border-radius:6px;
+      -webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);
+      -moz-box-shadow:0 0 10px rgba(0,0,0,0.5);
+      -ms-box-shadow:0 0 10px rgba(0,0,0,0.5);
+      -o-box-shadow:0 0 10px rgba(0,0,0,0.5);
+      box-shadow:0 0 10px rgba(0,0,0,0.5);
+      padding:28px 0;
+      width:300px;
+      background-color:#E7E3DF;
+    }
+    .logo-login{
+      margin:0 auto;
+      width:212px;
+      height:60px;
+      background:url(img/logo_login.png) no-repeat;
+    }
+    .form-login{
+      padding:0 30px;
+    }
+    .form-login li{
+      margin-top:18px;
+      *zoom: 1;
+    }
+    .form-login li:before,
+    .form-login li:after {
+      display: table;
+      line-height: 0;
+      content: "";
+    }
+    .form-login li:after {clear: both;}
+    .item-input,.item-code{
+      border:1px solid #C5C0BE;
+      border-radius:6px;
+      -webkit-box-shadow:1px 0 6px rgba(0,0,0,0.15) inset;
+      -moz-box-shadow:1px 0 6px rgba(0,0,0,0.15) inset;
+      -ms-box-shadow:1px 0 6px rgba(0,0,0,0.15) inset;
+      -o-box-shadow:1px 0 6px rgba(0,0,0,0.15) inset;
+      box-shadow:1px 0 6px rgba(0,0,0,0.15) inset;
+      height:40px;
+      background-color:#fff;
+    }
+    .icon-user,.icon-pwd{
+      display:inline-block;
+      margin:11px 10px;
+      width:18px;
+      height:18px;
+      vertical-align:middle;
+      background:url(img/icon_login.png) no-repeat;
+    }
+    .icon-user{background-position:0 0;}
+    .icon-pwd{background-position:0 -18px;}
+    .inputText,.inputCode{
+      border:0 none;
+      background-color:initial;
+      padding:10px 10px 10px 0;
+      height:20px;
+      line-height:20px;
+      font-size:12px;
+      font-family:simsun;
+      vertical-align:middle;
+    }
+    input::-webkit-input-placeholder{color:#999;}
+    input::-moz-placeholder{color:#999;}
+    .inputText{width:190px;}
+    .item-code{
+      float:left;
+      width:155px;
+    }
+    .inputCode{width:107px;}
+    .code{padding-left:5px;}
+    .btn-box,.chk-box{text-align:center;}
+    .btn-login{
+      border:1px solid #CF2B28;
+      border-radius:6px;
+      -webkit-box-shadow:0 1px 0 0 rgba(255,255,255,0.4) inset;
+      -moz-box-shadow:0 1px 0 0 rgba(255,255,255,0.4) inset;
+      -ms-box-shadow:0 1px 0 0 rgba(255,255,255,0.4) inset;
+      -o-box-shadow:0 1px 0 0 rgba(255,255,255,0.4) inset;
+      box-shadow:0 1px 0 0 rgba(255,255,255,0.4) inset;
+      width:238px;
+      padding:8px 0;
+      font-size:18px;
+      font-family:simhei;
+      color:#fff;
+      cursor:pointer;
+      background-color: #e33100;
+      background-image:-webkit-gradient(linear,left top, left bottom, color-stop(0%, #ea5265), color-stop(100%, #d43638));
+      background-image:-webkit-linear-gradient(top, #ea5265, #d43638);
+      background-image:-moz-linear-gradient(top, #ea5265, #d43638);
+      background-image:-ms-linear-gradient(top, #ea5265, #d43638);
+      background-image:-o-linear-gradient(top, #ea5265, #d43638);
+      background-image:linear-gradient(top, #ea5265, #d43638);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea5265',endColorstr='#d43638');
+    }
+    .btn-login:active {
+      -webkit-transform: translateY(1px);
+      -moz-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+      -o-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    .chk-box{font-family:simhei;}
+    #chk{vertical-align:middle;}
+  </style>
+</head>
+
+<body>
+<div class="module-login">
+  <div class="logo-login"></div>
+  <ul class="form-login">
+    <li>
+      <div class="item-input cf">
+        <label for="userName" class="icon-user fl"></label>
+        <input type="text" placeholder="请输入用户名" value="" id="userName" class="inputText fl">
+      </div>
+    </li>
+    <li>
+      <div class="item-input cf">
+        <label for="passWord" class="icon-pwd fl"></label>
+        <input type="password" placeholder="请输入密码" value="" id="passWord" class="inputText fl">
+      </div>
+    </li>
+    <li>
+      <div class="item-code fl">
+        <label for="code" class="icon-pwd fl"></label>
+        <input type="text" placeholder="请输入验证码" value="" id="code" class="inputCode fl">
+      </div>
+      <div class="code fl"><img src="img/code.png" alt=""></div>
+    </li>
+    <li>
+      <div class="btn-box"><input type="button" value="登录" class="btn-login"></div>
+    </li>
+    <li>
+      <div class="chk-box"><label for="chk"><input type="checkbox" value="" id="chk" checked><span>记住用户名和密码</span></label></div>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

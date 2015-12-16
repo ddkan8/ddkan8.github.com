@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>雏蜂出击！一锤定音！- 艾漫AIMON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="keywords" content="雏蜂出击！一锤定音！- 艾漫AIMON" />
+	<meta name="description" content="雏蜂出击！一锤定音！- 艾漫AIMON" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/jq.layer.css" />
+</head>
+
+<body>
+<div class="wrap">
+  <img src="img/bg.jpg" alt="">
+  <div class="top"><img src="img/top.png" alt=""></div>
+  <div class="share-box">
+    <div class="share-text">砸蛋次数：1</div>
+    <div class="icon-ren"></div>
+    <div class="btn-box"><a href="javascript:void(0);"></a></div>
+  </div>
+  <div class="egg">
+    <!-- <div class="btn_box"><a href="javascript:void(0);"></a></div> -->
+    <div class="eggList clearfix">
+      <ul>
+        <p class="hammer" id="hammer">锤子</p>
+        <li class="egg1"></li>
+        <li class="egg2"></li>
+        <li class="egg3"></li>
+      </ul>
+    </div>
+    <div class="btn-box2">
+      <a href="javascript:void(0);" class="e-btn1" id="my-prize">我的奖品</a><a href="javascript:void(0);" class="e-btn2" id="prize-list">奖品展示</a>
+    </div>
+  </div>
+  
+  <div class="matter_txt">
+    <h2></h2>
+    <ul class="cont">
+      <li>1.活动期间首次登入即有1次小游戏机会，之后每天将活动分享至朋友圈，QQ空间，微博即可增加1次机会（每日仅首次分享有效）；</li>
+      <li>2.获奖用户需要填写联系方式和手机号，若当时未填写可在活动页点击“我的奖品”进行补填写，奖品会在活动结束后15天内发放。没有砸中？没关系，带上腰包，自己做欧皇！</li>
+    </ul>
+  </div>
+</div>
+
+<div class="pop_box pop_box1" id="pop_box1" style="display:none;">
+  <div class="btn-box2">
+    <a href="" class="e-btn3">去分享</a><a href="javascript:void(0);" class="e-btn1 p-close">关闭</a>
+  </div>
+</div>
+
+<div class="pop_box pop_box2" id="pop_box2" style="display:none;">
+  <div class="btn-box2">
+    <a href="" class="e-btn1">马上砸金蛋</a>
+  </div>
+</div>
+
+<div class="pop_box pop_box3" id="pop_box3" style="display:none;">
+  <div class="btn-box2">
+    <a href="" class="e-btn3">去分享</a><a href="javascript:void(0);" class="e-btn1 p-close">关闭</a>
+  </div>
+</div>
+
+<div class="pop_box pop_box4" id="pop_box4" style="display:none;">
+  <div class="form-box">
+    <h2>砸到了无线鼠标！</h2>
+    <h3>快快填写有效联系方式领奖哦~</h3>
+    <ul class="popform">
+      <li><label>收件人：</label><input type="text" value="" class="inputText"></li>
+      <li><label>QQ：</label><input type="text" value="" class="inputText"></li>
+      <li><label>Tel：</label><input type="text" value="" class="inputText"></li>
+      <li><label>收奖地址：</label><input type="text" value="" class="inputText"></li>
+    </ul>
+    <div class="btn-box2">
+      <a href="javascript:void(0);" class="e-btn1">登记完毕</a>
+    </div>
+  </div>
+</div>
+
+<div class="pop_box pop_box5" id="pop_box5" style="display:none;">
+  <ul class="rec_list">
+    <li><a href="" class="e-btn4">我要兑奖</a>雏蜂卫衣*2</li>
+    <li><a href="" class="e-btn4">我要领取</a>雏蜂痛伞*1</li>
+    <li><a href="" class="e-btn4">我要领取</a>雏蜂琉璃和白桦A款*1</li>
+    <li><a href="" class="e-btn4">我要领取</a>雏蜂琉璃和白桦Q版*1</li>
+  </ul>
+  <div class="btn-box2">
+    <a href="javascript:void(0);" class="e-btn1 p-close">关闭</a>
+  </div>
+</div>
+
+<div class="pop_box" id="pop_box6" style="display:none;width:80%">
+  <div class="box-prize">
+    <div class="btn_return"></div>
+    <img src="img/prize.png" alt="">
+  </div>
+</div>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jq.layer.js" ></script>
+<script>
+$('#prize-list').click(function(){
+  $.LAYER.show({id:'pop_box6',layerContainer:'mark',overlay:{color:'#000',opacity:0.75}});
+});
+$('#my-prize').click(function(){
+  $.LAYER.show({id:'pop_box3',layerContainer:'mark',overlay:{color:'#000',opacity:0.75}});
+});
+$('.btn_return,.p-close').click(function(){
+  $.LAYER.close();
+});
+
+function eggClick(obj) {
+    var _this = obj;
+    var that = this;
+    var res = 1;
+//    $.getJSON("data.php",function(res){
+        if(_this.hasClass("curr")){
+            return false;
+        }
+        //_this.unbind('click');
+        $(".hammer").css({"top":_this.position().top-28,"left":_this.position().left+93});
+        $(".hammer").animate({
+            "top":_this.position().top-13,
+            "left":_this.position().left+63
+            },30,function(){
+                _this.addClass("curr");
+                if(res==1){
+                  // $.LAYER.show({id:'succ',layerContainer:'mark',overlay:{color:'#000',opacity:0.59}});
+                }else{
+                  // if(_this.find("em").length == 0){
+                  //   _this.prev().find("em").show();
+                  //   $.LAYER.show({id:'fail',layerContainer:'mark',overlay:{color:'#000',opacity:0.59}});
+                  // } else {
+                  //   _this.siblings().find("em").show();
+                  //   $.LAYER.show({id:'fail',layerContainer:'mark',overlay:{color:'#000',opacity:0.59}});
+                  // }
+                }                
+                $(".hammer").hide();                
+            }
+        );
+//    });
+}
+
+$(".eggList li").click(function() {
+    eggClick($(this));
+});
+
+$(".eggList li").hover(function() {
+    var posL = $(this).position().left + $(this).width();
+    $("#hammer").show().css('left', posL);
+})
+
+</script>
+</body>
+</html>

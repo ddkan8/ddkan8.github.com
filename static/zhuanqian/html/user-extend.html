@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title></title>
+<link rel="stylesheet" href="../css/style.min.css">
+<link rel="stylesheet" href="../css/jq.layer.css">
+</head>
+
+<body>
+<div class="m-nav flex flex-ac flex-pj">
+  <div class="m-return" onclick="javascript :history.back(-1);"></div>
+  <div class="m-tit flex-1">收徒</div>
+</div>
+<div class="wrap-page">
+	<div class="user-extend">
+	  <ul class="extend-ul flex flex-ac flex-pj">
+      <li class="flex-1"><span class="f15">累计徒弟的奖励</span> <em class="icon-faq"></em></li>
+      <li class="flex-1"><span class="f50">453.65</span>元</li>
+    </ul>
+    
+		<ul class="extend-ul2 flex flex-ac flex-pj">
+			<li class="flex-1">徒弟个数  <span class="f36">235</span> 个</li>
+			<li class="flex-1">徒弟奖励  <span class="f36">100%</span></li>
+		</ul>
+	</div>
+	
+	<ul class="other-item mBtm20 lineTB">
+    <li><a href="share.html">分享收徒<span class="txt">通过社交应用收徒</span></a></li>
+    <li><a href="extend-link2.html">扫码收徒<span class="txt">截图方便快捷</span></a></li>
+  </ul>
+  <ul class="other-item mBtm20 lineTB">
+    <li><a href="extend-link3.html"><em>为什么要收徒（必读）</em></a></li>
+    <li><a href="extend-link4.html"><em>收徒攻略（必读）</em></a></li>
+  </ul>
+</div>
+
+<div id="pop-1" class="pop-box" style="display: none">
+  <section class="pop-section">
+    <div class="pop-txt2 c-t1">徒弟做任务获得收入后，<br>师傅可以额外获得奖励分成，<br><em class="c3">永久有效！</em></div>
+  </section>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jq.layer.js"></script>
+<script type="text/javascript" src="../js/global.min.js"></script>
+<script>
+$('.icon-faq').click(function(e){
+  e.stopPropagation();
+  $.LAYER.show({id:'pop-1',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}});
+
+});
+$(document.body).click(function(){
+  $.LAYER.close();
+}); 
+</script>
+</body>
+</html>

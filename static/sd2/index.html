@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jquery+PHP摇圣诞树抽奖效果示例源码</title>
+<style type="text/css">
+body { margin:0; padding:0; font-family:"微软雅黑"; }
+img{border:0;}
+a { text-decoration: none; color:#0f3f94;}
+a:hover { color:#F30; text-decoration:underline;}
+h1 { background:#ccc; margin:0; padding:20px; }
+h2 { margin:0; padding:20px 0; }
+.intro{padding:20px;  line-height:24px;}
+iframe { border:0;display:block; width:650px; height:412px; }
+.p50 { padding-left:50px;}
+pre {line-height:22px; }
+pre span { color:#999; }
+.demo { padding:20px; border-bottom:#ccc solid 1px;}
+#footer{margin:15px auto; line-height:24px; text-align:center;color:#999; font-size:12px;padding:12px;}
+
+.box{width:600px;background:#F9EDBC;border:5px solid #A6324A;padding:5px;position:relative;color:#333;overflow:hidden;display:none;}
+ .box .close{color:#B7AC7F;display:inline-block;font-size:28px;height:30px;width:30px;line-height:30px;outline:none;overflow:hidden;position:absolute;right:15px;top:10px;text-align:center;text-decoration:none;}
+ .box .close:hover{text-decoration:none;color:#666;}
+ .box .pic{margin:12px;float:left;}
+ .box .title{float:left;font-size:22px;font-weight:bold;margin:38px 0 28px 12px;width:340px;}
+ .box .description{float:left;margin:0 0 0 12px;width:340px;line-height:26px;}
+
+#treeBox{height:560px;background:#941411;}
+#tree{width:481px;height:560px;margin:0 auto;position:relative;}
+#tree .btn{display:block;width:302px;height:88px;position:absolute;left:95px;top:247px;}
+#treeBox .normal{background:url(tree.jpg);}
+#treeBox .moveLeft{background:url(tree.jpg) 0 -560px;}
+#treeBox .moveRight{background:url(tree.jpg) 0 -1120px;}
+#treeBox .stop{background:url(tree.jpg) 0 -1680px;}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="lottery.js"></script>
+<script type="text/javascript" src="jfun.js"></script>
+</head>
+
+<body>
+<h1><center>Jquery+PHP摇圣诞树抽奖效果示例源码</center></h1>
+<div class="intro">
+这个抽奖效果是在网易理财那里看到的，圣诞节时用这个抽奖效果还不错吧？在这里分享一下，希望有人能喜欢。另外，还有很多其他抽奖效果，有兴趣的话，可以去我的<a href="http://www.thinkcart.net" target="_blank">博客</a>看看。<br />
+附示例JS代码、示例PHP代码打包下载。
+</div>
+<div class="demo">
+  <h2>效果演示：</h2>
+  <div id="treeBox">
+    <div id="tree" class="normal">
+        <a class="btn" href="javascript:void(0);" onclick="start_lottery()"><img src="btn.gif" width="302" height="88" /></a>
+    </div>
+  </div>
+</div>
+<div class="demo">
+<h2>注意事项</h2>
+1.暂时没想到。有问题，请给我留言吧。<a href="http://www.thinkcart.net/jquery-lottery-tree-299.html" target="_blank">点击给我留言</a><br /><br />
+2.不喜欢摇圣诞树？那试试<a target="_blank" href="http://www.thinkcart.net/share/lottery/" title="Jquery+Flash抽奖转盘源码模板v1.0">转盘</a>或<a target="_blank" href="http://www.thinkcart.net/share/bag/" title="Jquery+Flash打开礼袋抽奖效果示例源码">礼袋</a>或<a target="_blank" href="http://www.thinkcart.net/share/box/" title="Jquery+Flash捞宝箱抽奖示例源码">捞宝箱</a>或<a target="_blank" href="http://www.thinkcart.net/share/lottery-marquee/" title="Jquery+PHP走马灯抽奖效果示例源码">走马灯</a>或<a target="_blank" href="http://www.thinkcart.net/share/slot/" title="Jquery+Flash老虎机抽奖源码模板v1.0">老虎机</a>或<a target="_blank" href="http://www.thinkcart.net/share/lottery-balloon/" title="Jquery射气球抽奖效果示例源码">射气球</a>或<a target="_blank" href="http://www.thinkcart.net/share/lottery-card/" title="Jquery+Flash翻牌抽奖效果示例源码">翻牌</a>或<a target="_blank" href="http://www.thinkcart.net/share/egg2/" title="Jquery+Flash砸金蛋抽奖效果示例源码">砸金蛋</a>吧！
+<br /><br />
+</div>
+<div id="footer">
+<a href="http://www.thinkcart.net">thinkphp学习博客</a>- 记录工作，生活，学习的点点滴滴！<br />
+<a href="http://www.diahosting.com/client/aff.php?aff=1979">美国VPS</a>- 感谢提供服务器！<br />
+</div>
+
+<div class="box" id="award_1">
+    <a class="close" hidefocus="true" href="javascript:;" onclick="effect.zoomOut('award_1',1);"> × </a>
+    <div class="pic"><img src="award/1.jpg" width="200" height="193" /></div>
+    <div class="title">恭喜您抽中的是神仙姐姐</div>
+    <div class="description">揉揉我的眼睛，咬咬我的手指，请问这是真的吗？没错！别怀疑了！你要相信奇迹！</div>
+</div>
+
+<div class="box" id="award_2">
+    <a class="close" hidefocus="true" href="javascript:;" onclick="effect.zoomOut('award_2',1);"> × </a>
+    <div class="pic"><img src="award/2.jpg" width="200" height="160" /></div>
+    <div class="title">恭喜您抽中的是如花</div>
+    <div class="description">你说是你手贱呢？还是我邪恶了？怎么可以这么重口味呢?</div>
+</div>
+
+<div class="box" id="award_3">
+    <a class="close" hidefocus="true" href="javascript:;" onclick="effect.zoomOut('award_3',1);"> × </a>
+    <div class="pic"><img src="award/3.jpg" width="200" height="215" /></div>
+    <div class="title">恭喜您抽中的是芙蓉姐姐</div>
+    <div class="description">你性福了！自从芙蓉姐姐减肥成功而成为女神以后，不知有多少宅男为她消耗了多少纸巾！</div>
+</div>
+
+<div class="box" id="award_4">
+    <a class="close" hidefocus="true" href="javascript:;" onclick="effect.zoomOut('award_4',1);"> × </a>
+    <div class="pic"><img src="award/4.jpg" width="180" height="230" /></div>
+    <div class="title">恭喜您抽中的是凤姐</div>
+    <div class="description">不会吧？这么低的中奖概率你都能抽中，看来你跟凤姐确实是有缘分！你就收了她，好吗？不过，人家凤姐不一定看得上你，你是清华北大的高材生吗？</div>
+</div>
+</body>
+</html>

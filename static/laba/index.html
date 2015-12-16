@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>漫漫小长假 小开陪你一起过！</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="keywords" content="漫漫小长假 小开陪你一起过！" />
+	<meta name="description" content="漫漫小长假 小开陪你一起过！" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/jq.layer.css" />
+</head>
+
+<body>
+<!-- music -->
+<audio id="bgmusic" src="images/machine.mp3" preload="auto"></audio>
+<!--加载页面 S-->
+<div class="loading" id="loading">
+  <div class="abs">
+    <div class='pro-box'>
+      <img src="images/icon_loading.gif" alt="">
+      <div class='pro_div' id='pro_div'>
+        <div class='pro_bg'></div>
+        <div class='pro'></div>
+      </div>
+      <div class='nowloading'>
+        <p class="loading_rate" id="loading_rate">0%</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--加载页面 E-->
+<div class="page-wrap" id="page-start" style='display:none;'>
+  <div class="top">
+    <img src="images/top.png" alt="">
+    <div class="top-text"><span class="c1">即日起至10月7日,</span>每天都能获得一次抽奖机会哦~<br>每天<span class="c1">首次分享</span> 能额外获得一次抽奖机会呢!<br>书币、会员，缤纷好礼让你这个假期过得更精彩！</div>
+  </div>
+  
+  <div class="modle-machine">
+    <div class="machineContainer flex">
+
+      <div id="machine1" class="slotMachine">
+        <div class="slot slot1"></div>
+        <div class="slot slot2"></div>
+        <div class="slot slot3"></div>
+      </div>
+      
+      <div id="machine2" class="slotMachine">
+        <div class="slot slot1"></div>
+        <div class="slot slot2"></div>
+        <div class="slot slot3"></div>
+      </div>
+      
+      <div id="machine3" class="slotMachine">
+        <div class="slot slot1"></div>
+        <div class="slot slot2"></div>
+        <div class="slot slot3"></div>
+      </div>
+      
+    </div>
+    <div class="stick"></div>
+  </div>
+  <div class="lotteryNum">今天还有 <span class="c1">2</span> 次抽奖机会</div>
+  <div class="btn-box">
+    <a href="javascript:void(0);" id="slotMachineButton" class="btns btn1"></a><a href="javascript:void(0);" id="btn-share" class="btns btn2"></a>
+  </div>
+               
+  <div class="rule_text">
+    <div class="rule_top"><img src="images/rule_top.png" alt=""></div>
+    <h2><img src="images/tit.png" alt=""></h2>
+    <div class="rule_cont">
+    1.参与活动请先升级至<em>7.19</em>及以上版本；<br>
+    2.分享后如若未加抽奖机会，请<em>刷新页面</em>；<br>
+    3.本次活动最终解释权归开卷小说所有。
+    </div>
+  </div>
+</div>
+
+<div id="pop-box1" class="pop-box" style="display:none">
+  <div class="pBox">
+    <h2>每日首次分享<br><em>即可获得一次抽奖机会</em></h2>
+    <div class="pop-btn"><a href="javascript:void(0);" class="btns btn4"></a></div>
+  </div>
+</div>
+
+<div id="pop-box2" class="pop-box" style="display:none">
+  <div class="pBox">
+    <div class="win"></div>
+    <h3>得到<em>30</em>天会员！</h3>
+    <div class="pop-btn"><a href="javascript:void(0);" class="btns btn3"></a></div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.slotmachine.js"></script>
+<script src="js/jq.layer.js" ></script>
+<script>
+var loadbgmusic = function() {
+  var audio = document.getElementById('bgmusic');
+  
+  if(audio.paused){
+    audio.play(); 
+  }
+};
+
+/********加载图片 S*******/
+var load = document.getElementById('loading');
+var pw = parseInt( $('#pro_div .pro_bg').css('width') );
+var imgSources = ['icon_loading.gif', 'top.png', 'machine.png', 'slot1.png', 'slot2.png', 'slot3.png', 'stick.png', 'btn1.png', 'btn2.png', 'btn3.png', 'btn4.png', 'rule_top.png', 'tit.png', 'bg_hb.png', 'win.png'];
+var nowload = 0;    //记录当前加载图片的数量
+var imgVal = imgSources.length;     //需要加载的图片数量
+var imgPath = 'images/';
+var loadingPage = (function () {
+  for (var i = 0; i < imgSources.length; i++) {
+    imgSources[i] = (imgPath + imgSources[i]);
+  };
+  var loadImage = function (path, callback) {
+    var img = new Image();
+    img.onload = function () {
+      img.onload = null;
+      callback(path);
+      nowload++;
+      $('#pro_div .pro').css('width', pw / imgVal * nowload);
+    }
+    img.src = path;
+  }
+  var imgLoader = function (imgs, callback) {
+    var len = imgs.length, i = 0;
+    while (imgs.length) {
+      loadImage(imgs.shift(), function (path) {
+        callback(path, ++i, len);
+      })
+    }
+  }
+  var rateNum = document.getElementById('loading_rate');
+  var bar = document.getElementById('bar');
+  var percent = 0;
+  imgLoader(imgSources, function (path, curNum, total) {
+    percent = curNum / total;
+    rateNum.innerHTML = Math.floor(percent * 100) + '%';
+    if (percent == 1) {
+      setTimeout(function () {
+        $('#loading').css('display', 'none');
+        initPage01();
+      }, 500);
+    }
+  });
+})(); /********加载图片 E*******/
+
+function initPage01(){
+  $('#page-start').css('display', 'block').addClass('active');
+
+  var machine1 = $("#machine1").slotMachine({
+    active  : 0,
+    delay : 800
+  });
+  
+  var machine2 = $("#machine2").slotMachine({
+    active  : 1,
+    delay : 800
+  });
+  
+  var machine3 = $("#machine3").slotMachine({
+    active  : 2,
+    delay : 800
+  });
+  
+  function onComplete(active){
+    switch(this.element[0].id){
+      case 'machine1':
+        //$("#machine1Result").text("Index: "+this.active);
+        break;
+      case 'machine2':
+        //$("#machine2Result").text("Index: "+this.active);
+        break;
+      case 'machine3':
+        //$("#machine3Result").text("Index: "+this.active);
+        break;
+    }
+  }
+  
+  $("#slotMachineButton").click(function(){ 
+
+    machine1.shuffle(5, onComplete);
+      
+    setTimeout(function(){
+      machine2.shuffle(5, onComplete);
+    }, 500);
+    
+    setTimeout(function(){
+      machine3.shuffle(5, onComplete);
+    }, 1000);
+
+    setTimeout(function(){
+      $('.stick').removeClass('act');
+    }, 6000);
+
+    loadbgmusic();  
+    $('.stick').addClass('act');
+
+  });
+
+}
+
+
+$('#btn-share').click(function(){
+  $.LAYER.show({id:'pop-box1',layerContainer:'mark',overlay:{color:'#000',opacity:0.75}});
+});
+
+</script>
+</body>
+</html>

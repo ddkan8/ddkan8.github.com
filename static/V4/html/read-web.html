@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>图书阅读</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<div class="wrap-page">
+  <div class="read-content">
+    <p>关于小说的故事：最早发生的事情，是在长沙的镖子岭。</p>
+    <p>新中国成立初期，几个盗墓贼从战国古墓中盗出了本书中最重要的物件——战国帛书。</p>
+    <p>这是吴邪爷爷上一代也就是狗五爷年少时的故事。当时没有江湖上的排行，比较有名的共九人—陈皮阿四、狗五、黑背老六、等等，其中最末的是解阿九，也就是解连环的老爸。</p>
+    <p>后面也有所谓的十爷、十一爷，那被认可的范围就很小了，都是自己或者手下的人封的，说到外面别人都不知道。有人说陈皮阿四现在九十多了，五十年前他也四十多了，而但还是狗五还不大，如果他当时十七岁，年少成名也得十年，那时候也就二十七，如何能排在年近五十的陈皮阿四后面，成为狗五？如此…… 就二十七，如何能排在年近五十的陈皮阿四后面，成为狗五？如此……</p>
+    <p>关于小说的故事：最早发生的事情，是在长沙的镖子岭。</p>
+    <p>新中国成立初期，几个盗墓贼从战国古墓中盗出了本书中最重要的物件——战国帛书。</p>
+    <p>这是吴邪爷爷上一代也就是狗五爷年少时的故事。当时没有江湖上的排行，比较有名的共九人—陈皮阿四、狗五、黑背老六、等等，其中最末的是解阿九，也就是解连环的老爸。</p>
+    <p>后面也有所谓的十爷、十一爷，那被认可的范围就很小了，都是自己或者手下的人封的，说到外面别人都不知道。有人说陈皮阿四现在九十多了，五十年前他也四十多了，而但还是狗五还不大，如果他当时十七岁，年少成名也得十年，那时候也就二十七，如何能排在年近五十的陈皮阿四后面，成为狗五？如此…… 就二十七，如何能排在年近五十的陈皮阿四后面，成为狗五？如此……</p>
+  </div>
+</div>
+<div class="download"><p id="download"><img src="../img/download-web2.png" alt=""></p></div>
+<div id="mark_ios"></div>
+<div id="mark_android"></div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/global.js"></script>
+<script>
+  $(function(){
+    if(browser() == "ios"){
+      $('#download').attr('url', 'http://um0.cn/a8FSe/');
+    }
+    if(browser() == "android"){
+        $('#download').attr('url', 'http://www.kingreader.com/dl/android/KingReaderAppV7.13.apk');
+    }
+    
+    $('#download').click(function(){
+      if (navigator.userAgent.toLowerCase().indexOf("micromessenger") > -1) {
+        if(browser() == "ios"){
+          $('#mark_ios').show();
+          return false;
+        }
+        if(browser() == "android"){
+          $('#mark_android').show();
+          return false;
+        }
+      } else {
+        location.href = this.getAttribute('url');
+      }
+    });
+    
+  });
+  function browser() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+    if (bIsIpad || bIsIphoneOs) {
+      return "ios";
+    } else if (bIsMidp || bIsUc7 || bIsUc || bIsAndroid) {
+      return "android";
+    } else if (bIsCE || bIsWM) {
+      return "wp";
+    } else {
+      return "pc";
+    }
+  }
+</script>
+</body>
+</html>

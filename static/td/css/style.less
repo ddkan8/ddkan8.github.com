@@ -1,0 +1,64 @@
+@import '_common.less';
+@import '_reset.less';
+
+.list{
+    margin:0 auto;
+    padding-bottom:90/@px2rem;
+    width: 750/@px2rem;
+    background-color: #fff;
+}
+.list ul{   
+    background-color: #fff;
+}
+.list li{
+    position: relative;
+    padding:24/@px2rem;
+    color: #999;
+    border-bottom: 1px solid #C8C7CC;
+}
+.list .tit{
+    color: #333;
+    .px2px(font-size, 34);
+}
+.list .desc{
+    margin-top:15/@px2rem;
+    .px2px(font-size, 30);
+}
+.list .date{
+    position: absolute;
+    right:24/@px2rem;
+    top:20/@px2rem;
+    .px2px(font-size, 30);
+}
+.fixed{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #ADADAD;
+    padding:14/@px2rem 0 15/@px2rem;
+    width: 100%;
+    height:60/@px2rem;
+    background-color: #fff;
+}
+.btn{
+    margin:0 auto;
+    border-radius:8/@px2rem;
+    width:240/@px2rem;
+    height:60/@px2rem;
+    line-height:60/@px2rem;
+    text-align: center;
+    color: #fff;
+    .px2px(font-size, 30);
+    background-color: #FF7900;
+}
+.btn span{
+    display: inline-block;
+    margin-right:20/@px2rem;
+    width:32/@px2rem;
+    height:32/@px2rem;
+    background: url(../img/icon_resize.png) no-repeat;
+    background-size: contain;
+    vertical-align: text-top;
+}
+
+

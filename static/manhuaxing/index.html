@@ -1,0 +1,115 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>好漫画伴你行-漫画行</title>
+  <meta name="keywords" content="好漫画伴你行-漫画行" />
+  <meta name="description" content="好漫画伴你行-漫画行" />
+  <style>
+    body{font-size:12px;font-family:Helvetica;color:#333;background-color: #F2CE6C;}
+    body,div,ul,li,p{margin:0;padding:0;}
+    ul{list-style: none;}
+    a{color:#fff;text-decoration:none;}
+    a:hover{color:#fff;text-decoration:none;}
+    img{border: 0;vertical-align: top;}
+    .clearfix{*zoom:1;}
+    .clearfix:after{content:'\20';display:block;height:0;clear:both;}
+    .wrap{margin:0 auto;width:998px;}
+    .top, .top .wrap{height: 84px;background-color: #E70D26;}
+    .top{border-bottom:1px solid #000;}
+    .top .wrap{position: relative;z-index: 2;}
+    .logo{display:inline;float:left;margin-left:114px;width:164px;height:84px;background: url(img/logo.png) center center no-repeat;}
+    .menu{position:absolute;right:0;top:0;padding-left:20px;width:510px;height:85px;background: url(img/bg_nav.png) no-repeat; }
+    .menu li{display:inline;float:left;width:162px;height:85px;}
+    .menu li a{display:block;height:85px;line-height:85px;}
+    .menu li.tougao{width:162px;}
+    .menu li.weixin{margin-left:-44px;width:160px;}
+    .menu li.weibo{margin-left:-37px;width:150px;}
+    .menu li.qun{margin-left:-36px;width:154px;}
+    .ewm_wx, .ewm_qun{top:85px;right:0;}
+    .main, .main .wrap{height:610px;}
+    .main{background-color: #F6DE9C;}
+    .main .wrap{position: relative;background: url(img/bg_cont.png) 6px 58px no-repeat #F6DE9C;}
+    .rel{position: relative;}
+    .abs{position: absolute;}
+    .logo2{right:50px;top:83px;width:332px;height:176px;background: url(img/logo2.png) no-repeat;}
+    .phone{left:49px;top:57px;width:420px;height:565px;background: url(img/phone.png) no-repeat;}
+    .ren1{left:6px;top:3px;width:178px;height:128px;background: url(img/ren1.png) no-repeat;}
+    .ren2{left:289px;top:228px;width:290px;height:398px;background: url(img/ren2.png) no-repeat;}
+    .btn_box{right:0;top:268px;padding-top:78px;width:417px;height:163px;background: url(img/bg_btn.png) no-repeat;}
+    .btn_android, .btn_ios{margin-top:6px;width:250px;height:75px;}
+    .btn_ios a, .btn_android a{display:block;height:75px;}
+    .bottom, .bottom .wrap{background-color:#F2CE6C;}
+    .bottom .wrap{height:72px;line-height:72px;text-align: center;}
+  </style>
+  <script>
+    window.onload = window.onresize = function() {
+      browserRedirect();
+    };
+    /*
+      @@判断是PC还是移动端
+      @@return [string] phone|pc
+    */
+    function browserRedirect() {
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        location.href='mobile/index.html';
+      }
+    }
+  </script>
+</head>
+
+<body>
+<div class="top">
+  <div class="wrap clearfix">
+    <div class="logo"></div>
+    <div class="menu">
+      <ul>
+        <li class="tougao"><a href="http://bbs.manhuadao.cn/" target="_blank"></a></li>
+        <li class="weixin rel"><img src="img/ewm_wx.jpg" alt="" class="ewm_wx abs" style="display:none;"></li>
+        <li class="weibo"><a href="http://weibo.com/comicsland/" target="_blank"></a></li>
+        <li class="qun rel"><img src="img/ewm_qun.png" alt="" class="ewm_qun abs" style="display:none;"></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="main">
+  <div class="wrap">
+    <div class="logo2 abs"></div>
+    <div class="phone abs"></div>
+    <div class="ren1 abs"></div>
+    <div class="ren2 abs"></div>
+    <div class="btn_box abs">
+      <div class="btn_android"><a href="http://a.manhuadao.cn/"></a></div>
+      <div class="btn_ios"><a href="http://um0.cn/1CXee3"></a></div>
+    </div>
+  </div>
+</div>
+<div class="bottom">
+  <div class="wrap">Copyright &copy 2014 MANHUADAO.CN 上海元聚网络科技有限公司 All Rights Reserved（商务合作QQ：317022157）
+
+</div>
+</div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script>
+$('.weixin').hover(function(){
+  $('.weixin .ewm_wx').show();
+},function(){
+  $('.weixin .ewm_wx').hide();
+});  
+$('.qun').hover(function(){
+  $('.qun .ewm_qun').show();
+},function(){
+  $('.qun .ewm_qun').hide();
+});
+</script>
+</body>
+</html>

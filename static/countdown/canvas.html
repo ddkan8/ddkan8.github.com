@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Canvas</title>
+<style>
+  html,body,#myCanvas{margin:0;padding:0;height: 100%;}
+  canvas{display: block;}
+</style>
+</head>
+
+<body>
+<canvas id="myCanvas">当前浏览器不支持canvas，请更换浏览器后再试！</canvas>
+<script src="digit.js"></script>
+<script src="countdown.js"></script>
+<script>
+// window.onload = function(){
+//   var myCanvas = document.getElementById('myCanvas');
+//   myCanvas.width = 1024;
+//   myCanvas.height = 768;
+//   if(myCanvas.getContext('2d')){
+//     var context = myCanvas.getContext('2d');
+//     // 使用context绘制
+//   }else{
+//     alert('当前浏览器不支持canvas，请更换浏览器后再试！');
+//   }
+
+//   context.beginPath();
+//   context.moveTo(100, 100);
+//   context.lineTo(400, 400);
+//   context.lineTo(100, 400);
+//   context.lineTo(100, 100);
+//   context.closePath();
+//   //context.lineWidth = 3;
+//   //context.strokeStyle = '#f00';
+//   context.fillStyle = 'rgb(0, 0, 255)';
+//   // 绘制的状态
+
+//   //context.stroke();
+//   context.fill(); // 填充颜色
+//   // 绘制的方法
+  
+//   context.lineWidth = 3;
+//   context.strokeStyle = '#f00';
+//   context.stroke(); // 绘制线条
+  
+//   context.beginPath();
+//   context.moveTo(200, 100);
+//   context.lineTo(500, 400);
+//   context.closePath();
+
+//   context.lineWidth = 5;
+//   context.strokeStyle = '#ff0';
+//   context.stroke();
+// };
+
+// var tangram = [
+//   {p:[{x:0, y:0}, {x:800, y:0}, {x:400, y:400}], color:"#C6F261"},
+//   {p:[{x:0, y:0}, {x:400, y:400}, {x:0, y:800}], color:"#60B6D0"},
+//   {p:[{x:0, y:800}, {x:400, y:800}, {x:200, y:600}], color:"#FE9CCD"},
+//   {p:[{x:200, y:600}, {x:400, y:800}, {x:600, y:600}, {x:400, y:400}], color:"#A497BE"},
+//   {p:[{x:400, y:400}, {x:600, y:600}, {x:600, y:200}], color:"#FCEA11"},
+//   {p:[{x:800, y:0}, {x:600, y:200}, {x:600, y:600}, {x:800, y:400}], color:"#FF5061"},
+//   {p:[{x:800, y:400}, {x:800, y:800}, {x:400, y:800}], color:"#FCC520"}
+// ];
+// window.onload = function(){
+//   var myCanvas = document.getElementById('myCanvas');
+//   myCanvas.width = 800;
+//   myCanvas.height = 800;
+
+//   var context = myCanvas.getContext('2d');
+
+//   for(var i=0; i<tangram.length; i++){
+//     draw(tangram[i], context);
+//   }
+
+//   function draw(piece, cxt){
+//     cxt.beginPath();
+//     cxt.moveTo(piece.p[0].x, piece.p[0].y);
+
+//     for(var i=1; i<piece.p.length; i++){
+//       cxt.lineTo(piece.p[i].x, piece.p[i].y);
+//     }
+
+//     cxt.closePath();
+
+//     cxt.fillStyle = piece.color;
+//     cxt.fill();
+
+//     // cxt.strokeStyle = '#666';
+//     // cxt.lineWidth = 3;
+//     // cxt.stroke();
+//   }
+
+
+// };
+
+  // window.onload = function(){
+  //     var myCanvas = document.getElementById('myCanvas');
+  //     myCanvas.width = 800;
+  //     myCanvas.height = 800;
+
+  //     var context = myCanvas.getContext('2d');
+  //     context.arc(300, 300, 100, 0, 2*Math.PI, false);
+  //     // context.lineWidth = 4;
+  //     // context.strokeStyle = "#f00";
+  //     //context.stroke();
+  //     context.fillStyle = "#ff0";
+  //     context.fill();
+  // };
+</script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>漫画岛暑期漂流记</title>
+<link rel="stylesheet" href="content/css/style.css">
+<link rel="stylesheet" href="content/css/jq.layer.css">
+</head>
+
+<body>
+<div class="page-content">
+<!--加载页面 S-->
+<div class="loading" id="loading">
+  <div class="abs">
+    <div class='pro-box'>
+      <img src="content/img/icon_loading.gif" alt="">
+      <div class='pro_div' id='pro_div'>
+        <div class='pro_bg'></div>
+        <div class='pro'></div>
+      </div>
+      <div class='nowloading'>
+        <p class="loading_rate" id="loading_rate">0%</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--加载页面 E-->
+<!--开始游戏页面 S-->
+<div class="page-start" id="page-start" style='display:none;'>
+  <img src="content/img/bg_startPage.jpg" alt="">
+  <div class="cloud3 abs"></div>
+  <div class="top abs"></div>
+  <div class="cloud1 abs"></div>
+  <div class="cloud2 abs"></div>
+  <div class="zp abs"></div>
+  <div class="chuan abs"></div>
+  <div id="startgame" class="btn-start abs"></div>
+  <!-- <div class="rule abs"></div> -->
+  <div class="p2 abs"></div>
+  <div class="p1 abs"></div>
+</div>
+<!--开始游戏页面 E-->
+<!--游戏地图页面 S-->
+<div class="page-maps" id="page-maps" style='display:none;'>
+  <img src="content/img/bg_maps.jpg" alt="">
+  <div class="fish1 abs"></div>
+  <div class="fish2 abs"></div>
+  <div class="fish3 abs"></div>
+  <div class="line1 abs"></div>
+  <div class="line2 abs"></div>
+  <div class="line3 abs"></div>
+  <div class="guanka_chuan abs"><div class="arrow arrow1 abs"></div></div>
+  <div class="guanka_dt abs"><div class="arrow arrow2 abs"></div></div>
+  <div class="guanka_zp abs"><div class="arrow arrow3 abs"></div></div>
+  <div id="quitgame" class="btn-quit abs"></div>
+</div>
+<!--游戏地图页面 E-->
+<!--游戏关卡页面1 S-->
+<div id="page-level-1" class="page-level" style='display:none;'>
+  <img src="content/img/bg_dati.png" alt="">
+  <div class="btn-return abs"><em></em>返回地图</div>
+  <div class="font chuan-top abs"></div>
+  <div class="pass abs"></div>
+  <div class="item item1 abs">
+    <h2>1、《海贼王》中，萌物乔巴是以下哪个角色？</h2>
+    <ul class="cf">
+      <li>
+        <div class="img"><img src="content/images/p1_1.jpg" alt=""></div>
+        <div class="tit"><span class="dati_err"></span>伊丽莎白</div>
+      </li>
+      <li>
+        <div class="img"><img src="content/images/p1_2.jpg" alt=""></div>
+        <div class="tit"><span class="dati_suc"></span>乔巴</div>
+      </li>
+      <li>
+        <div class="img"><img src="content/images/p1_3.jpg" alt=""></div>
+        <div class="tit"><span class="dati_err"></span>魂</div>
+      </li>
+      <li>
+        <div class="img"><img src="content/images/p1_4.jpg" alt=""></div>
+        <div class="tit"><span class="dati_err"></span>哈姆太郎</div>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="btn_continue abs"></div>
+</div>
+<!--游戏关卡页面1 E-->
+<!--游戏关卡页面2 S-->
+<div id="page-level-2" class="page-level" style='display:none;'>
+  <img src="content/img/bg_dati.png" alt="">
+  <div class="btn-return abs"><em></em>返回地图</div>
+  <div class="font dt-top abs"></div>
+  <div class="pass abs"></div>
+  <div class="item item2 abs">
+    <h2>1、《海贼王》中，萌物乔巴是以下哪个角色？</h2>
+    <ul class="cf">
+      <li>
+        <div class="img"><img src="content/images/p1_1.jpg" alt=""></div>
+        <div class="tit"><span class="dati_err"></span>伊丽莎白</div>
+      </li>
+      <li>
+        <div class="img"><img src="content/images/p1_2.jpg" alt=""></div>
+        <div class="tit"><span class="dati_suc"></span>乔巴</div>
+      </li>
+      <li>
+        <div class="img"><img src="content/images/p1_3.jpg" alt=""></div>
+        <div class="tit"><span class="dati_err"></span>魂</div>
+      </li>
+      <li>
+        <div class="img"><img src="content/images/p1_4.jpg" alt=""></div>
+        <div class="tit"><span class="dati_err"></span>哈姆太郎</div>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="btn_continue abs"></div>
+</div>
+<!--游戏关卡页面2 E-->
+<!--游戏关卡页面3 S-->
+<div id="page-level-3" class="page-level" style='display:none;'>
+  <div class="btn-return abs"><em></em>返回地图</div>
+  <div class="font zp-top abs"></div>
+  <div class="ly_plate abs">
+    <div class="rotate"><img src="content/img/ly_plate.png" id="lotteryImg" alt=""></div>
+    <div id="lottery_star" class="lottery_star"><div></div></div>
+  </div>
+  <div class="btn-box abs"><span id="share-frends" class="btns btn-state1">分享给朋友</span></div>
+</div>
+<!--游戏关卡页面3 E-->
+</div>
+<!--弹层 S-->
+<div id="pop-box1" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit">恭喜你抽中到了xxx</div>
+    <div class="wining"></div>
+    <div class="pop-btnBox"><a href="" class="btns btn-state2">填写中奖信息</a></div>
+  </div>
+</div>
+
+<div id="pop-box2" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit w11 cf">
+      <div class="pity fl"></div>
+      <div class="txt fl">真可惜<em>╮(╯_╰)╭</em><br>今天的抽奖机会用完了<br>明天再来吧！</div>
+    </div> 
+    <div class="pop-btnBox mtop"><a href="" class="btns btn-downMhd"></a><a href="" class="btns btn-state3 mleft">分 享</a></div>
+  </div>
+</div>
+
+<div id="pop-box3" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit padding">你还没有集满<span class="c1">2个邮戳</span>哦~<br>先去通关吧！</div>
+  </div>
+</div>
+
+<div id="pop-box4" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit padding">你的中奖信息已成功提交！<br>我们将在5个工作日内为你寄送奖品！</div>
+    <div class="pop-btnBox mtop"><a href="" class="btns btn-downMhd"></a><a href="" class="btns btn-state3 mleft">分 享</a></div>
+  </div>
+</div>
+
+<div id="pop-box5" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit w11 cf">
+      <div class="pity fl"></div>
+      <div class="txt fl">真可惜<em>╮(╯_╰)╭</em><br>快去<span class="c1">漫画岛</span>涨涨姿势<br>再来挑战吧！</div>
+    </div> 
+    <div class="pop-btnBox mtop"><a href="" class="btns btn-downMhd"></a><a href="" class="btns btn-state3 mleft">分 享</a></div>
+  </div>
+</div>
+
+<div id="pop-box6" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit padding">*请认真填写您的有效收货信息</div>
+    <ul class="pop-form">
+      <li>姓名：<input type="text" value="" class="pop-input"></li>
+      <li>电话：<input type="text" value="" class="pop-input"></li>
+      <li>地址：<input type="text" value="" class="pop-input"></li>
+    </ul>
+    <div class="pop-btnBox mtop"><a href="" class="btns btn-state3">完 成</a></div>
+  </div>
+</div>
+
+<div id="pop-box7" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <ul class="share-api padding cf">
+      <li><img src="content/img/icon_weibo.png" alt=""><em>微博登录</em></li>
+      <li><img src="content/img/icon_qqzone.png" alt=""><em>QQ登录</em></li>
+      <li><img src="content/img/icon_weixin.png" alt=""><em>微信登录</em></li>
+    </ul>
+    <div class="tit line-top">登录一下马上<span class="c1">抽奖</span><br>快点试试运气吧！</div>
+  </div>
+</div>
+
+<div id="pop-box8" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <ul class="share-api padding cf">
+      <li><img src="content/img/icon_weibo.png" alt=""><em>微博</em></li>
+      <li><img src="content/img/icon_qqzone.png" alt=""><em>QQ空间</em></li>
+      <li><img src="content/img/icon_weixin.png" alt=""><em>微信</em></li>
+    </ul>
+    <div class="pop-btnBox line-top"><a href="" class="btns btn-state5">取 消</a></div>
+  </div>
+</div>
+
+<div id="pop-box9" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit padding">你确认退出漂流吗？<br>收集的邮戳会被上交给国家哦！</div>
+    <div class="pop-btnBox mtop"><a href="" class="btns btn-state5">确认退出</a><a href="javascript:void(0);" onclick="$.LAYER.close();" class="btns btn-state4 mleft">继续漂流</a></div>
+  </div>
+</div>
+
+<div id="pop-box10" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <div class="tit padding">你已经抽过奖了<br>把机会推荐给朋友吧！</div>
+    <div class="pop-btnBox mtop"><a href="" class="btns btn-state3">分享给好友</a></div>
+  </div>
+</div>
+
+<div id="pop-box11" class="pop-box" style='display:none;'>
+  <div class="inner">
+    <div class="btn-close"></div>
+    <h2>活动规则</h2>
+    <div class="cont">
+    2015年7月31日至8月15日期间，参加“漫画岛暑期漂流记”，顺利完成项目关卡、拿到活动邮戳，就能参加抽奖活动，有机会赢取iPhone6大奖哦~<br>
+    活动流程：<br>
+    1、点击“开始游戏”，先后完成“海贼船”、“悬疑灯塔”两个项目的答题活动，拿到邮戳；<br>
+    2、集满2枚邮戳后，登录“运气大陆”，就能参加抽奖啦！<br>
+    3、每位登录用户，每日限玩一次呦~
+    </div>
+  </div>
+</div>
+
+<div id="mark_ios"></div>
+<div id="mark_android"></div>
+<!--弹层 E-->
+<script type="text/javascript" src="content/js/jquery.min.js"></script>
+<script type="text/javascript" src="content/js/jQueryRotate.2.2.js"></script>
+<script type="text/javascript" src="content/js/jquery.easing.min.js"></script>
+<script type="text/javascript" src="content/js/jq.layer.js"></script>
+<script type="text/javascript" src="content/js/global.js"></script>
+</body>
+</html>

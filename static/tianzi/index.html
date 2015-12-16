@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>微信分享填字游戏</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="start" class="box">
+  <div class="bg"><img src="img/bg.png" alt=""><div class="logo"></div></div>
+  <div class="bg"><img src="img/bg_index.png" alt=""></div>
+  <div class="top_index"><img src="img/top_index.png" alt=""></div>
+  <div class="icon_book"></div>
+  <div class="tips">答对三题就能获得神秘奖励哦！赶紧来试试吧~</div>
+  <div id="startBtn" class="btns" style="display:none">开始</div>
+  <div class="loading" id="loading" style="display:none">
+    <div class="abs">
+      <div class='pro-box'>
+        <div class='pro_div' id='pro_div'>
+          <div class='pro_bg'></div>
+          <div class='pro'></div>
+        </div>
+        <div class='nowloading'>
+          <p class="loading_rate" id="loading_rate">0%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="main" class="box" style="display:none">
+  <div class="bg"><img src="img/bg.png" alt=""><div class="logo"></div></div>
+  <div class="bg"><img src="img/top.png" alt=""></div>
+  <div class="top">
+    已经答对<span class="succNum">0</span>题
+  </div>
+  <h2 class="tips">请使用下面的汉字组成一本书的名字</h2>
+  <div id="box"></div> 
+</div>
+
+<div id="end" class="box" style="display:none">
+  <div class="bg"><img src="img/bg.png" alt=""><div class="logo"></div></div>
+  <div id="succBox" class="bg" style="display:none">
+    <img src="img/gx.png" alt="">
+    <div class="text">您获得了100书币兑换码</div>
+    <div class="code"><span>123456456456456789</span></div>
+    <div class="text">长按复制，黏贴在兑换码页面中即可</div>
+  </div>
+  <div id="failBox" class="bg" style="display:none">
+    <img src="img/kx.png" alt="">
+    <div class="text">人生豪迈，不如重头再来</div>
+  </div>
+  <div class="btnBox">
+    <div id="" class="btns">了解更多</div>
+    <div id="resetBtn" class="btns">再来一次</div>
+    <div id="" class="btns">分享好友</div>
+  </div>
+</div>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

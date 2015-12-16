@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>提现中心</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<div id="container">
+<header class="m-header">
+  <section class="read-top flex flex-ac flex-pj">
+    <div class="m-return"></div>
+    <div class="m-tit flex-1">提现中心</div>
+    <div class="m-home"></div>
+  </section>
+</header>
+<div class="wrap-page">
+<div class="wrap">  
+  
+  <div class="tabs-cash">
+    
+    <ul class="hd cf">
+      <li class="active"><em class="cashAlipay"></em>支付宝提现</li>
+      <li><em class="cashShubi"></em>余额转书币</li>
+    </ul>
+    
+    <div class="bd">
+      <div class="cash-item">
+        <div class="balance">
+          <h2>可提现的账户余额：1000.00元</h2>
+          <p>所输入金额须是10的倍数，最低为10元</p>
+        </div>      
+        <ul class="cash-form">
+          <li class="cf">
+            <label>账号</label>
+            <p><input type="text" value="" placeholder="请输入正确的支付宝账号" class="inputCash"></p>
+          </li>
+          <li class="cf">
+            <label>姓名</label>
+            <p><input type="text" value="" placeholder="与支付宝开户姓名一致" class="inputCash"></p>
+          </li>
+          <li class="cf">
+            <label>金额</label>
+            <p><input type="text" value="" placeholder="100" class="inputCash"></p>
+          </li>
+        </ul>
+        <div class="btns cash-btn">确认提现</div>
+      </div>
+      <div class="cash-item" style="display: none;">
+        <div class="balance">
+          <h2>可提现的账户余额：1000.00元</h2>
+          <p>所输入金额须是10的倍数，最低为10元</p>
+        </div>      
+        <ul class="cash-form">
+          <li class="cf">
+            <label>账号</label>
+            <p>大魔王（书友123456）</p>
+          </li>
+          <li class="cf">
+            <label>金额</label>
+            <p><input type="text" value="" placeholder="100" class="inputCash"></p>
+          </li>
+        </ul>
+        <div class="btns cash-btn">确认提现</div>
+      </div>
+    </div>
+    <div class="cash-cue">温馨提示：<br>1.分成收入可用户支付宝提现或开卷书币充值；<br>2.支付宝提现申请完成后，我们会在<em class="c-b1">24小时</em>内汇款；书币充值申请完成后，我们会在<em class="c-b1">10分钟</em>内充值到您的开卷账户；<br>3.提现或申请完成后，您可在<a href="present_record.html">提现及充值记录</a>中查看提现或充值申请的状态；<br>4.如有疑问或咨询，可联系我们的微信公众号【开卷有益】，工作时间为周一至周五9:15-18:15</div>
+  </div>
+  
+</div>   
+</div>
+<footer class="m-footer">
+  <ul class="m-nav-btm flex">
+    <li>开卷首页</li>
+    <li>书籍分类</li>
+    <li>客户端下载</li>
+    <li>客服咨询</li>
+  </ul>
+  <p>ICP:沪ICP备15007044号<br>Copyright &copy; 2013 All rights reserved.</p>
+</footer>
+</div>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/global.js"></script>
+<script type="text/javascript">
+  $('.tabs-cash .hd li').click(function(){
+    $(this).siblings('li').removeClass('active');
+    $(this).addClass('active');
+    var index = $(this).index();
+    $('.tabs-cash .bd>div').hide()
+    $('.tabs-cash .bd>div').eq(index).show();
+  });	
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>关于我们</title>
+<link rel="stylesheet" href="../css/style.min.css">
+<link rel="stylesheet" href="../css/jq.layer.css">
+</head>
+
+<body>
+<div class="m-nav flex flex-ac flex-pj">
+  <div class="m-return" onclick="javascript :history.back(-1);"></div>
+  <div class="m-tit flex-1">其他</div>
+</div>
+<div class="wrap-page">
+	<ul class="other-item mTop20 lineTB">
+	  <li><a href="service.html">自助服务</a></li>
+	  <li><a href="javascript:;" id="ggBtn">历史公告</a></li>
+	</ul>
+	<ul class="other-item mTop20 lineTB">
+    <li><a href="javascript:;" id="appBtn">更新应用名称</a></li>
+    <li><a href="aboutus.html">联系我们</a></li>
+  </ul>
+</div>
+
+<div id="pop-gg" class="pop-box" style="display: none">
+  <section class="pop-section">
+    <div class="pop-txt2 c-t1">暂无历史公告</div>
+  </section>
+</div>
+
+<div id="pop-appUpdate" class="pop-box" style="display: none">
+  <section class="pop-section">
+    <div class="pop-txt2 c-t1">已经是最新版本，无需更新</div>
+  </section>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jq.layer.js"></script>
+<script type="text/javascript">
+$(function(){
+  $('#ggBtn').click(function(e){
+    e.stopPropagation();
+    $.LAYER.show({id:'pop-gg',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}});  
+  });
+  
+  $('#appBtn').click(function(e){
+    e.stopPropagation();
+    $.LAYER.show({id:'pop-appUpdate',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}});  
+  });
+
+  $(document.body).click(function(){
+    $.LAYER.close();
+  });
+});
+</script>
+</body>
+</html>

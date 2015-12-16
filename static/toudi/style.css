@@ -1,0 +1,121 @@
+.list {
+  padding-bottom: 1.2rem;
+  background-color: #fff;
+}
+.list ul {
+  background-color: #fff;
+}
+.list li {
+  position: relative;
+  padding-left: 0.32rem;
+  padding-right: 0.32rem;
+  padding-top: 0.32rem;
+  padding-bottom: 0.32rem;
+  color: #999;
+  border-bottom: 1px solid #C8C7CC;
+}
+.list .tit {
+  color: #333;
+  font-size: 17px;
+}
+[data-dpr="2"] .list .tit {
+  font-size: 34px;
+}
+[data-dpr="2.5"] .list .tit {
+  font-size: 43px;
+}
+[data-dpr="2.75"] .list .tit {
+  font-size: 47px;
+}
+[data-dpr="3"] .list .tit {
+  font-size: 51px;
+}
+[data-dpr="4"] .list .tit {
+  font-size: 68px;
+}
+.list .desc {
+  margin-top: 0.2rem;
+  font-size: 15px;
+}
+[data-dpr="2"] .list .desc {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .list .desc {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .list .desc {
+  font-size: 41px;
+}
+[data-dpr="3"] .list .desc {
+  font-size: 45px;
+}
+[data-dpr="4"] .list .desc {
+  font-size: 60px;
+}
+.list .date {
+  position: absolute;
+  right: 0.32rem;
+  top: 0.26666667rem;
+  font-size: 15px;
+}
+[data-dpr="2"] .list .date {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .list .date {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .list .date {
+  font-size: 41px;
+}
+[data-dpr="3"] .list .date {
+  font-size: 45px;
+}
+[data-dpr="4"] .list .date {
+  font-size: 60px;
+}
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #ADADAD;
+  padding-top: 0.18666667rem;
+  padding-bottom: 0.2rem;
+  width: 100%;
+  height: 0.8rem;
+  background-color: #fff;
+}
+.btn {
+  margin: 0 auto;
+  border-radius: 0.1066666666666667rem;
+  width: 3.2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  background-color: #FF7900;
+}
+[data-dpr="2"] .btn {
+  font-size: 30px;
+}
+[data-dpr="2.5"] .btn {
+  font-size: 38px;
+}
+[data-dpr="2.75"] .btn {
+  font-size: 41px;
+}
+[data-dpr="3"] .btn {
+  font-size: 45px;
+}
+[data-dpr="4"] .btn {
+  font-size: 60px;
+}
+.btn span {
+  display: inline-block;
+  margin-right: 0.26666667rem;
+  width: 0.42666667rem;
+  height: 0.42666667rem;
+  background: url(../img/icon_resize.png) no-repeat;
+  background-size: contain;
+  vertical-align: text-top;
+}

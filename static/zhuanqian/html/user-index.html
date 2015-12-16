@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title></title>
+<link rel="stylesheet" href="../css/style.min.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/jq.layer.css">
+</head>
+
+<body>
+<div class="m-nav flex flex-ac flex-pj">
+  <div class="m-return" onclick="javascript :history.back(-1);"></div>
+  <div class="m-tit flex-1">爱玩客</div>
+</div>
+<div class="wrap-page">
+	<div class="user-info lineBtm">
+	  <div class="hd flex flex-ac flex-pj">
+  	  <ul class="profit flex-1">
+  	    <li>
+  	      <h2>今日收益 (元)</h2>
+  	      <p>888.88</p>
+  	    </li>
+  	  </ul>
+  	  <div class="ext-uTop">
+    		<div class="head rel"><a href="user-info.html"><img src="../img/head.jpg" alt=""></a><em class="yes abs"></em></div>
+    		<div class="user-id">无名字就写ID</div>
+  		</div>
+    </div>
+		<ul class="user-bankroll flex flex-ac">
+			<li class="flex-1">
+				<h2>账户余额：</h2>
+				<p>10.00元</p>
+			</li>
+			<li class="flex-1">
+				<h2>累计收入：</h2>
+				<p>10.00元</p>
+			</li>
+		</ul>
+	</div>
+	<ul class="user-nav flex flex-ac lineBtm bgc1">
+	  <li class="flex-1"><a href="">明细</a></li>
+	  <li class="flex-1"><a href="">收徒</a></li>
+	  <li class="flex-1"><a href="">提现</a></li>
+	</ul>
+	<ul class="user-list lineTB mTop20 bgc1">	
+		<li class="flex flex-ac">
+			<div class="user-icon"><img src="../img/icon_user1.png" alt=""></div>
+			<div class="user-cont flex-1">
+				<div class="app-arrow">新手任务</div>
+				<p>任务描述任务描述任务描述任务描述任务描</p>
+			</div>
+		</li>
+		<li class="flex flex-ac">
+			<div class="user-icon"><img src="../img/icon_user2.png" alt=""></div>
+			<div class="user-cont flex-1">
+				<div class="app-arrow">限时任务</div>
+				<p>任务描述任务描述任务描述任务描述任务描</p>
+			</div>
+		</li>
+		<li class="flex flex-ac">
+			<div class="user-icon"><img src="../img/icon_user3.png" alt=""></div>
+			<div class="user-cont flex-1">
+				<div class="app-arrow">联盟任务</div>
+				<p>任务描述任务描述任务描述任务描述任务描</p>
+			</div>
+		</li>
+  </ul>
+	<ul class="user-list lineTB mTop20 bgc1">
+		<li class="flex flex-ac">
+			<div class="user-icon"><img src="../img/icon_user4.png" alt=""></div>
+			<div class="user-cont flex-1">
+				<div class="app-arrow">其他</div>
+				<p>任务描述任务描述任务描述任务描述任务描</p>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<div id="demo111" class="pop-box" style="display: none">
+  <div class="pbox2">
+    <div class="p-tit">头像修改</div>
+    <div class="swiper-container swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../img/head.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../img/head.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../img/head.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../img/head.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="../img/head.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="btnBox3"><div class="btns btn-state3">提交</div></div>
+  </div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jq.layer.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/global.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper1', {
+  slidesPerView: 3,
+  paginationClickable: true,
+  spaceBetween: 30,
+  loop : true
+});
+
+$('.swiper-slide').click(function(){
+  $('.swiper-slide').removeClass('on');
+  $(this).toggleClass('on');
+});
+
+$('.ext-uTop .head').click(function(){
+  $.LAYER.show({id:'demo111',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}});
+  swiper.update();
+});
+
+</script>
+</body>
+</html>

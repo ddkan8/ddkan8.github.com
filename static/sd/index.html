@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>圣诞活动</title>
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/pageResponse.min.js"></script>
+	<script>
+		window.onload = window.onresize = function(){
+		  pageResponse({
+		    selectors : '.page',
+		    mode : 'contain',
+		    width : '640',
+		    height : '1008'
+		  });
+		};
+	</script>
+</head>
+
+<body>
+<!--加载页面 S-->
+<div class="loading abs" id="loading">
+  <div class="abs">
+    <div class='pro-box'>
+      <img src="img/loading.gif" alt="">
+      <div class='pro_div' id='pro_div'>
+        <div class='pro_bg'></div>
+        <div class='pro'></div>
+      </div>
+      <div class='nowloading'>
+        <p class="loading_rate" id="loading_rate">0%</p>
+      </div>
+    </div>
+    <div class="btm_logo abs"></div>
+  </div>
+</div>
+<!--加载页面 E-->
+<div id="wrap" class="page" style="display:none;">
+
+	<audio id="bgmusic" loop="loop" src="img/christmas.mp3" preload="auto"></audio>
+	<div id="cardsound" class="cardsound"></div>
+
+	<div id="start" class="start" style="display:none;">
+		<div class="bg_index"></div>
+		<div class="scroll_txt">
+			<p>
+			Single day，single day，<br>single all the way，<br>这么浪漫的日子，没有圣诞<br>老人/麋鹿少女real不算是<br>圣诞节，赶紧找到房屋中的<br><span class="t_c1">4块隐秘碎片</span>，召唤你的专<br>属圣诞老人/麋鹿少女吧。<br>偷偷告诉你，摘下他的胡子<br>有/摘下她的伪装有惊喜哦！
+			</p>
+		</div>
+	  <canvas width="100%" height="100%" class="snow snow1"></canvas>
+	  <div class="btn_start">
+	  	<div class="star1"></div>
+	  	<div class="star2"></div>
+	  	<div class="star3"></div>
+	  </div>
+	  <div class="dialog dialog_index">
+	  	<div class="txt">选择性别：</div>
+	  	<ul class="btn_box">
+	  		<li class="btn_boy">我是男生</li>
+	  		<li class="btn_girl">我是女生</li>
+	  	</ul>
+	  </div>
+	</div>
+
+	<div id="main" style="display:none;">
+
+		<ul class="shred_top">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+		<div class="shred_box">
+			<div class="flip">
+				<ul class="front">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="back"></ul>
+			</div>
+			<div class="dialog dialog_shred">
+				<div class="result_yes">
+					<div class="txt">Wow，看起来你<br>马上要得到你的圣<br>诞节礼物了呢！</div>
+				</div>
+		  </div>
+		</div>
+
+		<div id="level1" class="level" style="display:none;">
+			<div class="window"></div>
+		  <canvas width="100%" height="100%" class="snow snow2"></canvas>
+			<div class="bg_level1 box">
+				<div class="stocking item"><img src="img/shred1.png" style="display:none;" alt=""></div>
+				<p class="tips"></p>
+			</div>
+		</div>
+
+		<div id="level2" class="level" style="display:none;">
+			<div class="bg_level2 box">
+				<div class="book item"><img src="img/shred2.png" style="display:none;" alt=""></div>
+				<div class="candle">
+					<div class="fuego"></div>
+				</div>
+				<div class="bonfire">
+					<div class="halo1"></div>
+					<div class="halo2"></div>
+					<div class="c1"></div>
+					<div class="c2"></div>
+					<div class="c3"></div>
+					<div class="wood"></div>
+					<div class="flame"></div>
+				</div>
+				<p class="tips"></p>
+			</div>
+		</div>
+
+		<div id="level3" class="level" style="display:none;">
+			<div class="bg_level3 box">
+				<div class="santa_hat item"><img src="img/shred3.png" style="display:none;" alt=""></div>
+				
+				<div class="candle_box">
+					<div class="candle">
+						<div class="fuego"></div>
+					</div>
+					<div class="candle">
+						<div class="fuego"></div>
+					</div>
+					<div class="candle">
+						<div class="fuego"></div>
+					</div>
+					<div class="candle">
+						<div class="fuego"></div>
+					</div>
+					<div class="candle">
+						<div class="fuego"></div>
+					</div>
+					<div class="candle">
+						<div class="fuego"></div>
+					</div>
+				</div>
+
+				<div class="lights">
+					<div class="lg1"></div>
+					<div class="lg2"></div>
+					<div class="lg3"></div>
+				</div>
+				
+				<ul id="clock">
+			   	<li id="sec"></li>
+			   	<li id="hour"></li>
+					<li id="min"></li>
+				</ul>
+
+				<p class="tips"></p>
+			</div>
+		</div>
+
+		<div id="level4" class="level" style="display:none;">
+			<div class="bg_level4 box">
+				<div class="turkey item"><img src="img/shred4.png" style="display:none;" alt=""></div>
+
+				<div class="candle_box2">
+					<div class="candle">
+						<div class="c1"></div>
+						<div class="fuego"></div>
+					</div>
+					<div class="candle">
+						<div class="c2"></div>
+						<div class="fuego"></div>
+					</div>
+				</div>
+
+				<p class="tips"></p>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="end" style="display:none;">
+		<div class="box_boy bg_base" style="display:none;">
+			<div class="pic_boy"></div>
+			<div class="dialog dialog_end">
+		  	<div class="txt">扒开他的胡子！</div>
+		  </div>
+		  <div class="halo"></div>
+		</div>
+		<div class="box_girl bg_base" style="display:none;">
+			<div class="pic_girl"></div>
+			<div class="dialog dialog_end">
+		  	<div class="txt">扒开她的伪装！</div>
+		  </div>
+		  <div class="halo"></div>
+		</div>
+		<div class="end_result" style="display:none;">
+			<div class="head"></div>
+			<div class="bg_head"></div>
+			<div class="dialog dialog_endresult">
+		  	<div class="txt"></div>
+		  	<ul class="btn_box">
+		  		<li class="btn_share1"></li>
+		  		<li class="btn_share2"></li>
+		  	</ul>
+		  	<div class="qrcode"><img src="img/qrcode.png" alt=""></div>
+		  </div>
+		</div>
+	</div>
+</div>
+
+<div id="mark_ios"></div>
+<div id="mark_android"></div>
+
+<script src="js/jquery.let_it_snow.js"></script>
+<script src="js/jquery.fly.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

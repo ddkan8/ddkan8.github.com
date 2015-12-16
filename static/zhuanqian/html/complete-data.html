@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title></title>
+<link rel="stylesheet" href="../css/style.min.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/jq.layer.css">
+</head>
+
+<body>
+<div class="m-nav flex flex-ac flex-pj">
+  <div class="m-return" onclick="javascript :history.back(-1);"></div>
+  <div class="m-tit flex-1">完善资料</div>
+</div>
+<div class="m-main">
+  <section class="mod-info">
+    <div class="hd rel">
+      <ul class="form-item lineTB">
+        <li class="cf"><label>昵称</label><input type="text" class="inputText" placeholder="我的名字"></li>
+      </ul>
+      <div class="head abs"><img src="../img/head.jpg" alt=""><em class="no abs"></em></div>
+    </div>
+    <ul class="form-item lineTB">
+      <li class="cf">
+        <label>性别</label>
+        <select class="select">
+          <option value=""></option>
+          <option value="">男</option>
+          <option value="">女</option>
+        </select>
+      </li>
+      <li class="cf">
+        <label>生日</label>
+        <input type="date" class="dateText">       
+      </li>
+      <li class="cf">
+        <label>职业</label>
+        <select class="select">
+          <option value=""></option>
+          <option value="">boss</option>
+          <option value="">学生</option>
+        </select>
+      </li>
+    </ul>
+    <ul class="form-item lineTB">
+      <li class="cf"><a href=""><label>微信</label><span class="off">未绑定</span></a></li>
+    </ul>
+    <div class="btnBox2"><div class="btns langBtn">提交</div></div>
+  </section>
+  
+</div>
+
+<div id="pop1" class="pop-box" style="display: none">
+  <section class="pop-section">
+    <div class="pop-txt2">您的资料未完善,<br>这样无法获得任务奖励!</div>
+    <div class="btn-box"><span class="btns btn-state3 btn-cancel">放弃奖励</span><span class="btns btn-state2 ml">继续完善</span></div>
+  </section>
+</div>
+
+<div id="pop2" class="pop-box" style="display: none">
+  <section class="pop-section">
+    <div class="validate-cont2"><img src="../img/icon_suc.png" alt=""><em>更新资料成功</em></div>
+  </section>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jq.layer.js"></script>
+<script type="text/javascript" src="../js/swiper.min.js"></script>
+<script type="text/javascript" src="../js/global.min.js"></script>
+<script>
+$('.langBtn').click(function(){
+  $.LAYER.show({id:'pop2',layerContainer:'mark',overlay:{color:'#000',opacity:0.5}});
+
+});
+$('.btn-cancel').click(function(){
+  $.LAYER.close();
+});  
+</script>
+</body>
+</html>

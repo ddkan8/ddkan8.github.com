@@ -1,0 +1,36 @@
+一、less2css   less
+1、Install NodeJS (you may need nodejs-legacy - see issue #23)
+
+2、Install npm(NodeJS Package Manager)
+
+3、Install less
+
+npm install less -gd
+
+4、Optional: To use minification you will need a minifier. Install less-plugin-clean-css or similar.
+
+npm install -g less-plugin-clean-css
+
+5、Optional: To use autoprefix. Install less-plugin-autoprefix.
+
+npm install -g less-plugin-autoprefix
+
+二、Alignment
+ctrl+alt+a
+
+三、css3
+
+四、jquery
+
+五、Minifier
+ctrl+alt+m 当前文件压缩
+ctrl+alt+shift+m 生成.min文件并压缩
+
+六、
+Git
+SublimeTmpl
+Autoprefixer
+CSScomb
+SublimeCodeIntel
+HTML/CSS/JS Prettify
+ConvertToUTF8

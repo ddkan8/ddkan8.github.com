@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+	.wrap{margin: 0 auto;width: 1000px;height:500px;background-color: #003c7b}
+	#sideNavBar {display:none;position:absolute;width:260px;height:612px;left:0;top:0;}
+	.sidescroll-box{
+		border:6px solid #180D0A;
+		border-radius:10px;
+		width:248px;
+		height:600px;
+		background-color:#fff;
+	}
+</style>
+<script>
+window.onload = function() {
+
+	(function(win, doc){
+		var oDiv = doc.getElementById('sideNavBar');
+		var b = 0;
+
+		setPos();
+		setTop();
+
+		win.onresize = function() {
+			setPos();
+		}
+
+		win.onscroll = function() {
+
+			if (b != 1) {
+				clearInterval(oDiv.iTimer);
+			}
+
+			b = 2;
+
+			setTop();
+		}
+
+		oDiv.onclick = function() {
+
+			clearInterval(oDiv.iTimer);
+			var iCur = iSpeed = 0;
+
+			oDiv.iTimer = setInterval(function() {
+
+				iCur = doc.documentElement.scrollTop || doc.body.scrollTop;
+				iSpeed = Math.floor( ( 0 - iCur ) / 8 );
+
+				if ( iCur == 0 ) {
+					clearInterval(oDiv.iTimer);
+				} else {
+					doc.documentElement.scrollTop = doc.body.scrollTop = iCur + iSpeed;
+				}
+
+				b = 1;
+
+
+			}, 30);
+
+		}
+
+		function setTop() {
+
+			var scrollTop = doc.documentElement.scrollTop || doc.body.scrollTop;
+			oDiv.style.top = scrollTop + 300 + 'px';
+
+		}
+
+		function setPos() {
+
+			var cWidth = doc.documentElement.clientWidth;
+			var w = parseInt(getStyle(oDiv, 'width'));
+			var oLeft = (doc.documentElement.clientWidth - 1000) / 2 - w - 10;
+
+			oDiv.style.left = oLeft + 'px';
+
+			if(cWidth > 1350){
+				oDiv.style.display = 'block';
+			}else{
+				clearInterval(oDiv.iTimer);
+				oDiv.style.display = 'none';
+			}
+
+		}
+
+		function getStyle(obj, attr){
+			return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
+		}
+	})(window, document);
+
+}
+</script>
+</head>
+
+<body style="height: 2000px;background-color: #007aff">
+	<div class="wrap"></div>
+	<div id="sideNavBar">
+		<div class="sidescroll-box"></div>
+	</div>
+</body>
+</html>

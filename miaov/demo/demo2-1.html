@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    div{
+      position: absolute;
+      left: 30px;
+      top: 50px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: #fff;
+      background-color: #f00;
+    }
+  </style>
+  <script src="move.js"></script>
+  <script>
+    window.onload = function (){
+
+      var len = 20;
+      var str = '';
+      var aDiv = document.getElementsByTagName('div');
+      var num = 0;
+      var timer = null;
+      var flag = true;
+      var stop = true;
+
+      for (var i=0; i<len; i++){
+        str += '<div style="position:absolute;left:'+ i*60 +'px;top:0;background-color:#f00;">' + (i+1) +'</div>'
+      }
+
+      document.body.innerHTML = str;
+
+      document.onclick = function (){
+
+        var iTop = 0;
+
+        if (!stop){return;}
+        stop = false;
+
+        clearInterval(timer);
+        timer = setInterval(function (){
+
+          iTop = flag ? 400 : 0;
+          function callback(){
+            if (num == len - 1 ){
+              stop = true;
+              flag = !flag;
+            }else{
+              return null;
+            }
+          }
+
+          startMove(aDiv[num], {top:iTop}, callback());
+          num++;
+
+          if (num === len){
+            clearInterval(timer);
+            num = 0;
+          }
+
+        }, 50);
+
+      };
+
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+</html>

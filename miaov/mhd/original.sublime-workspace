@@ -1,0 +1,865 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cle",
+				"clearTimeout〔function〕"
+			],
+			[
+				"add",
+				"addClass〔function〕"
+			],
+			[
+				"clear",
+				"clearInterval〔function〕"
+			],
+			[
+				"bg",
+				"bgImg"
+			],
+			[
+				"t",
+				"type	Attr"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"fi",
+				"first-child〔pseudo-class〕"
+			],
+			[
+				"ve",
+				"vertical-align"
+			],
+			[
+				"height",
+				"height"
+			],
+			[
+				"tab",
+				"table-cell"
+			],
+			[
+				"ta",
+				"table"
+			],
+			[
+				"display",
+				"display"
+			],
+			[
+				"width",
+				"width"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"bac",
+				"background-image"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"ma",
+				"margin-right"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"u",
+				"underline"
+			],
+			[
+				"p",
+				"padding-bottom"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"fl",
+				"float"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"arr",
+				"arrHead"
+			],
+			[
+				"setTim",
+				"setTimeout"
+			],
+			[
+				"trans",
+				"translateY"
+			],
+			[
+				"ad",
+				"addClass"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"m",
+				"middle"
+			],
+			[
+				"i",
+				"id	Attr"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"f",
+				"fixed"
+			],
+			[
+				"fo",
+				"formItem"
+			],
+			[
+				"for",
+				"formItem"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"te",
+				"text-top"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"o",
+				"oDiv"
+			],
+			[
+				"cal",
+				"className"
+			],
+			[
+				"a",
+				"aDiv"
+			],
+			[
+				"as",
+				"aStrong"
+			],
+			[
+				"pr",
+				"price"
+			],
+			[
+				"os",
+				"oStrong"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"get",
+				"getElementsByTagName"
+			],
+			[
+				"cla",
+				"className"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"r",
+				"relative"
+			],
+			[
+				"to",
+				"top"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/D/kaiyue/V3/web/niudan/index.html",
+			"settings":
+			{
+				"buffer_size": 3635,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "html/index.html",
+			"settings":
+			{
+				"buffer_size": 8479,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "css/style.less",
+			"settings":
+			{
+				"buffer_size": 32506,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "ssh",
+		"selected_items":
+		[
+			[
+				"ssh",
+				"Set Syntax: HTML"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"sscss",
+				"Set Syntax: CSS"
+			],
+			[
+				"Package Control:",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/original",
+		"/D/original/css",
+		"/D/original/html",
+		"/D/kaiyue/V3/web",
+		"/D/kaiyue/V3/web/activity",
+		"/D/kaiyue/V3/web/activity/excavator",
+		"/D/kaiyue/V3/web/activity/excavator/css",
+		"/D/kaiyue/V3/web/niudan"
+	],
+	"file_history":
+	[
+		"/F/lesson1/move.js",
+		"/D/Program Files/nodejs/node_global/node_modules/spm/node_modules/spm-webpack/node_modules/fs-extra/lib/move.js",
+		"/D/下载/智能社课堂-官网特效源码/智能社源码-html5/3131 - 个性相册 - PolaroidPhotobarGallery2/js/zns_move.js",
+		"/D/下载/智能社课堂-视频源码记录/智能社视频材料 - JS运动中级/记录/土豆右下角菜单悬浮效果/move.js",
+		"/D/下载/智能社课堂-视频源码记录/智能社视频材料 - JS运动应用/仿FLASH的图片轮换播放器/move.js",
+		"/D/下载/智能社课堂-官网特效源码/智能社源码-js/3526 - 彩球/js/zns_script.js",
+		"/D/下载/智能社课堂-官网特效源码/智能社源码-html5/3135 - 全屏图片_弹性菜单/js/zns_common.js",
+		"/D/下载/智能社课堂-官网特效源码/智能社源码-html5/3135 - 全屏图片_弹性菜单/js/zns_motion.js",
+		"/D/kaiyue/V3/web/activity/excavator/css/style.less",
+		"/D/original/css/style.css",
+		"/D/Personal/Desktop/jquery.touchSlider.js",
+		"/D/kaiyue/V3/web/activity/excavator/index.html",
+		"/F/gulp_web/package.json",
+		"/D/original/user/my-cartoon.html",
+		"/D/original/user/new-cartoon-step1.html",
+		"/D/kaiyue/V3/web/activity/excavator/css/style.css",
+		"/D/original/user/new-cartoon-step2.html",
+		"/D/Personal/Desktop/an.html",
+		"/D/公司项目/sd/css/style.less",
+		"/D/kaiyue/V3/web/activity/Xmas/css/style.css",
+		"/D/公司项目/2015圣诞节转盘/css/style.less",
+		"/D/公司项目/漫画岛版本更新1230/style.less",
+		"/D/original/html/index.html",
+		"/D/original/js/move.js",
+		"/F/ddkan8.github.com/miaov/demo/move.js",
+		"/D/kaiyue/V3/web/m/html/index_rank.html",
+		"/D/kaiyue/V3/web/m/css/style-original.css",
+		"/D/original/user/new-cartoon-step3.html",
+		"/D/original/html/aboutus.html",
+		"/D/original/html/detail.html",
+		"/D/original/html/download.html",
+		"/D/original/html/edit-pwd.html",
+		"/D/original/html/find-pwd.html",
+		"/D/original/html/find-succ.html",
+		"/D/original/html/login.html",
+		"/D/original/html/reg-succ-active.html",
+		"/D/original/html/reg-succ.html",
+		"/D/original/html/reg.html",
+		"/D/Personal/Desktop/png8/dragsort-0.5.1/example.html",
+		"/D/Personal/Desktop/png8/dragsort-0.5.1/jquery.dragsort-0.5.1.js",
+		"/D/kaiyue/V3/web/static/guide/guide_downTxt.html",
+		"/D/kaiyue/V3/web/static/guide/guide_iosPay.html",
+		"/D/kaiyue/V3/web/V4/css/style.css",
+		"/D/kaiyue/V3/web/static/guide/css/style.css",
+		"/D/kaiyue/V3/web/m/css/style.css",
+		"/D/kaiyue/V3/web/V4/css/style-original.css",
+		"/D/kaiyue/V3/web/V4/html/guide_downTxt.html",
+		"/D/kaiyue/V3/web/V4/html/user_help.html",
+		"/D/kaiyue/V3/web/V4/html/search_index.html",
+		"/D/kaiyue/V3/web/V4/html/search_nofind.html",
+		"/D/original/css/style.less",
+		"/D/original/user/agreement1.html",
+		"/D/original/user/agreement2.html",
+		"/D/original/user/error1.html",
+		"/D/original/user/feedback.html",
+		"/D/original/user/index.html",
+		"/D/original/user/message-center.html",
+		"/D/original/user/new-cartoon-step4.html",
+		"/D/original/user/personal-info.html",
+		"/D/original/user/personal-info2.html",
+		"/D/original/user/record-remit.html",
+		"/D/original/js/base.js",
+		"/F/ddkan8.github.com/miaov/txt/iconfont.css",
+		"/D/Personal/Desktop/jquery.scrollUp.js",
+		"/D/下载/miaov.js",
+		"/D/下载/Swiper-master/Gruntfile.js",
+		"/D/下载/bootstrap-2.3.2/package.json",
+		"/D/Program Files/Sublime Text/Data/Packages/SublimeGit/Default.sublime-keymap",
+		"/D/Program Files/Sublime Text/Data/Packages/User/SublimeGit.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/D/Program Files/Sublime Text/Data/Packages/SublimeGit/Default (Windows).sublime-keymap",
+		"/D/Program Files/Sublime Text/Data/Packages/SublimeGit/SublimeGit.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/Alignment/Base File.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/Git/Git.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/SublimeCodeIntel/Default (Windows).sublime-keymap",
+		"/D/Program Files/Sublime Text/Data/Packages/User/Git.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/User/Minifier.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/Minifier/Minifier.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/CSS3/CSS3.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/D/original/css/style.min.css",
+		"/D/Program Files/Sublime Text/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/Less2Css/less2css.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/User/less2css.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/Less2Css/README.md",
+		"/D/Program Files/Sublime Text/Data/Packages/Less2Css/Default (Windows).sublime-keymap",
+		"/D/Program Files/Sublime Text/Data/Packages/CSScomb/Default.sublime-keymap",
+		"/D/original/js/base.min.js",
+		"/D/Program Files/Sublime Text/Data/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
+		"/D/Program Files/Sublime Text/Data/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
+		"/D/Program Files/Sublime Text/Data/Packages/Autoprefixer/Autoprefixer.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/User/Autoprefixer.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/User/Package Control.sublime-settings",
+		"/D/Program Files/Sublime Text/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/original/mobile/index.html",
+		"/D/公司项目/ajax/css/style.less",
+		"/D/公司项目/漫画岛版本更新1230/css/style.less",
+		"/D/公司项目/漫画岛版本更新1230/css/style.css",
+		"/D/公司项目/ajax/css/style.css",
+		"/D/kaiyue/V3/web/original/css/style.css",
+		"/D/kaiyue/V3/web/activity/hd20151229/css/style.css",
+		"/D/kaiyue/V3/web/activity/hd20151229/data.php",
+		"/D/kaiyue/V3/web/activity/hd20151229/index.html",
+		"/D/kaiyue/V3/web/original/css/style.less",
+		"/D/kaiyue/V3/web/original/js/base.js",
+		"/D/公司项目/漫画行/index.html",
+		"/D/kaiyue/V3/web/original/user/feedback.html",
+		"/D/Personal/Temp/Rar$EXa0.583/gui-config.json",
+		"/D/kaiyue/V3/web/upload/index.html",
+		"/D/kaiyue/V3/web/original/jcrop/jquery.Jcrop.css",
+		"/D/公司项目/开卷有益推广管理系统/login.html",
+		"/D/kaiyue/V3/web/original/jcrop/jquery.Jcrop.min.js",
+		"/D/kaiyue/V3/web/upload/resize.php",
+		"/D/kaiyue/V3/web/upload/config.inc.php",
+		"/D/kaiyue/V3/web/upload/upload.php",
+		"/D/公司项目/漫画行/mobile/index.html",
+		"/D/kaiyue/V3/web/original/cutpic.js",
+		"/D/kaiyue/V3/web/upload/jcrop/jquery.Jcrop.min.js",
+		"/D/kaiyue/V3/web/upload/jcrop/jquery.Jcrop.css",
+		"/F/CutAvatar/!css/Main.css",
+		"/F/CutAvatar/Default.aspx",
+		"/D/kaiyue/V3/web/original/js/cutpic.js",
+		"/F/CutAvatar/Handler/CutAvatarHandler.ashx",
+		"/F/CutAvatar/!js/cutpic.js",
+		"/F/CutAvatar/!css/uploadify.css",
+		"/D/kaiyue/V3/web/original/jcrop/jquery.Jcrop.js",
+		"/D/Personal/Temp/Rar$DIa0.335/demo.js"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 112.0,
+		"where_history":
+		[
+			"D:\\original\\user",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"banner",
+			"bgimg",
+			"rotate2",
+			"flame",
+			"imgchoose",
+			"viewbox",
+			"clear",
+			"jcrop-holder",
+			".rank-list li",
+			".ell, .rank-list li",
+			"m-rank",
+			"mod-rank",
+			"'></",
+			"sns-icon",
+			"findBox",
+			"findMore",
+			"findBox",
+			"search-allweb-btn",
+			"book-list-ext",
+			"only-book",
+			"nofind",
+			"login-after",
+			"<!-- footer start -->\n<div class=\"footer\">\n  <div class=\"wrap\">\n    <p>Copyright &copy; 2014-2016 MANHUADAO.CN 上海元聚网络科技有限公司 All Rights Reserved</p>\n    <p>商务合作QQ：317022157 　投稿咨询QQ：2489797364</p>\n  </div>\n</div>\n<!-- footer end -->",
+			"btn-add",
+			"items-form",
+			"cartoon-box",
+			"footer",
+			"tabs-hd",
+			"cont-box",
+			"tab-back",
+			"tab-back .tit",
+			"mod-message",
+			"sns-qq",
+			"href",
+			",\n",
+			"><",
+			"mod-main",
+			"forget-pwd-cont",
+			"bg-wht",
+			"注册",
+			"F6581C",
+			"form-item",
+			"form-login",
+			"form-box",
+			".login-top",
+			"login-text",
+			"menu",
+			"jpg",
+			"footer",
+			"ban",
+			"cart-tb",
+			"login-before",
+			"item-code",
+			".mod-contract .tb-scroll",
+			"contract-tb",
+			"person-form",
+			"textW",
+			"person-form",
+			"step-2",
+			"recei-form",
+			"person-form",
+			"items-form",
+			".menu li a",
+			"matter_txt",
+			"mod_item",
+			"wrap",
+			"tabs-ct",
+			"我的",
+			"record-tb",
+			"我的",
+			"cartoon-list",
+			"btn-open",
+			"btnOpen",
+			"banner",
+			"banner-",
+			"page",
+			"mod-tb",
+			"ve",
+			"user-head",
+			"items-form",
+			"textW6",
+			"textW5",
+			"nobg",
+			"no-cont",
+			"addEventHandler",
+			"avatar_submit",
+			"browser",
+			"Jcrop",
+			"jcrop-holder",
+			"imgchoose",
+			"avatarUpload",
+			"imgchoose",
+			"imgareaselect",
+			"percentage",
+			"2097152",
+			"fileQueue",
+			"dragDrop",
+			"pop_box",
+			"t1",
+			"px2rem",
+			"page-wrap",
+			".png",
+			"scTop",
+			"pop-box",
+			"loadingPage",
+			"uploads/images/",
+			"doMusic",
+			"IsExistsMusic",
+			"loadScripts",
+			"start_lottery",
+			"svg",
+			"bg_base",
+			"t_c1",
+			"scroll_txt",
+			"t_c1",
+			"scroll_txt",
+			"shred_box",
+			"dialog_shred",
+			"selectRes",
+			"scroll_txt",
+			"c1",
+			"btn_start",
+			"snow",
+			"dialog_endresult",
+			"btn_box",
+			"arrHead",
+			".box",
+			"bg_base"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"<!-- footer start -->\n<div class=\"footer\">\n  <div class=\"wrap\">\n    <p>Copyright &copy; 2014-2016 MANHUADAO.CN 上海元聚网络科技有限公司 All Rights Reserved</p>\n    <p>投稿咨询QQ：2489797364 　商务合作QQ：317022157</p>\n  </div>\n</div>\n<!-- footer end -->"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/D/kaiyue/V3/web/niudan/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3635,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3635,
+								3635
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "html/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4252,
+								4252
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2151.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/style.less",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 32506,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5605,
+								5605
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6395.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 130.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "original.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 171.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

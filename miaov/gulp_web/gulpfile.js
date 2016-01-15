@@ -31,7 +31,7 @@ gulp.task('styles', function() {
     //输出压缩文件到指定目录
     .pipe(gulp.dest('dist/assets/css'))
     //提醒任务完成
-    .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(notify({ message: 'Styles任务完成' }));
 });
 
 // // Styles任务
@@ -80,7 +80,7 @@ gulp.task('scripts', function() {
     //输出压缩文件到指定目录
     .pipe(gulp.dest('dist/assets/js'))
     //提醒任务完成
-    .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe(notify({ message: 'Scripts任务完成' }));
 });
 
 // 图片压缩
@@ -89,20 +89,28 @@ gulp.task('images', function() {
     .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
     //.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/assets/img'))
-    .pipe(notify({ message: 'Images task complete' }));
+    .pipe(notify({ message: 'images任务完成' }));
 });
 
 // 编译Jade
 gulp.task('templates', function() {
   var YOUR_LOCALS = {};
  
-  gulp.src('./views/**/*.jade')
+  gulp.src('views/**/*.jade')
     .pipe(jade({
-      locals: YOUR_LOCALS
+      locals: YOUR_LOCALS,
+      // html不压缩
+      pretty: true
     }))
-    .pipe(gulp.dest('./dist/assets/html'))
-    .pipe(notify("Templates task complete"))
+    .pipe(gulp.dest('dist/assets/html'))
+    .pipe(notify("Templates任务完成"))
 });
+// gulp.task('jade', function() {
+//   return gulp.src('views/**/*.jade')
+//     .pipe(jade({ pretty: true }))
+//     .pipe(gulp.dest('dist/assets/html'))
+//     .pipe(notify({ message: 'jade任务完成' }));
+// });
 
 // 清除文件
 // gulp.task('clean', function() {  
@@ -110,27 +118,28 @@ gulp.task('templates', function() {
 //     .pipe(clean());
 // });
 gulp.task('clean',function(cb){
-  del(['./dist'],cb)
+  del(['dist'],cb)
 })
 
 // 默认任务
-gulp.task('default', ['clean', 'watch'], function() {  
+gulp.task('default', ['clean'], function() {  
     gulp.start('styles', 'scripts', 'images', 'templates');
 });
 
 // 监听文件变化
 gulp.task('watch', function() {
 
-  // 监听所有.scss档
+  // 监听所有.scss
   gulp.watch('src/styles/**/*.scss', ['styles']);
 
-  // 监听所有.js档
+  // 监听所有.js
   gulp.watch('src/scripts/**/*.js', ['scripts']);
 
-  // 监听所有图片档
+  // 监听所有图片
   gulp.watch('src/images/**/*', ['images']);
 
-  gulp.watch('views/*.jade',['templates']);
+  gulp.watch('views/**/*.jade',['templates']);
+  // gulp.watch('views/**/*.jade', ['jade']);
 
   livereload.listen();
 

@@ -1,1 +1,1 @@
-body{background-color:#EEE}body h2{color:Red}
+footer,header{display:block}body{margin:0;padding:0;background-color:#ccc}header{font-size:50px;background-color:red}footer{font-size:30px;background-color:#00f}

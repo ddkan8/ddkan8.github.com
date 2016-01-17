@@ -1,4 +1,18 @@
+$color_red : #f00;
+$color_blue : #00f;
+$bgc_gray : #ccc;
 body{
-  background-color: #EEE;
-  h2{color: Red}
+  margin:0;
+  padding:0;
+  background-color: $bgc_gray;
+}
+header{
+	display:block;
+	font-size:50px;
+	background-color: $color_red;
+}
+footer{
+	display:block;
+	font-size:30px;
+	background-color: $color_blue;
 }

@@ -1,0 +1,6 @@
+npm install gulp browser-sync del gulp-autoprefixer gulp-cache gulp-rimraf gulp-concat gulp-imagemin gulp-jade gulp-jshint jshint gulp-less gulp-cssnano gulp-notify gulp-rename gulp-uglify --save-dev
+
+
+
+gulp-cssnano ´úÌæ gulp-minify-css
+gulp-rimraf  ´úÌæ gulp-clean

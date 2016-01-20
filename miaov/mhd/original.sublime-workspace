@@ -4,12 +4,52 @@
 		"selected_items":
 		[
 			[
-				"cle",
-				"clearTimeout〔function〕"
+				"chi",
+				"children〔function〕"
+			],
+			[
+				"a",
+				"alt	Attr"
 			],
 			[
 				"add",
-				"addClass〔function〕"
+				"addClass"
+			],
+			[
+				"h",
+				"hide	.hide()"
+			],
+			[
+				"t",
+				"table-cell"
+			],
+			[
+				"ta",
+				"table-row"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"te",
+				"textarea	Tag"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"cle",
+				"clearInterval〔function〕"
 			],
 			[
 				"clear",
@@ -20,16 +60,8 @@
 				"bgImg"
 			],
 			[
-				"t",
-				"type	Attr"
-			],
-			[
 				"c",
 				"class	Attr"
-			],
-			[
-				"padd",
-				"padding"
 			],
 			[
 				"fi",
@@ -48,20 +80,12 @@
 				"table-cell"
 			],
 			[
-				"ta",
-				"table"
-			],
-			[
 				"display",
 				"display"
 			],
 			[
 				"width",
 				"width"
-			],
-			[
-				"mar",
-				"margin"
 			],
 			[
 				"tex",
@@ -72,16 +96,8 @@
 				"background-color"
 			],
 			[
-				"pa",
-				"padding-left"
-			],
-			[
 				"bac",
 				"background-image"
-			],
-			[
-				"pad",
-				"padding"
 			],
 			[
 				"ma",
@@ -164,10 +180,6 @@
 				"opacity"
 			],
 			[
-				"h",
-				"height"
-			],
-			[
 				"li",
 				"line-height"
 			],
@@ -208,10 +220,6 @@
 				"max-width"
 			],
 			[
-				"te",
-				"text-top"
-			],
-			[
 				"pos",
 				"position"
 			],
@@ -230,10 +238,6 @@
 			[
 				"cal",
 				"className"
-			],
-			[
-				"a",
-				"aDiv"
 			],
 			[
 				"as",
@@ -280,10 +284,10 @@
 	"buffers":
 	[
 		{
-			"file": "/D/kaiyue/V3/web/niudan/index.html",
+			"file": "/D/Personal/Desktop/1.js",
 			"settings":
 			{
-				"buffer_size": 3635,
+				"buffer_size": 567,
 				"line_ending": "Windows"
 			}
 		},
@@ -291,15 +295,15 @@
 			"file": "html/index.html",
 			"settings":
 			{
-				"buffer_size": 8479,
+				"buffer_size": 7752,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "css/style.less",
+			"file": "jlj/index.html",
 			"settings":
 			{
-				"buffer_size": 32506,
+				"buffer_size": 14829,
 				"line_ending": "Windows"
 			}
 		}
@@ -311,10 +315,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 400.0,
-		"last_filter": "ssh",
+		"height": 226.0,
+		"last_filter": "ssjs",
 		"selected_items":
 		[
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"ssh",
 				"Set Syntax: HTML"
@@ -373,16 +381,76 @@
 	"expanded_folders":
 	[
 		"/D/original",
-		"/D/original/css",
 		"/D/original/html",
+		"/D/original/jlj",
+		"/D/original/jlj/css",
 		"/D/kaiyue/V3/web",
-		"/D/kaiyue/V3/web/activity",
 		"/D/kaiyue/V3/web/activity/excavator",
 		"/D/kaiyue/V3/web/activity/excavator/css",
-		"/D/kaiyue/V3/web/niudan"
+		"/D/kaiyue/V3/web/niudan/dist",
+		"/D/kaiyue/V3/web/niudan/dist/content",
+		"/D/kaiyue/V3/web/niudan/dist/content/css",
+		"/D/kaiyue/V3/web/niudan/dist/content/js",
+		"/D/kaiyue/V3/web/niudan/src",
+		"/D/kaiyue/V3/web/niudan/src/css",
+		"/D/kaiyue/V3/web/niudan/src/js",
+		"/D/kaiyue/V3/web/niudan/views",
+		"/D/kaiyue/V3/web/V4/css"
 	],
 	"file_history":
 	[
+		"/D/kaiyue/V3/web/niudan/src/js/global.js",
+		"/D/kaiyue/V3/web/niudan/views/index.html",
+		"/D/kaiyue/V3/web/niudan/package.json",
+		"/D/kaiyue/V3/web/niudan/gulpfile.js",
+		"/D/Personal/Desktop/gulpfile.js",
+		"/D/kaiyue/V3/web/activity/excavator/css/style.less",
+		"/D/kaiyue/V3/web/niudan/src/css/style.less",
+		"/D/kaiyue/V3/web/niudan/src/js/jquery.js",
+		"/D/kaiyue/V3/web/activity/excavator/index.html",
+		"/D/公司项目/2015圣诞节转盘/index.html",
+		"/D/公司项目/zhuanqian/html/other.html",
+		"/D/kaiyue/V3/web/niudan/dist/content/css/style.css",
+		"/D/公司项目/2015圣诞节转盘/css/style.less",
+		"/D/kaiyue/V3/web/niudan/src/js/jq.layer.js",
+		"/D/kaiyue/V3/web/activity/Xmas/index.html",
+		"/D/kaiyue/V3/web/activity/hd20151229/index.html",
+		"/D/kaiyue/V3/web/activity/tianzi.html",
+		"/D/kaiyue/V3/web/activity/js/main.js",
+		"/D/公司项目/zhuanqian/html/bind-weixin2.html",
+		"/D/公司项目/zhuanqian/html/bind-weixin.html",
+		"/D/公司项目/zhuanqian/js/global.js",
+		"/D/zhuanqian/html/list-demo.html",
+		"/D/zhuanqian/html/validate-err.html",
+		"/D/zhuanqian/js/global.js",
+		"/D/kaiyue/V3/web/niudan/dist/content/css/jq.layer.css",
+		"/D/kaiyue/V3/web/niudan/dist/content/css/style.min.css",
+		"/D/kaiyue/V3/web/niudan/src/js/jquery.min.js",
+		"/D/kaiyue/V3/web/niudan/dist/content/js/global.js",
+		"/D/kaiyue/V3/web/V4/css/style-original.css",
+		"/D/original/jlj/css/style.css",
+		"/D/original/jlj/css/style.less",
+		"/D/kaiyue/V3/web/niudan/index.html",
+		"/D/original/jlj/index.html",
+		"/D/original/jlj/js/base.js",
+		"/D/kaiyue/V3/web/V4/html/index_rank.html",
+		"/D/kaiyue/V3/web/V4/css/style.css",
+		"/F/ddkan8.github.com/miaov/gulp_web/views/blog/index.jade",
+		"/F/ddkan8.github.com/miaov/gulp_web/views/blog/hello.md",
+		"/D/original/css/style.less",
+		"/D/original/css/style.css",
+		"/D/original/html/index.html",
+		"/D/original/js/move.js",
+		"/D/Personal/Desktop/jquery.touchSlider.js",
+		"/D/Personal/Temp/Rar$DIa0.725/test-debug.js",
+		"/D/Personal/Temp/Rar$DIa0.241/sea.js",
+		"/D/Personal/Temp/Rar$DIa0.962/mod2.js",
+		"/D/Personal/Temp/Rar$DIa0.785/package.json",
+		"/D/Personal/Temp/Rar$DIa0.093/test.js",
+		"/D/Personal/Desktop/serverplayer.js",
+		"/D/Personal/Desktop/lib.js",
+		"/D/Personal/Desktop/canvas/index.html",
+		"/D/original/js/jquery.lazyload.min.js",
 		"/F/lesson1/move.js",
 		"/D/Program Files/nodejs/node_global/node_modules/spm/node_modules/spm-webpack/node_modules/fs-extra/lib/move.js",
 		"/D/下载/智能社课堂-官网特效源码/智能社源码-html5/3131 - 个性相册 - PolaroidPhotobarGallery2/js/zns_move.js",
@@ -391,10 +459,6 @@
 		"/D/下载/智能社课堂-官网特效源码/智能社源码-js/3526 - 彩球/js/zns_script.js",
 		"/D/下载/智能社课堂-官网特效源码/智能社源码-html5/3135 - 全屏图片_弹性菜单/js/zns_common.js",
 		"/D/下载/智能社课堂-官网特效源码/智能社源码-html5/3135 - 全屏图片_弹性菜单/js/zns_motion.js",
-		"/D/kaiyue/V3/web/activity/excavator/css/style.less",
-		"/D/original/css/style.css",
-		"/D/Personal/Desktop/jquery.touchSlider.js",
-		"/D/kaiyue/V3/web/activity/excavator/index.html",
 		"/F/gulp_web/package.json",
 		"/D/original/user/my-cartoon.html",
 		"/D/original/user/new-cartoon-step1.html",
@@ -403,10 +467,7 @@
 		"/D/Personal/Desktop/an.html",
 		"/D/公司项目/sd/css/style.less",
 		"/D/kaiyue/V3/web/activity/Xmas/css/style.css",
-		"/D/公司项目/2015圣诞节转盘/css/style.less",
 		"/D/公司项目/漫画岛版本更新1230/style.less",
-		"/D/original/html/index.html",
-		"/D/original/js/move.js",
 		"/F/ddkan8.github.com/miaov/demo/move.js",
 		"/D/kaiyue/V3/web/m/html/index_rank.html",
 		"/D/kaiyue/V3/web/m/css/style-original.css",
@@ -425,15 +486,12 @@
 		"/D/Personal/Desktop/png8/dragsort-0.5.1/jquery.dragsort-0.5.1.js",
 		"/D/kaiyue/V3/web/static/guide/guide_downTxt.html",
 		"/D/kaiyue/V3/web/static/guide/guide_iosPay.html",
-		"/D/kaiyue/V3/web/V4/css/style.css",
 		"/D/kaiyue/V3/web/static/guide/css/style.css",
 		"/D/kaiyue/V3/web/m/css/style.css",
-		"/D/kaiyue/V3/web/V4/css/style-original.css",
 		"/D/kaiyue/V3/web/V4/html/guide_downTxt.html",
 		"/D/kaiyue/V3/web/V4/html/user_help.html",
 		"/D/kaiyue/V3/web/V4/html/search_index.html",
 		"/D/kaiyue/V3/web/V4/html/search_nofind.html",
-		"/D/original/css/style.less",
 		"/D/original/user/agreement1.html",
 		"/D/original/user/agreement2.html",
 		"/D/original/user/error1.html",
@@ -468,49 +526,7 @@
 		"/D/Program Files/Sublime Text/Data/Packages/Less2Css/less2css.sublime-settings",
 		"/D/Program Files/Sublime Text/Data/Packages/User/less2css.sublime-settings",
 		"/D/Program Files/Sublime Text/Data/Packages/Less2Css/README.md",
-		"/D/Program Files/Sublime Text/Data/Packages/Less2Css/Default (Windows).sublime-keymap",
-		"/D/Program Files/Sublime Text/Data/Packages/CSScomb/Default.sublime-keymap",
-		"/D/original/js/base.min.js",
-		"/D/Program Files/Sublime Text/Data/Packages/HTML-CSS-JS Prettify/Default (Windows).sublime-keymap",
-		"/D/Program Files/Sublime Text/Data/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
-		"/D/Program Files/Sublime Text/Data/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc",
-		"/D/Program Files/Sublime Text/Data/Packages/Autoprefixer/Autoprefixer.sublime-settings",
-		"/D/Program Files/Sublime Text/Data/Packages/User/Autoprefixer.sublime-settings",
-		"/D/Program Files/Sublime Text/Data/Packages/User/Package Control.sublime-settings",
-		"/D/Program Files/Sublime Text/Data/Packages/Default/Preferences.sublime-settings",
-		"/D/original/mobile/index.html",
-		"/D/公司项目/ajax/css/style.less",
-		"/D/公司项目/漫画岛版本更新1230/css/style.less",
-		"/D/公司项目/漫画岛版本更新1230/css/style.css",
-		"/D/公司项目/ajax/css/style.css",
-		"/D/kaiyue/V3/web/original/css/style.css",
-		"/D/kaiyue/V3/web/activity/hd20151229/css/style.css",
-		"/D/kaiyue/V3/web/activity/hd20151229/data.php",
-		"/D/kaiyue/V3/web/activity/hd20151229/index.html",
-		"/D/kaiyue/V3/web/original/css/style.less",
-		"/D/kaiyue/V3/web/original/js/base.js",
-		"/D/公司项目/漫画行/index.html",
-		"/D/kaiyue/V3/web/original/user/feedback.html",
-		"/D/Personal/Temp/Rar$EXa0.583/gui-config.json",
-		"/D/kaiyue/V3/web/upload/index.html",
-		"/D/kaiyue/V3/web/original/jcrop/jquery.Jcrop.css",
-		"/D/公司项目/开卷有益推广管理系统/login.html",
-		"/D/kaiyue/V3/web/original/jcrop/jquery.Jcrop.min.js",
-		"/D/kaiyue/V3/web/upload/resize.php",
-		"/D/kaiyue/V3/web/upload/config.inc.php",
-		"/D/kaiyue/V3/web/upload/upload.php",
-		"/D/公司项目/漫画行/mobile/index.html",
-		"/D/kaiyue/V3/web/original/cutpic.js",
-		"/D/kaiyue/V3/web/upload/jcrop/jquery.Jcrop.min.js",
-		"/D/kaiyue/V3/web/upload/jcrop/jquery.Jcrop.css",
-		"/F/CutAvatar/!css/Main.css",
-		"/F/CutAvatar/Default.aspx",
-		"/D/kaiyue/V3/web/original/js/cutpic.js",
-		"/F/CutAvatar/Handler/CutAvatarHandler.ashx",
-		"/F/CutAvatar/!js/cutpic.js",
-		"/F/CutAvatar/!css/uploadify.css",
-		"/D/kaiyue/V3/web/original/jcrop/jquery.Jcrop.js",
-		"/D/Personal/Temp/Rar$DIa0.335/demo.js"
+		"/D/Program Files/Sublime Text/Data/Packages/Less2Css/Default (Windows).sublime-keymap"
 	],
 	"find":
 	{
@@ -530,6 +546,28 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"参赛作品电子文件请依照以下方式投稿",
+			"box",
+			"href",
+			"head-box",
+			"result-box",
+			"ball_spall",
+			"ball",
+			"rotate",
+			"btn_twist",
+			"btns",
+			"close",
+			"clearfix",
+			"cf",
+			"rec_list",
+			"script",
+			"tabs_jlj",
+			"m-rank",
+			"mod-rank",
+			".fileBox ol",
+			"banner",
+			"rank-img",
+			"lamp",
 			"banner",
 			"bgimg",
 			"rotate2",
@@ -635,29 +673,7 @@
 			"scTop",
 			"pop-box",
 			"loadingPage",
-			"uploads/images/",
-			"doMusic",
-			"IsExistsMusic",
-			"loadScripts",
-			"start_lottery",
-			"svg",
-			"bg_base",
-			"t_c1",
-			"scroll_txt",
-			"t_c1",
-			"scroll_txt",
-			"shred_box",
-			"dialog_shred",
-			"selectRes",
-			"scroll_txt",
-			"c1",
-			"btn_start",
-			"snow",
-			"dialog_endresult",
-			"btn_box",
-			"arrHead",
-			".box",
-			"bg_base"
+			"uploads/images/"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -676,38 +692,37 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/D/kaiyue/V3/web/niudan/index.html",
+					"file": "/D/Personal/Desktop/1.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3635,
+						"buffer_size": 567,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3635,
-								3635
+								103,
+								103
 							]
 						],
 						"settings":
 						{
 							"auto_complete": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -716,15 +731,45 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 8479,
+						"buffer_size": 7752,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4252,
-								4252
+								4173,
+								4225
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2160.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "jlj/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14829,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13489,
+								13489
 							]
 						],
 						"settings":
@@ -735,41 +780,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2151.0,
+						"translation.y": 6871.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "css/style.less",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 32506,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5605,
-								5605
-							]
-						],
-						"settings":
-						{
-							"origin_encoding": "UTF-8",
-							"syntax": "Packages/LESS/LESS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 6395.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -856,7 +870,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 171.0,
+	"side_bar_width": 234.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>书籍搜索-详情</title>
+	<style>
+	#content{width:700px;margin:70px auto 0;}
+	.btn{width:320px;height:40px;position:absolute;top:10px;right:20%;}
+	a{float:left;width:150px;height:40px;border:#999;background:#f90;text-decoration:none;font:bold 16px/40px "宋体";text-align:center;color:#fff;margin-right: 10px;}
+	</style>
+	<script>
+
+	function fn(data){
+
+		var oCon = document.getElementById('content');
+		var str = '';
+		var author = '';
+
+		if(!data) oCon.innerHTML = '没有找到您要的信息！';
+		for(var j=0;j<data.author.length;j++){
+			author += data.author[j];
+		}
+
+		str += '<h2>'+ data.title +'</h2>';
+		str += '<img src="'+ data.image +'" />';
+		str += '<p>作者：<span>'+ data.author +'</span></P>';
+		str += '<p>翻译：<span>'+ data.translator +'</span></P>';
+		str += '<p>出版社：<span>'+ data.publisher +'</span></P>';
+		str += '<p>出版时间：<span>'+ data.pubdate +'</span></P>';
+		str += '<p>页数：<span>'+ data.pages +'</span></P>';
+		str += '<p>出版时间：<span>'+ data.pubdate +'</span></P>';
+		str += '<p>出版时间：<span>'+ data.summary +'</span></P>';
+	
+		oCon.innerHTML = str;
+
+	}
+
+	window.onload = function(){
+		var aBtn = document.getElementsByTagName('a');
+		var search = window.location.search;
+		var arr = search.substring(1).split('&');
+		var id = '';
+		
+		for(var i=0;i<arr.length;i++){
+			var arr2 = arr[i].split('=');
+			if(arr2[0]=='id'){
+				id = arr2[1];
+				continue;
+			}
+			if(arr2[0]=='page'){
+				page = arr2[1];
+			}
+		}
+
+		if(search){
+			var oScript = document.createElement('script');
+			oScript.src = 'https://api.douban.com/v2/book/'+ id +'?&callback=fn';
+			document.body.appendChild(oScript);
+		}
+		aBtn[0].onclick = function(){
+			window.history.back(-1);
+		}
+		aBtn[1].onclick = function(){
+			window.location = 'index.html';
+		}
+
+	}
+	</script>
+</head>
+<body>
+	<div class="btn">
+		<a href="javascript:;">返回上一页</a>
+		<a href="javascript:;">返回首页</a>
+	</div>
+	<div id="content"></div>
+</body>
+</html>

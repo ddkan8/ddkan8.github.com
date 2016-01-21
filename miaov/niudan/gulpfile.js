@@ -1,18 +1,19 @@
 // 引入gulp和插件
-var gulp = require('gulp'),
-    less = require('gulp-less'),
-    autoprefixer = require('gulp-autoprefixer'),
-    cssnano = require('gulp-cssnano'),
-    jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    jade = require('gulp-jade'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
-    del = require('del'),
-    browserSync = require('browser-sync'),
+var gulp = require('gulp'),                        // 主程序
+    less = require('gulp-less'),                   // 将less编译成css文件
+    autoprefixer = require('gulp-autoprefixer'),   // 添加CSS前缀
+    cssnano = require('gulp-cssnano'),             // CSS压缩
+    jshint = require('gulp-jshint'),               // 检查js
+    uglify = require('gulp-uglify'),               // js压缩
+    imagemin = require('gulp-imagemin'),           // 图片压缩
+    tinypng = require('gulp-tinypng'),             // https://tinypng.com/ png和jpg图片压缩
+    jade = require('gulp-jade'),                   // 将jade编译成html文件
+    rename = require('gulp-rename'),               // 重命名
+    concat = require('gulp-concat'),               // 合并文件
+    notify = require('gulp-notify'),               // 任务更改提醒
+    cache = require('gulp-cache'),                 // 图片缓存，只有图片替换了才压缩
+    del = require('del'),                          // 删除文件和文件夹
+    browserSync = require('browser-sync'),         // 自动刷新页面
     path = {
         HTML : "Wechat/public/html/weShop/*.html",
         LESS : "Wechat/public/style/less/*.less",
@@ -61,10 +62,16 @@ gulp.task('scripts', function() {
 // 图片压缩
 gulp.task('images', function() {  
   return gulp.src('src/img/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    //.pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    // .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest('dist/content/img'))
     .pipe(notify({ message: 'images任务完成' }));
+});
+
+gulp.task('tinypng', function () {
+    gulp.src(['src/**/*.png','src/**/*.jpg'])
+        .pipe(tinypng('2oC5A6LlO0mnj3CQ-WhKDyZ6CoFlLUtp'))
+        .pipe(gulp.dest('dist/content/img'));
 });
 
 // // 编译Jade

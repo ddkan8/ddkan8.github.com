@@ -1,4 +1,4 @@
-// npm install --save-dev gulp gulp-less gulp-autoprefixer gulp-cssnano gulp-jshint gulp-uglify gulp-imagemin gulp-tinypng gulp-jade gulp-rename gulp-concat gulp-rev gulp-notify gulp-plumber gulp-cache del browser-sync browsersync-ssi gulp-zip
+// npm install --save-dev gulp gulp-less gulp-autoprefixer gulp-cssnano gulp-jshint gulp-uglify gulp-imagemin imagemin-pngquant gulp-tinypng gulp-jade gulp-rename gulp-concat gulp-rev gulp-notify gulp-plumber gulp-cache del browser-sync browsersync-ssi gulp-zip
 
 // 引入gulp和插件
 var gulp = require('gulp'),                        // 主程序
@@ -8,6 +8,7 @@ var gulp = require('gulp'),                        // 主程序
     jshint = require('gulp-jshint'),               // 检查js
     uglify = require('gulp-uglify'),               // js压缩
     imagemin = require('gulp-imagemin'),           // 图片压缩
+    pngquant = require('imagemin-pngquant'),       // 图片深度压缩
     tinypng = require('gulp-tinypng'),             // https://tinypng.com/ png和jpg图片压缩
     jade = require('gulp-jade'),                   // 将jade编译成html文件
     rename = require('gulp-rename'),               // 重命名
@@ -21,15 +22,15 @@ var gulp = require('gulp'),                        // 主程序
     SSI = require('browsersync-ssi'),              // .shtml文件解析
     zip = require('gulp-zip');                     // 打包压缩
 
-var path_src = {
+var pathSrc = {
         // JADA : "src/jade/**/*.jade",
         HTML : "src/html/**/*.html",
         LESS : "src/less/**/*.less",
         JS   : "src/js/**/*.js",
-        IMG  : "src/img/**/*"
+        IMG  : "src/img/**/*.{png,jpg,jpeg,gif,ico}"
     };
 
-var path_dist = {
+var pathDist = {
         HTML : "dist/html",
         CSS : "dist/css",
         JS   : "dist/js",
@@ -40,42 +41,42 @@ var path_dist = {
 // gulp.task('jade', function() {
 //     var YOUR_LOCALS = {};
  
-//     gulp.src(path_src.JADE)
+//     gulp.src(pathSrc.JADE)
 //         .pipe(jade({
 //             locals: YOUR_LOCALS,
 //             // html不压缩
 //             pretty: true
 //         }))
-//     .pipe(gulp.dest(path_dist.HTML))
+//     .pipe(gulp.dest(pathDist.HTML))
 //     // .pipe(notify("Jade任务完成"))
 //     .pipe(browserSync.stream());
 // });
 
 // html任务
 gulp.task("html", function() {
-    return gulp.src(path_src.HTML)
+    return gulp.src(pathSrc.HTML)
     .pipe(plumber())
-    .pipe(gulp.dest(path_dist.HTML))
+    .pipe(gulp.dest(pathDist.HTML))
     .pipe(browserSync.stream());
 })
 
 // less任务
 gulp.task("less", function() {
     // 编译sass
-    return gulp.src(path_src.LESS)
+    return gulp.src(pathSrc.LESS)
     .pipe(plumber())
     .pipe(less())
     // 添加前缀
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     // 保存未压缩文件到我们指定的目录下面
-    .pipe(gulp.dest(path_dist.CSS))
+    .pipe(gulp.dest(pathDist.CSS))
     // 给文件添加.min后缀
     .pipe(rename({ suffix: '.min' }))
     // 压缩样式文件
     .pipe(cssnano())
     .pipe(rev())
     // 输出压缩文件到指定目录
-    .pipe(gulp.dest(path_dist.CSS))
+    .pipe(gulp.dest(pathDist.CSS))
     // 提醒任务完成
     // .pipe(notify({ message: 'Styles任务完成' }))
     .pipe(browserSync.stream());
@@ -84,21 +85,21 @@ gulp.task("less", function() {
 // scripts任务
 gulp.task('scripts', function() {
     // js代码校验
-    return gulp.src(path_src.JS)
+    return gulp.src(pathSrc.JS)
     .pipe(plumber())
     // .pipe(jshint('.jshintrc'))
     // .pipe(jshint())
     // .pipe(jshint.reporter('default'))
     // js代码合并
     // .pipe(concat('global.js'))
-    .pipe(gulp.dest(path_dist.JS))
+    .pipe(gulp.dest(pathDist.JS))
     // 给文件添加.min后缀
     .pipe(rename({suffix: '.min'}))
     // 压缩脚本文件
     .pipe(uglify())
     .pipe(rev())
     // 输出压缩文件到指定目录
-    .pipe(gulp.dest(path_dist.JS))
+    .pipe(gulp.dest(pathDist.JS))
     // 提醒任务完成
     // .pipe(notify({ message: 'Scripts任务完成' }))
     .pipe(browserSync.stream());
@@ -106,21 +107,30 @@ gulp.task('scripts', function() {
 
 // images任务
 gulp.task('images', function() {  
-    return gulp.src(path_src.IMG)
+    return gulp.src(pathSrc.IMG)
     .pipe(plumber())
     // .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    .pipe(gulp.dest(path_dist.IMG))
+    .pipe(cache(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        // optimizationLevel: 5, // 类型：Number  默认：3  取值范围：0-7（优化等级）
+        // progressive: true, // 类型：Boolean 默认：false 无损压缩jpg图片
+        // interlaced: true, // 类型：Boolean 默认：false 隔行扫描gif进行渲染
+        // multipass: true, // 类型：Boolean 默认：false 多次优化svg直到完全优化
+        use: [pngquant()] // 使用pngquant来压缩png图片
+        // use: [pngquant({quality: '65-80'})]
+    })))
+    .pipe(gulp.dest(pathDist.IMG))
     // .pipe(notify({ message: 'images任务完成' }))
     .pipe(browserSync.stream());
 });
 
 // tinypng任务
 gulp.task('tinypng', function () {
-    return gulp.src(['src/**/*.png','src/**/*.jpg'])
+    return gulp.src('src/img/**/*.{png,jpg,jpeg}')
     .pipe(plumber())
     .pipe(tinypng('2oC5A6LlO0mnj3CQ-WhKDyZ6CoFlLUtp'))
-    .pipe(gulp.dest(path_dist.IMG))
+    .pipe(gulp.dest(pathDist.IMG))
     .pipe(browserSync.stream());
 });
 
@@ -151,11 +161,11 @@ gulp.task("serve", ["html", "less", "scripts", "images"], function() {
         }
     });
 
-    gulp.watch(path_src.HTML, ["html"]);
-    gulp.watch(path_src.LESS, ["less"]);
-    gulp.watch(path_src.JS, ["scripts"]);
-    gulp.watch(path_src.IMG, ["images"]);
-    gulp.watch(path_dist.HTML).on("change", function() {
+    gulp.watch(pathSrc.HTML, ["html"]);
+    gulp.watch(pathSrc.LESS, ["less"]);
+    gulp.watch(pathSrc.JS, ["scripts"]);
+    gulp.watch(pathSrc.IMG, ["images"]);
+    gulp.watch(pathDist.HTML).on("change", function() {
         browserSync.reload;
     });
 });

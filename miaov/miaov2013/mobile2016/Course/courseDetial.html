@@ -1,0 +1,976 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>妙味课堂-2016年课程详情-www.miaov.com</title>
+<script>
+judge();
+function judge(){
+	var Sys = {};
+	var ua = navigator.userAgent.toLowerCase();
+	var s;
+	(s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+	(s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+	(s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+	(s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+	(s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+	(s = ua.match(/rv:([\d.]+)/)) ? Sys.ie11 = s[1] :'';
+	
+	if(Sys.firefox){Sys.firefox = Number(Sys.firefox.substring(0,2))};
+	if(Sys.chrome){Sys.chrome = Number(Sys.chrome.substring(0,2))};
+	
+	if(Sys.ie || Sys.firefox < 40 || Sys.chrome < 38 || Sys.safari || (Sys.ie11 && !Sys.firefox)){
+		window.location.href = '../ie/Course/courseDetial.html';
+	}else{
+		return false;
+	}
+}
+</script>
+
+<link href="http://www.miaov.com/2013/favicon.ico" rel="icon">
+<link href="../css/course.css" rel="stylesheet" type="text/css">
+<script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/move.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<nav>
+	<div class="nav_main clear">
+	<div class="logo">
+		<a href="#">
+			<img src="../images/logo.png" class="logoBg">
+			<div class="logoText">
+				<div class="text">
+					<img src="../images/miaov.png"/>
+				</div>
+				<div class="text">
+					<img src="../images/miaov-cn.png"/>
+				</div>
+				<div class="logoAll"></div>
+				<span></span>
+			</div>
+		</a>
+	</div>
+    <div class="menu">
+    	<div class="box">
+			<div class="left"></div>
+			<div class="right"></div>
+		</div>
+    	<ul>
+        	<li><a href="http://www.miaov.com/2013/" target="_black">首页</a></li>
+            <li><a href="#" target="_black">课程</a></li>
+            <li><a href="http://bbs.miaov.com/forum.php?mod=viewthread&tid=8075" target="_black">VIP会员</a></li>
+            <li><a href="http://bbs.miaov.com/forum.php?mod=forumdisplay&fid=19" target="_black">学员作品</a></li>
+            <li><a href="http://www.miaov.com/2013/#about" target="_black">关于我们</a></li>
+            <li><a href="http://bbs.miaov.com/forum.php" target="_black">论坛</a></li>
+            <li><a href="http://www.miaov.com/2013/#message" target="_black">留言</a></li>
+        </ul>
+        <div class="loginBtn"><a href="http://bbs.miaov.com/member.php?mod=miaov_reg" target="_black">登录</a><a href="http://bbs.miaov.com/member.php?mod=miaov_reg" target="_black">注册</a></div>
+    </div>
+    </div>
+</nav>
+
+<div class="content clear">
+	<div class="banner clear"><img src="../images/course/banner.jpg"></div>
+    <div class="classInf clear">
+    	<div class="classInfTitle"><h2>妙味2016年最新版“H5移动端实战开发”课程</h2></div>
+        <div class="classInfMain">
+        	<div class="titleSmall" id="classInfMain"><span>最新开班信息<i>&nbsp;</i></span></div>
+            <div class="infList">
+            	<ul>
+                    
+                    <li><span>距离 2016年3月中旬 开班还有</span>
+                    	<dfn class="clock"><i>&nbsp;</i>
+                            <span>
+                                <div class="numGroup move">
+                                    <div class="numUp"></div>
+                                    <div class="numUp2"></div>
+                                    <div class="numDown"></div>
+                                    <div class="numDown2"></div>
+                                </div>
+                                <div class="text">天</div>
+                            </span>
+                            <span>
+                                <div class="numGroup">
+                                    <div class="numUp"></div>
+                                    <div class="numUp2"></div>
+                                    <div class="numDown"></div>
+                                    <div class="numDown2"></div>
+                                </div>
+                                <div class="text">时</div>
+                            </span>
+                            <span>
+                                <div class="numGroup">
+                                    <div class="numUp"></div>
+                                    <div class="numUp2"></div>
+                                    <div class="numDown"></div>
+                                    <div class="numDown2"></div>
+                                </div>
+                                <div class="text">分</div>
+                            </span>
+                            <span>
+                                <div class="numGroup">
+                                    <div class="numUp"></div>
+                                    <div class="numDown"></div>
+                                    <div class="numUp2"></div>
+                                	<div class="numDown2"></div>
+                                </div>
+                                <div class="text">秒</div>
+                            </span>
+                        <em>&nbsp;</em>
+                        </dfn>
+                    </li>
+                    <li>
+                        <span>席位有限，报名请点击：</span>
+                        <dfn class="btn" data-alerttitle="报名请联系 课程顾问" data-alertcontent="QQ：3023710192、3277256077<br>电话：010-82176510<br>地址：<a style='color:#436cd3;' href='http://j.map.baidu.com/CcYI7' target='_black'>北京西二旗-辉煌国际大厦5号楼2001室</a>" data-alertp="javascript"><i>&nbsp;</i><span >我要报名</span><em>&nbsp;</em></dfn>
+                    </li>
+                </ul>
+            </div>
+            <div class="titleSmall" id="classInterduce"><span>简介<i>&nbsp;</i></span></div>
+            <div class="infIntroduce">
+            	<span>2016年，我们剖析各种移动端应用案例、对各种移动端技术，重新归类编排。
+使用阶梯性教学，以实战透析知识点。人性化的课程编排，更深入的知识点讲解，
+配合细致耐心的练习辅导，随时响应的提问机制，确保不落下任何一位学员。
+——妙味最新〖H5移动端实战课程〗不可错过！</span>
+            </div>
+        	<div class="classInfMainBg"><div class="pen"><img src="../images/course/pen.png"></div></div>
+        </div>
+    </div>
+    <div class="videoInf clear" id="videoInterduce">
+    	<div class="titleSmall"><span>课程介绍视频<i>&nbsp;</i></span></div>
+        <div class="introduceList">
+            <img src="../mobile/courseVideo1.jpg">
+            <span>
+                <b data-alertm="视频名称：H5移动端实战课程介绍（上）<br>视频时长：12分06秒<br>视频大小：24.5M<br>观看地址：<a href='http://pan.baidu.com/s/1qWXYd9U' style='color:#436cd3;' target='_black'>>>下载或在线观看</a>">1-H5移动端实战课程介绍（上）</b>
+                <i class="bgPink">12'06"</i><br>
+                欢乐版“咬文嚼字”式课程介绍、移动端课程简要介绍、模拟器、wampp、适配、横竖屏、移动端事件、滑屏动画、响应式、bootstrap…
+            </span>
+            <dfn data-alertm="视频名称：H5移动端实战课程介绍（上）<br>视频时长：12分06秒<br>视频大小：24.5M<br>观看地址：<a href='http://pan.baidu.com/s/1qWXYd9U' style='color:#436cd3;' target='_black'>>>下载或在线观看</a>">&nbsp;</dfn>
+        </div>
+        <div class="introduceList">
+            <img src="../mobile/courseVideo1.jpg">
+            <span>
+                <b data-alertm="视频名称：H5移动端实战课程介绍（下）<br>视频时长：11分45秒<br>视频大小：20M<br>观看地址：<a href='http://pan.baidu.com/s/1dDKNw3n' style='color:#436cd3;' target='_black'>>>下载或在线观看</a>">2-H5移动端实战课程介绍（下）</b>
+                <i class="bgPink">11'45"</i><br>
+                移动端高级事件、封装类iScroll滑屏组件、多指操作、重力感应、摇一摇、字体图标、控件美化、canvas及音频视频、粒子像素级操作…
+            </span>
+            <dfn data-alertm="视频名称：H5移动端实战课程介绍（下）<br>视频时长：11分45秒<br>视频大小：20M<br>观看地址：<a href='http://pan.baidu.com/s/1dDKNw3n' style='color:#436cd3;' target='_black'>>>下载或在线观看</a>">&nbsp;</dfn>
+        </div>
+        
+        <div class="price">
+        	<div class="priceM"><span>课程价格</span><em>6000<i>元</i></em></div>
+            
+            
+            <div class="contentEntity">
+            	<p><span>课程时长：</span>2个月</p>
+                <p><span>讲课方式：</span>全日制面授方式，周一至周五上课</p>
+                <p><span>上课时间：</span>早上9:30—12:30<em>&nbsp;</em>下午14:00-17:00<em>&nbsp;</em>晚自习17:00-19:00</p>
+            </div>
+            <div class="magnifying"></div>
+        </div>
+        <div class="paple">&nbsp;</div>
+        <div class="paple2">&nbsp;</div>
+    	<div class="corrow">&nbsp;</div>
+    </div>
+</div>
+
+<div class="book" id="bookTitle">
+
+	<div class="title"><span>课程大纲</span></div>
+	<div class="bookContentBg fl">&nbsp;</div>
+    <div class="bookContentBg fr">&nbsp;</div>
+    
+    <div class="box" id="book">
+        
+        <div class="bookMain">
+        	<div class="firstPaper rotate">
+            	<div class="tabMain" style="border-radius:0px;">
+                    <div class="tab left" data-leaf="true" style="width:36px;transform:rotateY(0deg); left:0px;">目录</div>
+                </div>
+            	<div class="bookTitle">课程目录</div>
+                <div class="bookContent">
+                	<ul class="list"><!--mar_xs 让里面的li间距为2px; sm:5px; md:10px; lg:20px 当然 间距的增加代表了个数的减少-->
+                        <li data-leaf="sibling"><span><i>01</i></span><em>课程目录</em></li>
+                        <li data-leaf="sibling"><span><i>02</i></span><em>移动端入门</em></li>
+                        <li data-leaf="sibling" data-target="1"><span><i>03</i></span><em>移动端事件基础</em></li>
+                        <li data-leaf="sibling" data-target="1"><span><i>04</i></span><em>响应式开发</em></li>
+                        <li data-leaf="sibling" data-target="2"><span><i>05</i></span><em>移动端高级事件</em></li>
+                        <li data-leaf="sibling" data-target="2"><span><i>06</i></span><em>场景美化和表单</em></li>
+                        <li data-leaf="sibling" data-target="3"><span><i>07</i></span><em>canvas&音频&视频</em></li>
+                        <li data-leaf="sibling" data-target="3"><span><i>08</i></span><em>地图&离线存储</em></li>
+                        <li data-leaf="sibling" data-target="4"><span><i>09</i></span><em>多线程、客户端数据库</em></li>
+                        <li data-leaf="sibling" data-target="4"><span><i>10</i></span><em>移动端实战开发</em></li>
+                    </ul>
+                    <div class="pageNum">02</div>
+                </div>
+            </div>
+
+            <div class="paper">
+            	<div class="event" data-leaf="javascript">&nbsp;</div>
+                <div class="tabMain">
+                    <div class="tab right" data-leaf="true">入门</div>
+                    <div class="tab left" data-leaf="true">事件基础</div>
+                </div>
+            	<div class="bookContentLeft">
+                    <div class="bookTitle">移动端入门</div>
+                    <div class="bookContent">
+                        <div class="text">Emulation、wampp、devicePixelRatio、viewport
+、物理像素、user-scalable、initial-scale、minimum-scale、maximum-scale、1px问题、图片发虚问题处理、rem、getBoundingClientRect、background-size、box-sizing、-webkit-text-size-adjust、-webkit-appearance，-webkit-tap-highlight-color、window.orientation 横竖屏检测、orientationchange,百分比适配</div>
+                        <div class="bookImg">
+                            <div class="prevBtn">&nbsp;</div>
+                            <div class="contImg">
+                                <ul>
+                                    <li><a href="../mobile/mobile1/1/1.html" target="_black"><img src="../mobile/60_60/1/1.gif"><span>移动端布局1</span></a></li>
+                                    <li><a href="../mobile/mobile1/2/1.html" target="_black"><img src="../mobile/60_60/1/2.gif"><span>移动端布局2</span></a></li>
+                                    <li><a href="../mobile/mobile1/3/1.html" target="_black"><img src="../mobile/60_60/1/3.gif"><span>百度移动首页</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="nextBtn">&nbsp;</div>
+                        </div>
+                        <div class="pageNum">08</div>
+                    </div>
+                </div>
+            	<div class="bookContentRight">
+                    <div class="bookTitle">移动端事件基础</div>
+                    <div class="bookContent">
+                        <div class="text">touch事件、touchstart、touchmove、touchend、touches、targetTouches、changedTouches、移动端拖拽、默认事件处理、Transition过渡、贝塞尔曲线运动、transitionend事件、transform、translate位移
+、scale缩放、rotate旋转、skew斜切、transform-origin变换基点设置、perspective景深、transform-style3d空间、面向对象、对象包装、zepto.js、tap、swipeleft、swipeRight、swipeUp…</div>
+                        <div class="bookImg">
+                            <div class="prevBtn">&nbsp;</div>
+                            <div class="contImg">
+                                <ul>
+                                    <li><a href="../mobile/mobile2/1/1.html" target="_black"><img src="../mobile/60_60/2/1.gif"><span>滑屏切换</span></a></li>
+                                    <li><a href="../mobile/mobile2/2/1.html" target="_black"><img src="../mobile/60_60/2/2.png"><span>3D图片</span></a></li>
+                                    <li><a href="../mobile/mobile2/3/1.html" target="_black"><img src="../mobile/60_60/2/3.gif"><span>图片拖拽</span></a></li>
+                                    <li><a href="../mobile/mobile2/4/1.html" target="_black"><img src="../mobile/60_60/2/4.gif"><span>音悦台</span></a></li>
+                                    <li><a href="../mobile/mobile2/5/1.html" target="_black"><img src="../mobile/60_60/2/5.gif"><span>锤子解锁</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="nextBtn">&nbsp;</div>
+                        </div>
+                        <div class="pageNum">09</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paper">
+            	<div class="event" data-leaf="javascript">&nbsp;</div>
+                <div class="tabMain">
+                    <div class="tab right" data-leaf="true">响应式</div>
+                    <div class="tab left" data-leaf="true">高级</div>
+                </div>
+            	<div class="bookContentLeft">
+                    <div class="bookTitle">响应式开发</div>
+                    <div class="bookContent">
+                        <div class="text">media、media引入方式、媒体类型、关键字、媒体特征、device-aspect-radio、子元素选择器、:nth-child、:nth-last-child、:nth-child(odd)、:nth-last-of-type(n)、display:flex 弹性和模型、justify-content、space-between、space-around、align-items、flex-wrap、align-content、order元素顺序修改、flex中的margin设置、bootstrap中的栅格系统和响应式工具…</div>
+                        <div class="bookImg">
+                            <div class="prevBtn">&nbsp;</div>
+                            <div class="contImg">
+                                <ul>
+                                    <li><a href="../mobile/mobile3/1.html" target="_black"><img src="../mobile/60_60/3/1.png"><span>PC端</span></a></li>
+                                    <li><a href="../mobile/mobile3/1.html" target="_black"><img src="../mobile/60_60/3/2.png"><span>iPad</span></a></li>
+                                    <li><a href="../mobile/mobile3/1.html" target="_black"><img src="../mobile/60_60/3/3.png"><span>手机端</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="nextBtn">&nbsp;</div>
+                        </div>
+                        <div class="pageNum">09</div>
+                    </div>
+                </div>
+            	<div class="bookContentRight">
+                    <div class="bookTitle">移动端高级事件</div>
+                    <div class="bookContent">
+                        <div class="text">iScroll.js、tween运动算法、时间运动框架、mScroll自定义滑动区域封装、自定义滚动条、自定义事件添加、onscroll、onscrollstart、onscrollend，瀑布流相册、预加载、下拉刷新、锚点动画、多指操作、gesturestart、gesturechange、 gestureend、gesture兼容、勾股定理、Math.atan()、象限修复、重力感应、体感游戏、摇一摇…</div>
+                        <div class="bookImg">
+                            <div class="prevBtn">&nbsp;</div>
+                            <div class="contImg">
+                                <ul>
+                                    <li><a href="../mobile/mobile4/1/1.html" target="_black"><img src="../mobile/60_60/4/1.gif"><span>体感游戏</span></a></li>
+                                    <li><a href="../mobile/mobile4/7/1.html" target="_black"><img src="../mobile/60_60/4/2.gif"><span>锤子闹钟设置</span></a></li>
+                                    <li><a href="../mobile/mobile4/3/1.html" target="_black"><img src="../mobile/60_60/4/3.gif"><span>双指操作</span></a></li>
+                                    <li><a href="../mobile/mobile4/4/1.html" target="_black"><img src="../mobile/60_60/4/4.gif"><span>无缝图片切换</span></a></li>
+                                    <li><a href="../mobile/mobile4/5/1.html" target="_black"><img src="../mobile/60_60/4/5.gif"><span>摇一摇</span></a></li>
+                                    <li><a href="../mobile/mobile4/6/1.html" target="_black"><img src="../mobile/60_60/4/6.gif"><span>scroll</span></a></li>
+                                    <li><a href="../mobile/mobile4/2/1.html" target="_black"><img src="../mobile/60_60/4/7.gif"><span>锚点动画</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="nextBtn">&nbsp;</div>
+                        </div>
+                        <div class="pageNum">14</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paper">
+            	<div class="event" data-leaf="javascript">&nbsp;</div>
+                <div class="tabMain">
+                    <div class="tab right" data-leaf="true">美化</div>
+                    <div class="tab left" data-leaf="true">canvas</div>
+                </div>
+            	<div class="bookContentLeft">
+                    <div class="bookTitle">移动端场景美化和表单</div>
+                    <div class="bookContent">
+                        <div class="text">font-face,bootstrap Glyphicons 字体图标,自定义字体图标,border-image,linear-gradient,repeating-linear-gradient,radial-gradient,多背景,背景图基点设置，background-clip 背景图裁切,filter滤镜,grayscale 灰度,blur 模糊,新增表单控件类型,email,tel,
+url,search,range,date,placeholder,list和datalist，requeired，validity对象,Invalid事件,属性选择器,E[attr],E[attr="value"],表单控件美化…</div>
+                        <div class="bookImg">
+                            <div class="prevBtn">&nbsp;</div>
+                            <div class="contImg">
+                                <ul>
+                                    <li><a href="../mobile/mobile5/1/1.html" target="_black"><img src="../mobile/60_60/5/1.gif"><span>图标设置</span></a></li>
+                                    <li><a href="../mobile/mobile5/2/1.html" target="_black"><img src="../mobile/60_60/5/2.gif"><span>iPhone经典开机</span></a></li>
+                                    <li><a href="../mobile/mobile5/5/1.html" target="_black"><img src="../mobile/60_60/5/3.gif"><span>背景模糊</span></a></li>
+                                    <li><a href="../mobile/mobile5/6/1.html" target="_black"><img src="../mobile/60_60/5/4.gif"><span>进场动画</span></a></li>
+                                    <li><a href="../mobile/mobile5/7/1.html" target="_black"><img src="../mobile/60_60/5/5.gif"><span>3D特效</span></a></li>
+                                    <li><a href="../mobile/mobile5/3/1.html" target="_black"><img src="../mobile/60_60/5/6.gif"><span>控件美化</span></a></li>
+                                    <li><a href="../mobile/mobile5/4/1.html" target="_black"><img src="../mobile/60_60/5/7.gif"><span>控件美化</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="nextBtn">&nbsp;</div>
+                        </div>
+                        <div class="pageNum">10</div>
+                    </div>
+                </div>
+            	<div class="bookContentRight">
+                    <div class="bookTitle">canvas&音频&视频</div>
+                    <div class="bookContent">
+                        <div class="text">audio 、video、source、视频容器、controls、autoplay、loop、currentTime、duration、volume、autobuffer、paused、、编解码器、媒体元素、、poster、canvas、getContext(‘2d’)、fillRect、strokeRect、beginPath、lineWidth、lineJoin、moveTo、stroke、fill、rect、arc、arcTo、quadraticCurveTo、bezierCurveTo、变换、drawImage、strokeText、fillText…</div>
+                        <div class="bookImg">
+                            <div class="prevBtn">&nbsp;</div>
+                            <div class="contImg">
+                                <ul>
+                                    <li><a href="../mobile/mobile6/1/1.html" target="_black"><img src="../mobile/60_60/6/1.gif"><span>画板</span></a></li>
+                                    <li><a href="../mobile/mobile6/2/1.html" target="_black"><img src="../mobile/60_60/6/2.gif"><span>时钟</span></a></li>
+                                    <li><a href="../mobile/mobile6/3/1.html" target="_black"><img src="../mobile/60_60/6/3.gif"><span>canvas逐帧动画知识点</span></a></li>
+                                    <li><a href="../mobile/mobile6/5/1.html" target="_black"><img src="../mobile/60_60/6/4.gif"><span>播放器</span></a></li>
+                                    <li><a href="../mobile/mobile6/6/1.html" target="_black"><img src="../mobile/60_60/6/5.png"><span>拨云见日</span></a></li>
+
+                                    <li><a href="../mobile/mobile6/7/1.html" target="_black"><img src="../mobile/60_60/6/6.png"><span>破茧重叠</span></a></li>
+                                    <li><a href="../mobile/mobile6/8/1.html" target="_black"><img src="../mobile/60_60/6/7.jpg"><span>对话场景</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="nextBtn">&nbsp;</div>
+                        </div>
+                        <div class="pageNum">10</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="paper">
+            	<div class="event" data-leaf="javascript">&nbsp;</div>
+                <div class="tabMain">
+                    <div class="tab right" data-leaf="true">地图</div>
+                    <div class="tab left" data-leaf="true">多线程</div>
+                </div>
+            	<div class="bookContentLeft">
+                    <div class="bookTitle">地图&离线存储</div>
+                    <div class="bookContent">
+                        <div class="text">Geolocation、经度 coords.longitude、纬度 coords.latitude 、navigator.geolocation、coords.accuracy、coords.heading、enableHighAcuracy、watchPosition、clearWatch、百度地图API
+、本地存储、Storage、sessionStorage、localStorage、setItem、getItem、removeItem、clear、存储事件、applicationCache 离线存储、AddType text/cache-manifest .manifest…</div>
+                        <div class="bookImg">
+                            <div class="prevBtn">&nbsp;</div>
+                            <div class="contImg">
+                                <ul>
+                                    <li><a href="../mobile/mobile7/1/1.html" target="_black"><img src="../mobile/60_60/7/1.gif"><span>行走日记</span></a></li>
+                                    <li><a href="../mobile/mobile7/2/1.html" target="_black"><img src="../mobile/60_60/7/2.gif"><span>模拟GPS知识点</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="nextBtn">&nbsp;</div>
+                        </div>
+                        <div class="pageNum">11</div>
+                    </div>
+                </div>
+                <div class="bookContentRight">
+                    <div class="bookTitle">多线程、客户端数据库</div>
+                    <div class="bookContent">
+                        <div class="text">Web Workers、单线程、多线程、new Worker、postMessage、navgator、location、XMLHttpRequest构造器、importScripts、contenteditable="true"、x-webkit-speech、桌面提醒、webkitNotifications、notification、webSql、indexedDb、openDatabase、transaction、executeSql、indexedDB.open、onsuccess、onupgradeneeded、deleteObjectStore、apple-mobile-web-app-capable、apple-touch-fullscreen、telephone=no,email=no、apple-mobile-web-app-status-bar-style、App、Native App和Hybrid、App…</div>
+
+                        <div class="pageNum">12</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lastPaper">
+                <div class="tabMain">
+                    <div class="tab right" data-leaf="true">实战</div>
+                </div>
+                <div class="bookTitle">移动端实战开发</div>
+                <div class="bookContent">
+                    <div class="text">
+                        一：移动端商城开发<br/>
+                        二：微信场景应用开发<br/>
+                        三：移动端组件开发、“摇一摇”模块开发<br/>
+                        四：响应式实战开发<br/>
+                        五：移动端体感游戏开发<br/>
+                        六：相册WebApp开发<br/>
+                        七：绘图版WebApp开发<br/>
+                        八：音频、视频播放器开发<br/>
+                        九：地图WebApp开发<br/>
+                        注：以上实战内容为本课程结课标准。
+                    </div>
+
+                    <div class="pageNum">15</div>
+                </div>
+            </div>
+            
+            <div class="bookRing">
+                <div class="ring1">&nbsp;</div>
+                <div class="ring2">&nbsp;</div>
+                <div class="ring3">&nbsp;</div>
+            </div>
+            
+            <div class="bookRing" style="top:409px;">
+                <div class="ring1">&nbsp;</div>
+                <div class="ring2">&nbsp;</div>
+                <div class="ring3">&nbsp;</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    
+    <div class="bookPaple1">&nbsp;</div>
+    <div class="bookPaple2">&nbsp;</div>
+    <div class="bookPaple3">&nbsp;</div>
+    <div class="bookPaple4">&nbsp;</div>
+    <div class="bookPaple5">&nbsp;</div>
+    <div class="bookPaple6">&nbsp;</div>
+</div>
+
+<div class="studyRequirement" id="studyRequirement">
+	<div class="pen2">&nbsp;</div>
+	<div class="paple">&nbsp;</div>
+    <div class="envelope">&nbsp;</div>
+    <div class="setSquare">&nbsp;</div>
+    <div class="requirementMain">
+    	<div class="titleSmall"><span>学前须知<i>&nbsp;</i></span></div>
+        <dfn>
+            1、能在PC端独立完成一个类似 <a href="http://y.qq.com/" target="_blank">“QQ音乐首页”</a> 这样的静态页面；<br>
+            2、具备一定面向对象基础，最好能用面向对象写法实现简易版拖拽；<br>
+            3、学前案例测试：<a href="../mobile/test/index.html" target="_blank">>>简易版拖拽效果</a><br>
+            4、对 prototype、this 指向有一定了解更佳；
+        </dfn>
+    </div>
+</div>
+
+<div class="studentWorks" id="studentWorks" onselectstart="return false">
+	<div class="studentTit">
+    	<div class="titleSmall fl"><span>照片墙<i>&nbsp;</i></span></div>
+        <div class="more fr"><a href="http://bbs.miaov.com/forum.php?mod=forumdisplay&fid=20" target="_black">更多照片</a></div>
+    </div>
+    <div class="studentMain"></div>
+    <div class="compasses">&nbsp;</div>
+    
+</div>
+
+<div class="service clear" onselectstart="return false" id="classService">
+	<div class="serLeft">&nbsp;</div>
+    <div class="serCenter">
+    	<div class="serviceTit">
+        	<div class="titleSmall fl"><span>课程服务<i>&nbsp;</i></span></div>
+            <div class="more fl">报名该课程，您将获得：</div>
+        </div>
+        <img src="../images/course/service.gif">
+    </div>
+    <div class="serRight">&nbsp;</div>
+    <div class="registrationBtnBg"><div class="registrationBtn"  data-alerttitle="报名请与妙味课程顾问联系" data-alertcontent="QQ：3023710192、3277256077<br>电话：010-82176510<br>地址：<a style='color:#436cd3;' href='http://j.map.baidu.com/CcYI7' target='_black'>北京西二旗-辉煌国际大厦5号楼2001室</a>"  data-activeclass="active">&nbsp;</div></div>
+</div>
+
+<div class="question" id="commonProblem">
+	<div class="questionTit">
+        <div class="titleSmall fl"><span>常见问题<i>&nbsp;</i></span></div>
+        <div class="more fr"><a href="../question/index.html" target="_black">更多问题</a></div>
+    </div>
+    <div class="questionMain">
+    
+    	<div class="model">
+        	<div class="questionLeft bgPink">Q<div class="before bgPink">&nbsp;</div></div>
+            <div class="questionText bgPink right"><a href="../question/index.html" target="_black">如果听不会可以退款吗？</a></div>
+            
+            <div class="questionText bgBlue left"><a href="../question/index.html" target="_black">我们实体班有免费试听2天时间，听不会可以全额退款…</a></div>
+            <div class="questionLeft bgBlue left">A<div class="before bgInfo">&nbsp;</div></div>
+        </div>
+        
+        <div class="model m2">
+        	<div class="questionLeft bgPrimary">Q<div class="before bgPrimary">&nbsp;</div></div>
+            <div class="questionText bgPrimary right"><a href="../question/index.html" target="_black">你们课程为什么贵？</a></div>
+            
+            <div class="questionText bgPurple left"><a href="../question/index.html" target="_black">妙味的学费一直保持每年至少涨1~2次价格，除了价格上涨，还有内容的增多、服务的增多、学员工资大幅上涨…</a></div>
+            <div class="questionLeft bgPurple left">A<div class="before bgPurple">&nbsp;</div></div>
+        </div>
+        
+        <div class="model m3">
+        	<div class="questionLeft bgDanger">Q<div class="before bgDanger">&nbsp;</div></div>
+            <div class="questionText bgDanger right"><a href="../question/index.html" target="_black">你们推荐工作吗？</a></div>
+            
+            <div class="questionText bgInfo left"><a href="../question/index.html" target="_black">必须的！几乎每个月都有一堆公司找我们要人，我们会推荐合适的学员…</a></div>
+            <div class="questionLeft bgInfo left">A<div class="before bgInfo">&nbsp;</div></div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="contact">
+	<dfn><span>课程咨询QQ：</span>3023710192、3277256077<br><span>课程咨询电话：</span>010-82176510 </dfn>
+    <dfn><span>客服在线时间：</span>周一至周五<i>&nbsp;</i>9:30-18:00<em>&nbsp;</em>周六至周日<i>&nbsp;</i>10:00-17:00<br><span>地址：</span><a style="color:#e15671" href="http://j.map.baidu.com/CcYI7" target="_blank">北京海淀区西二旗辉煌国际大厦5号楼2001室</a></dfn>
+</div>
+
+<div class="note">
+	<div class="noteM black" data-scrollto="#classInfMain" data-revised="17">开班信息</div>
+    <div class="noteM primary" data-scrollto="#videoInterduce" data-revised="0">课程视频</div>
+    <div class="noteM blue" data-scrollto="#book" data-revised="29">课程大纲</div>
+    <div class="noteM black" data-scrollto="#studyRequirement" data-revised="0">学前须知</div>
+    <div class="noteM pink" data-scrollto="#studentWorks" data-revised="0">照片墙</div>
+    <div class="noteM primary" data-scrollto="#classService" data-revised="0">我要报名</div>
+</div>
+
+<div class="backTop" data-backtop="javascript">&nbsp;</div>
+
+<div class="footer">
+	<div class="f_main">
+    	<div class="f_logo fl"><img src="../images/logo2.png"></div>
+        <div class="f_copy fl">
+        	<p><a href="#">首页</a>|<a href="#">课程设置</a>|<a href="#">视频教程</a>|<a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">在线留言</a>|<a href="#">加入我们</a>|<a href="#">常见问题</a>|<a href="#">网站地图</a></p>
+        	<p><span>京ICP备08102442号 2012.MIAOOV.COM 版权所有</span></p>
+        </div>
+    </div>
+</div>
+
+<script src="../js/startMove.js"></script>
+<script src="../js/event.js"></script>
+<script src="../js/eventLibrary.js"></script>
+<script>
+
+var workes = {
+	init:function(){
+		var _this = this;
+		_this.obj = $('.studentWorks').find('.studentMain');
+		_this.card = null;
+		_this.arr = [];
+		_this.width = 1000;
+		_this.now = 0;
+		_this.off = true;
+		
+		$.ajax({
+			url:'../testData/studentWorkes.json',
+			success:function(data){
+				$.each(data.Data,function( key,value ){
+					$('<div class="card"><a href="'+ value.href +'" target="_blank"><img src="'+ value.img +'"></a><span>\
+					   <p>'+ value.tiile +'</p>\
+					   <a><i class="user">&nbsp;</i><em>'+ value.userName +'</em></a><dfn><i class="comment">&nbsp;</i><em>'+ value.comment +'</em><i class="agree">&nbsp;</i><em>'+ value.agree +'</em></dfn>\
+					   </span></div>').appendTo(_this.obj);
+				});
+				
+				_this.obj.append(_this.obj.html());
+				_this.card = _this.obj.find('.card');
+				_this.findNum();
+				_this.bindEvent();
+				_this.setPosition();
+			}
+		});
+	},
+	setPosition:function(){
+		var _this = this;
+		_this.theta = 2*Math.PI/_this.card.length;
+		var r = 400;
+		
+		$.each(_this.card,function( key,value ){
+			$(value).get(0).xAxis =  r*Math.sin(_this.theta*_this.arr[key]) + 400;
+			$(value).get(0).zAxis = r*Math.cos(_this.theta*_this.arr[key])/6 + 10;
+			$(value).get(0).style.transform = 'translate3D('+ $(value).get(0).xAxis +'px,0px,'+ $(value).get(0).zAxis +'px) scale(0.9,0.9)';
+			$(value).get(0).style.webkitTransform = 'translate3D('+ $(value).get(0).xAxis +'px,0px,'+ $(value).get(0).zAxis +'px) scale(0.9,0.9)';
+			//$(value).get(0).style.zIndex = Math.floor($(value).get(0).zAxis) + 40;
+			//$(value).animate({zIndex:Math.floor($(value).get(0).zAxis) + 40},500);
+			$(value).removeClass('active');
+			if(key == _this.now){
+				
+				for(var i=1;i<Math.ceil((_this.card.length)/4)+1;i++){
+					var n = (_this.arr.indexOf($(value).index())-i)<0?(_this.arr.indexOf($(value).index())-i)+_this.card.length:(_this.arr.indexOf($(value).index())-i);
+					_this.card.eq(_this.arr[n]).css({opacity:(10-i)/10});
+					_this.card.eq(_this.arr[_this.arr.indexOf($(value).index())+i]).css({opacity:(10-i)/10});
+					//.css({opacity:(10-i)/10});
+				}
+				$(value).addClass('active');
+				$(value).css({opacity:1,zIndex:99});
+				$(value).get(0).style.transform = 'translate3D('+ $(value).get(0).xAxis +'px,0px,'+ ($(value).get(0).zAxis+2) +'px) scale(1.1,1.1)';
+				$(value).get(0).style.webkitTransform = 'translate3D('+ $(value).get(0).xAxis +'px,0px,'+ ($(value).get(0).zAxis+2) +'px) scale(1.1,1.1)';
+			}
+		});
+	},
+	findNum:function(){
+		var _this = this;
+		$.each(_this.card,function( key,value ){ _this.arr.push(key);});
+		//_this.prev({num:3});
+	},
+	next:function( option ){
+		var _this = this;
+		var num = option && option.num;
+		var index = option && option.index;
+		
+		_this.arr.push(_this.arr[0]);_this.arr.shift();
+		_this.setPosition();
+		if(num>1){
+			num--;
+			setTimeout(function(){
+				_this.next({num:num});
+			},100);
+		}
+	},
+	prev:function( option ){
+		var _this = this;
+		var num = option && option.num;
+		var index = option && option.index;
+		
+		_this.arr.unshift(_this.arr[_this.arr.length-1]);_this.arr.pop();
+		_this.setPosition();
+		if(num>1){
+			num--;
+			setTimeout(function(){
+				_this.prev({num:num});
+			},100);
+		}
+		
+	},
+	bindEvent:function(){
+		var _this = this;
+		var timer = null;
+		
+		_this.card.on('click',function(){
+
+			if($(this).index()!=_this.now && _this.off){
+				_this.off = false;
+				clearTimeout(timer);
+				timer = setTimeout(function(){
+					_this.off = true;
+				},200);
+				var m = _this.arr.indexOf($(this).index()) - _this.arr.indexOf(_this.now);
+				
+				if( m > _this.card.length/2){
+					_this.next({num:_this.card.length - m});
+				}else if(m < 0 && Math.abs(m)>_this.card.length/2){
+					_this.prev({num:_this.card.length - Math.abs(m)});
+				}else if(m > 0){
+					_this.prev({num:m});
+				}else{
+					_this.next({num:Math.abs(m)});
+				}
+				
+				_this.now = $(this).index();
+				_this.setPosition();
+				return false;
+			}else if($(this).index()==_this.now && _this.off){
+				//console.log('跳转吧');
+			}else{
+				return false;
+			}
+			
+		});
+	}
+};
+workes.init();
+
+clock3({obj:$('.classInfMain .clock').eq(0),time:Date.parse(new Date(2016,2,20))/1000});
+function clock3(option){
+    
+    var parent = option.obj;
+    var expirationTime = option.time;
+    var elemDay = parent.find('.numUp').eq(0);
+    var elemHour = parent.find('.numUp').eq(1);
+    var elemMinute = parent.find('.numUp').eq(2);
+    var elemSecond = parent.find('.numUp').eq(3);
+    var surplusTime,day,hour,minu,sec,newDay,newHour,newMinu,newSec;
+    
+    surplusTime = expirationTime - (Date.parse(new Date())/1000);
+    //console.log(surplusTime);
+    sec = surplusTime%60;
+    minu = (Math.floor(surplusTime/60))%60;
+    hour = (Math.floor(surplusTime/3600))%24;
+    day = Math.floor((surplusTime/3600)/24);
+    
+    //console.log(day);
+    
+    change(sec,elemSecond );
+    change(minu,elemMinute);
+    change(hour,elemHour);
+    change(day,elemDay);
+    
+    var timer = setInterval(function(){
+        surplusTime = expirationTime - (Date.parse(new Date())/1000);
+        newSec = surplusTime%60;
+        newMinu = (Math.floor(surplusTime/60))%60;
+        newHour = (Math.floor(surplusTime/3600))%24;
+        newDay = Math.floor((surplusTime/3600)/24);
+        
+        if( newSec < 0 ){
+            clearInterval(timer);
+        }
+        
+        change( newSec,elemSecond );
+        if(minu != newMinu){
+            minu = newMinu;
+            change(newMinu,elemMinute);
+        }
+        if(hour != newHour){
+            hour = newHour
+            change(newHour,elemHour);
+        }
+        if(day != newDay){
+            day = newDay
+            change(newDay,elemDay);
+        }
+    },1000);
+    
+    function change( num,target ){
+        target.parent().addClass('move');
+        setTimeout(function(){
+            if( num < 0 ){
+                target.html('<img src="../images/0.png"><img src="../images/0.png">');
+                target.siblings('.numDown2').html(target.html());
+                return false;
+            }
+            if(num<10){
+                target.html('<img src="../images/0.png"><img src="../images/'+ num +'.png">');
+                target.siblings('.numDown2').html(target.html());
+            }else{
+                target.html('<img src="../images/'+ num.toString()[0] +'.png"><img src="../images/'+ num.toString()[1] +'.png">');
+                target.siblings('.numDown2').html(target.html());
+            }
+        },200);
+        
+        setTimeout(function(){
+            target.siblings('.numUp2').html(target.html());
+            target.siblings('.numDown').html(target.html());
+            target.parent().removeClass('move');
+        },300);
+    }
+}
+
+var book = {
+	init:function(){
+		var _this = this;
+		_this.parent = $('#book');
+		_this.paper = _this.parent.find('.paper .event');
+		_this.labelLength = _this.parent.find('.tabMain').length;
+		var xz = (12 - _this.labelLength)*5;
+		var width = 450 - xz;
+		
+		css(_this.parent.find('.firstPaper').get(0),'translateZ', 0);
+		css(_this.parent.find('.lastPaper').get(0),'translateZ', -_this.paper.length);
+		
+		$.each(_this.parent.find('.tabMain'),function( key,value ){
+			$(value).css({
+				'right':(width/_this.labelLength)*(key+1) - 30 - xz*0.8 + 'px',
+				'width':(width/(_this.labelLength-1)) + 40 + 'px'
+			}).find('.tab').css('width',width/(_this.labelLength-1));
+		});
+		
+		_this.parent.find('.tabMain').eq(0).css({
+			'left':'0px'
+		});
+		
+		var Catalog = _this.parent.find('.firstPaper .bookContent .list li');
+		if(Catalog.length < 9){
+			_this.parent.find('.firstPaper .bookContent .list').removeClass('mar_xs mar_sm mar_md mar_lg');
+			_this.parent.find('.firstPaper .bookContent .list').addClass('mar_lg');
+		}else if(Catalog.length < 13){
+			_this.parent.find('.firstPaper .bookContent .list').removeClass('mar_xs mar_sm mar_md mar_lg');
+			_this.parent.find('.firstPaper .bookContent .list').addClass('mar_md');
+		}else if(Catalog.length < 15){
+			_this.parent.find('.firstPaper .bookContent .list').removeClass('mar_xs mar_sm mar_md mar_lg');
+			_this.parent.find('.firstPaper .bookContent .list').addClass('mar_sm');
+		}else{
+			_this.parent.find('.firstPaper .bookContent .list').removeClass('mar_xs mar_sm mar_md mar_lg');
+			_this.parent.find('.firstPaper .bookContent .list').addClass('mar_xs');
+		}
+		
+		_this.color = ['primary','info','success','mint','warning','danger','pink','purple','dark'];
+		$.each(_this.paper,function( key,value ){
+			
+			css($(value).parent().get(0),'zIndex',(_this.paper.length) - key);
+			css($(value).parent().get(0),'translateZ', - key);
+
+		});
+		
+		$.each(_this.parent.find('.pageNum'),function( k,v ){
+			$(v).html((k+1)<10?'0'+(k+1):k+1);
+			_this.parent.find('.tab').eq(k).addClass(_this.color[k%_this.color.length]);
+		});
+	}
+}
+book.init();
+
+var floatMenu = {
+	init:function(){
+		var menu = $('.note .noteM');
+		var timer = null;
+		var timeout = null;
+		var leatTop = $('body').scrollTop();
+		var off = true;
+		var arr = [];
+		
+		if(leatTop>1400 && off){
+			off = false;
+			$('.backTop').animate({opacity:1},500);
+		}
+		
+		$.each($('.note .noteM'),function( k,v ){
+			arr.push($($(v).data('scrollto')).offset().top);
+		});
+		
+		$(window).scroll(function( ev ){
+			clearInterval(timer);
+			clearTimeout(timeout);
+			timer = setInterval(function(){
+				if(leatTop != $(window).scrollTop()){
+					$.each(arr,function( k,v ){
+						
+						if(leatTop < $(window).scrollTop()){
+							if($(window).scrollTop() > v ){
+								$('.note .noteM').eq(k).siblings().removeClass('active');
+								$('.note .noteM').eq(k).addClass('active');
+							}
+							if($(window).scrollTop() > (arr[k+1] - v)/2 + v ){
+								$('.note .noteM').eq(k+1).siblings().removeClass('active');
+								$('.note .noteM').eq(k+1).addClass('active');
+							}	
+						}else{
+							if($(window).scrollTop() < (v - arr[k-1])/3 + arr[k-1] ){
+								$('.note .noteM').eq(k-1).siblings().removeClass('active');
+								$('.note .noteM').eq(k-1).addClass('active');
+								return false;
+							}
+							if($(window).scrollTop() < v ){
+								$('.note .noteM').eq(k).siblings().removeClass('active');
+								$('.note .noteM').eq(k).addClass('active');
+								return false;
+							}
+						}
+						
+					});
+					if($(window).scrollTop()>300 && off){
+						off = false;
+						$('.backTop').show();
+						$('.backTop').animate({opacity:1},200,function(){
+							
+						});
+					}else if($(window).scrollTop()<200 && !off){
+						off = true;
+						$('.backTop').animate({opacity:0},200,function(){
+							$('.backTop').hide();
+						});
+					}
+					
+				}
+			},10);
+			
+			timeout = setTimeout(function(){
+				leatTop = $(window).scrollTop();
+				clearInterval(timer);
+			},200);
+		});
+	}
+}
+floatMenu.init();
+
+var bookImg = {
+	init:function(){
+		var _this = this;
+		_this.parent = $('#book .bookImg');
+		$.each(_this.parent,function( k,v ){
+			_this.intImg(v);
+		});
+	},
+	intImg:function( obj ){
+		var _this = this;
+		var oUl = $(obj).find('ul');
+		var oImg = $(obj).find('li');
+		var prevBtn = $(obj).find('.prevBtn');
+		var nextBtn = $(obj).find('.nextBtn');
+		$(obj).attr('now',0);
+		$(obj).attr('page',0);
+		if(oImg.length<=3){
+			oUl.css('width','100%');
+			prevBtn.css('display','none');
+			nextBtn.css('display','none');
+		}else{
+			oUl.css('width',Math.ceil(oImg.length/3)*100 + '%');
+			$(obj).attr('page',Math.ceil(oImg.length/3)-1);
+			_this.bindEvent($(obj),prevBtn,nextBtn,oUl);
+		}
+	},
+	bindEvent:function( obj,prev,next,target ){
+		var _this = this;
+		prev.on('click',function(){
+			if($(obj).attr('now') > 0 ){
+				$(obj).attr('now',Number($(obj).attr('now'))-1)
+				target.css('left',-($(obj).attr('now') * 278));
+				next.css('opacity',1);
+			}
+			if($(obj).attr('now') == 0){
+				$(this).css('opacity',0.3);
+			}
+		});
+		next.on('click',function(){
+			//console.log($(obj).attr('page'),$(obj).attr('now'));
+			if($(obj).attr('page') > 0 && $(obj).attr('now') < $(obj).attr('page')){
+				$(obj).attr('now',Number($(obj).attr('now'))+1)
+				target.css('left',-($(obj).attr('now') * 278));
+				prev.css('opacity',1);
+			}
+			if($(obj).attr('now') == $(obj).attr('page')){
+				$(this).css('opacity',0.3);
+			}	
+		});
+	}
+};
+bookImg.init();
+
+var classList = {
+	init:function(){
+		var _this = this;
+		_this.parent = $('#videoInterduce');
+		_this.prevBtn = _this.parent.find('.classListLeftBtn');
+		_this.nextBtn = _this.parent.find('.classListRightBtn');
+		_this.ul = _this.parent.find('ul');
+		_this.list = _this.parent.find('li');
+		_this.now = 0;
+		_this.page = 0;
+		
+		if(_this.list.length <= 2 ){
+			_this.prevBtn.css('display','none');
+			_this.nextBtn.css('display','none');
+		}else{
+			_this.ul.css('width',_this.list.length * 240 + 20);
+			_this.page = Math.floor(_this.list.length/2);
+			_this.bindEvent();
+		}
+	},
+	bindEvent:function(){
+		var _this = this;
+		_this.prevBtn.on('click',function(){
+			if(_this.now > 0 ){
+				_this.now --;
+				_this.ul.css('left',-(_this.now * 240) - 14);
+				_this.nextBtn.css('opacity',1);
+			}
+			if(_this.now == 0){
+				$(this).css('opacity',0.3);
+			}
+		});
+		_this.nextBtn.on('click',function(){
+			if(_this.page > 0 && _this.now < _this.page){
+				//console.log(_this.now,_this.page);
+				_this.now ++;
+				_this.ul.css('left',-(_this.now * 240) - 16);
+				_this.prevBtn.css('opacity',1);
+			}
+			if(_this.now == _this.page){
+				$(this).css('opacity',0.3);
+			}	
+		});
+	}
+}
+classList.init();
+</script>
+</body>
+</html>

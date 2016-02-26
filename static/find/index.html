@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>看图找英雄</title>
+<link rel="stylesheet" href="content/css/style.css">
+</head>
+
+<body>
+<div id="page-start" class="page-start bg abs">
+  <div class="top"></div>
+  <div class="bottom"></div>
+  <div class="rule-txt">
+    游戏规则：<br>
+    根据每关的文字提示，在4幅图中点击正确的漫威人物头像，即可通关！
+  </div>
+  <div id="startGame" class="startGame"></div>
+</div>
+<div id="page-panel" class="page-panel bg abs">
+  <div id="levelTxt" class="levelTxt"><span class="txt">第<em>1</em>关</span><span class="title">找出绿巨人</span></div>
+  <div class="levelTime">计时中 <span id="levelTime">0</span></div>
+  <ul id="pageItem1" class="pageItem cf" style="display: none;">
+    <li class="link"><img src="content/images/p1_1.jpg" alt=""><div class="mark"></div></li>
+    <li class="link true"><img src="content/images/p1_4true.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p1_2.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p1_3.jpg" alt=""><div class="mark"></div></li>
+  </ul>
+  <ul id="pageItem2" class="pageItem cf" style="display: none;">
+    <li class="link"><img src="content/images/p2_2.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p2_1.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p2_3.jpg" alt=""><div class="mark"></div></li>
+    <li class="link true"><img src="content/images/p2_4true.jpg" alt=""><div class="mark"></div></li>
+  </ul>
+  <ul id="pageItem3" class="pageItem cf" style="display: none;">
+    <li class="link true"><img src="content/images/p3_4true.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p3_2.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p3_1.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p3_3.jpg" alt=""><div class="mark"></div></li>
+  </ul>
+  <ul id="pageItem4" class="pageItem cf" style="display: none;">
+    <li class="link true"><img src="content/images/p4_4true.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p4_3.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p4_1.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p4_2.jpg" alt=""><div class="mark"></div></li>
+  </ul>
+  <ul id="pageItem5" class="pageItem cf" style="display: none;">
+    <li class="link true"><img src="content/images/p5_4true.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p5_2.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p5_1.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p5_3.jpg" alt=""><div class="mark"></div></li>
+  </ul>
+  <ul id="pageItem6" class="pageItem cf" style="display: none;">
+    <li class="link true"><img src="content/images/p6_4true.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p6_1.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p6_3.jpg" alt=""><div class="mark"></div></li>
+    <li class="link"><img src="content/images/p6_2.jpg" alt=""><div class="mark"></div></li>
+  </ul>
+</div>
+<div id="page-end" class="page-end bg abs">
+  <div class="gx"></div>
+  <div class="renwu"><img src="content/img/renwu1.png" alt=""></div>
+  <div class="end_banner">
+    <div id="globalTime" class="globalTime">你的总耗时为 <span><em></em>秒</span></div>
+    <div class="beatTxt">打败了<em>100%</em>的漫迷！</div>
+  </div>
+  <div class="honor">
+    获得 <span>葵花点穴手</span> 称号
+  </div>
+  <div class="btnBox flex flex-pc">
+    <div id="btnShare" class="btnShare"></div>
+  </div>
+  <div class="guanzhu"><span>搜索"<em>mhdapp</em>"关注漫画岛微信号</span></div>
+  <div class="end_bottom cf">
+    <p class="ewm"><img src="content/img/ewm.png"></p>
+  </div>
+</div>
+<div id="mark_ios"></div>
+<div id="mark_android"></div>
+
+<script type="text/javascript" src="content/js/jquery.min.js"></script>
+<script type="text/javascript" src="content/js/global.js"></script>
+</body>
+</html>

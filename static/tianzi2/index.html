@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>挑战百万红包，智商超群的我刚参与了疯狂猜题，老司机带你涨姿势！</title>
+<meta charset="utf-8">
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no" name="format-detection">
+<meta name="wap-font-scale" content="no" />
+<meta content="no-cache" http-equiv="Cache-control">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script src="http://g.alicdn.com/mtb/??lib-flexible/0.3.2/flexible_css.js,lib-flexible/0.3.2/flexible.js"></script>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jq.layer.css">
+</head>
+
+<body>
+<!--加载页面 S-->
+<div class="loading abs" id="loading">
+  <div class="abs">
+    <div class='pro-box'>
+      <img src="img/loading.gif" alt="">
+      <div class='pro_div' id='pro_div'>
+        <div class='pro_bg'></div>
+        <div class='pro'></div>
+      </div>
+      <div class='nowloading'>
+        <p class="loading_rate" id="loading_rate">0%</p>
+      </div>
+    </div>
+    <div class="btm_logo abs"></div>
+  </div>
+</div>
+<!--加载页面 E-->
+<div id="start" class="index bg" style="display:none">
+  <div class="index_txt abs"></div>
+  <div class="index_txt2 abs"></div>
+  <ul class="index_cont abs">
+    <li><span class="pic_book"></span></li>
+    <li><span class="index_txt3 font30">答对题就送读书红包<br>还有作者亲笔签名实体书等你拿哦<br>好礼不等人，赶紧来挑战！！</span></li>
+    <li><span id="startBtn" class="btns startBtn font36">开 始 挑 战</span></li>
+  </ul>
+  <div class="btm_logo2 abs"></div>
+</div>
+
+<div id="main" class="main bg" style="display:none">
+  <div id="box"></div>
+  <div class="btm_logo2 abs"></div>
+</div>
+
+<div id="end" class="end bg" style="display:none">
+  
+  <div class="result result1">
+    <div class="state"><img src="img/state1.jpg" alt=""></div>
+    <div class="res_num font30">您答对了 <em class="succNum">0</em> 题，属于小说界的[<strong class="nickname"></strong>]</div>
+    <div class="res_txt font30"></div>   
+  </div>
+
+  <!-- 领红包 -->
+  <div class="box_hongbao" style="display:none">
+    <div class="hongbao"></div>
+    <p class="font30">赶紧拆开领取【开卷有益】<br>为您精心准备的读书红包吧~</p>
+  </div>
+  
+  <!-- 答对0-3题 -->
+  <div class="end_mod" style="display:none;">
+    <div class="btnBox">
+      <div id="resetBtn" class="btns">纳尼？再来一次！</div>
+      <div class="btns">让好友体(chu)验(chou)</div>
+    </div>
+  </div>
+
+  <!-- 未中红包 -->
+  <div class="end_mod" style="display:none">
+    <div class="box_reCode">
+      <div class="icon_regret"></div>
+      <div class="text font26">骚年，来晚了，100万红包都发完了~<br>赶紧下载【开卷有益】，别错过更多精彩哦~</div>
+    </div>
+    <div class="btnBox">
+      <div class="btns">免费下载</div>
+    </div>
+  </div>
+  
+  <!-- 2元红包 -->
+  <div class="end_mod" style="display:none">
+    <div class="box_reCode">
+      <div class="text font26">您获得了2元读书红包</div>
+      <div class="recode font26"><span>123456456456456789</span></div>
+      <div class="text font26">长按复制，前往【开卷有益】礼券中心即可兑换</div>
+    </div>
+    <div class="btnBox">
+      <div class="btns">偶不服！要更大的读书红包</div>
+      <div class="btns">与好友切(zhuang)磋(bi)</div>
+    </div>
+  </div>
+
+  <!-- 5元红包 -->
+  <div class="end_mod" style="display:none">
+    <div class="box_reCode">
+      <div class="text font26">您获得了5元读书红包</div>
+      <div class="recode font26"><span>123456456456456789</span></div>
+      <div class="text font26">长按复制，前往【开卷有益】礼券中心即可兑换</div>
+    </div>
+    <div class="btnBox">
+      <div class="btns">与好友切(zhuang)磋(bi)</div>
+    </div>
+  </div>
+
+  <div class="box_book cf">
+    <div class="pic_book fl"></div>
+    <p class="fl cont font24">将活动页面转发至朋友圈，截图发送给开卷有益微信公众号，还有机会获得“芈月传”作者亲笔签名的实体书一本哦~</p>
+  </div>
+  <div class="tit_split"></div>
+  <div class="btn_link">
+    <a href="" class="btn_online"></a>
+    <a href="" class="btn_exchange"></a>
+  </div>
+  <div class="box_qrcode">
+    <div class="txt font30">答题无力？？关注微信公众号，<br>全部答案告诉你↓↓↓</div>
+    <div class="qrcode"><img src="img/qrcode.png" alt=""></div>
+  </div>
+  <ul class="rule_cont">
+    <li>1.红包请在【开卷有益】应用的礼券中心进行兑换，可直接扫码或者在各大应用市场中下载【开卷有益】；</li>
+    <li>2.同金额红包兑换码每个用户只能使用一个；</li>
+    <li>3.参与签名实体书领取活动需关注微信公众号【开卷有益】，然后将截图发送给公众号即可；</li>
+    <li>4.在线书城可提供用户直接阅读热门小说，方便快捷；</li>
+    <li>5.如有问题，请咨询微信公众号【开卷有益】。</li>
+  </ul>
+  <div class="btm"><span class="btm_logo2"></span></div>
+</div>
+<div id="mark_ios"></div>
+<div id="mark_android"></div>
+
+<script src="js/jq.layer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

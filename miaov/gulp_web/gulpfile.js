@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
     del = require('del'),
-    browserSync = require('browser-sync').create(),
+    browserSync = require('browser-sync'),
     path = {
         HTML : "Wechat/public/html/weShop/*.html",
         LESS : "Wechat/public/style/less/*.less",

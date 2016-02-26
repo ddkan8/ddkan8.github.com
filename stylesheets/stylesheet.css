@@ -423,3 +423,86 @@ Small Device Styles
   }
 
 }
+/* 清除浮动 */
+.cf {*zoom: 1;}
+.cf:before,
+.cf:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.cf:after {clear: both;}
+.main{
+  margin: 0;
+  padding: 20px 0 10px;
+  background-color: #fff
+}
+.main ul{
+  margin: 0 auto;
+  padding: 0;
+  width: 960px;
+}
+.main li{
+  position: relative;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  width: 230px;
+  height: 409px;
+  text-align: center;
+  background-color: #ccc;
+}
+.main li>img{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  width: 230px;
+  height: 409px;
+}
+.main li:nth-child(4n+1){
+  margin-left: 0;
+}
+.main .qrcode{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 230px;
+  height: 369px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.main .qrcode img{
+  opacity: 0;
+  margin-top: 115px;
+  width: 140px;
+  height: 140px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.main .qrcode:hover{
+  background-color: rgba(0,0,0,.95);
+}
+.main .qrcode:hover img{
+  opacity: 1;
+  margin-top: 115px;
+  width: 140px;
+  height: 140px;
+}
+.main h2{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 4px 4px;
+  margin: 0;
+  padding: 0;
+  width: 230px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(0,0,0,.75);
+}

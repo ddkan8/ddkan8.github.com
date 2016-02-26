@@ -1,0 +1,295 @@
+﻿@charset "utf-8";
+// 设计稿宽度
+@view-base:640;
+// px转换rem
+@px2rem:@view-base / 10 * 1rem;
+// {padding:20 / @pxTorem 10 / @pxTorem;}
+.px2px(@name, @px){
+    @{name}: round(@px / 2) * 1px;
+    [data-dpr="2"] & {
+        @{name}: @px * 1px;
+    }
+    // for mx3
+    [data-dpr="2.5"] & {
+        @{name}: round(@px * 2.5 / 2) * 1px;
+    }
+    // for 小米note
+    [data-dpr="2.75"] & {
+        @{name}: round(@px * 2.75 / 2) * 1px;
+    }
+    [data-dpr="3"] & {
+        @{name}: round(@px / 2 * 3) * 1px
+    }
+    // for 三星note4
+    [data-dpr="4"] & {
+        @{name}: @px * 2px;
+    }
+}
+
+body{
+  font-family:'\5fae\8f6f\96c5\9ed1',simsun,Arial,sans-serif;
+  color:#fff;
+}
+/* ============================================================
+   flex：定义布局为盒模型
+   flex-v：盒模型垂直布局
+   flex-1：子元素占据剩余的空间
+   flex-align-center：子元素垂直居中 ->简写 flex-ac
+   flex-pack-center：子元素水平居中   ->简写 flex-pc
+   flex-pack-justify：子元素两端对齐 ->简写 flex-pj
+      兼容性：ios 4+、android 2.3+、winphone8+
+============================================================ */
+.flex{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}
+.flex-v{-webkit-box-orient:vertical;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}
+.flex-1{-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;}
+.flex-ac{-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;}
+.flex-pc{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}
+.flex-pj{-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}
+
+.page-wrap{
+  height: 1008/@px2rem;
+  background: url(../img/bg.jpg) center top no-repeat #8A1113;
+  background-size: 100% auto;
+}
+.wrap{
+  position: relative;
+  margin: 0 auto;
+  width: 640/@px2rem;
+  height: 1008/@px2rem;
+  overflow: hidden;
+}
+.box{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1008/@px2rem;
+}
+.top{
+  height: 106/@px2rem;
+  background: url(../img/bg_top.png) center no-repeat;
+  background-size: 640/@px2rem 106/@px2rem;
+}
+.bottom{
+  height: 106/@px2rem;
+  background: url(../img/bg_bottom.png) center no-repeat;
+  background-size: 640/@px2rem 106/@px2rem;
+}
+.center{
+  height: 796/@px2rem;
+  background: url(../img/bg_center.png) center repeat-y;
+  background-size: 640/@px2rem 10/@px2rem;
+}
+.door{
+  position: relative;
+  width: 505/@px2rem;
+  height: 571/@px2rem;
+  text-align: center;
+
+  span{
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 255/@px2rem;
+    height: 571/@px2rem;
+  }
+  .door-l{
+    left: 0;
+    background: url(../img/door_l.png) no-repeat;
+    background-size: 100%;
+  }
+  .door-r{
+    right: 0;
+    background: url(../img/door_r.png) no-repeat;
+    background-size: 100%;
+  }
+}
+.active .door-l{
+  -webkit-animation:mLeft 1s linear 0.1s forwards;
+  animation:mLeft 1s linear 0.1s forwards;
+  -webkit-backface-visibility:hidden;
+}
+.active .door-r{
+  -webkit-animation:moveRight 1s linear 0.1s forwards;
+  animation:moveRight 1s linear 0.1s forwards;
+  -webkit-backface-visibility:hidden;
+}
+@-webkit-keyframes mLeft{
+  0%{-webkit-transform:translateX(0)}
+  50%{-webkit-transform:translateX(-30/@px2rem)}
+  100%{-webkit-transform:translateX(0)}
+}
+@keyframes mLeft{
+  0%{transform:translateX(0)}
+  50%{transform:translateX(-30/@px2rem)}
+  100%{transform:translateX(0)}
+}
+@-webkit-keyframes moveRight{
+  0%{-webkit-transform:translateX(0)}
+  50%{-webkit-transform:translateX(30/@px2rem)}
+  100%{-webkit-transform:translateX(0)}
+}
+@keyframes moveRight{
+  0%{transform:translateX(0)}
+  50%{transform:translateX(30/@px2rem)}
+  100%{transform:translateX(0)}
+}
+
+.god{
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: -10/@px2rem;
+  margin-left: -640/2/@px2rem;
+  width: 640/@px2rem;
+  height: 970/@px2rem;
+}
+.god1{
+  background: url(../img/god1.png) no-repeat;
+  background-size: 100%;
+}
+.god2{
+  background: url(../img/god2.png) no-repeat;
+  background-size: 100%;
+}
+.god3{
+  background: url(../img/god3.png) no-repeat;
+  background-size: 100%;
+}
+.god4{
+  background: url(../img/god4.png) no-repeat;
+  background-size: 100%;
+}
+.god5{
+  background: url(../img/god5.png) no-repeat;
+  background-size: 100%;
+}
+.active .god{
+  display:block;
+  -webkit-animation:scale 1s ease 2s forwards;
+  animation:scale 1s ease 2s forwards;
+  -webkit-backface-visibility:hidden;
+}
+@-webkit-keyframes scale {
+  0%{opacity:0;-webkit-transform:scale(0)}
+  90%{-webkit-transform:scale(1.2)}
+  100%{opacity:1;-webkit-transform:scale(1)}
+}
+@keyframes scale {
+  0%{opacity:0;transform:scale(0)}
+  90%{transform:scale(1.2)}
+  100%{opacity:1;transform:scale(1)}
+}
+
+.btn-find{
+  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 90/@px2rem;
+  margin-left: -379/2/@px2rem;
+  width: 379/@px2rem;
+  height: 77/@px2rem;
+  background: url(../img/btn_find.png) no-repeat;
+  background-size: 100%;
+}
+.active .btn-find{
+  display:block;
+  -webkit-animation:fadeIn .5s linear 2s forwards;
+  animation:fadeIn .5s linear 2s forwards;
+  -webkit-backface-visibility:hidden;
+}
+@-webkit-keyframes fadeIn{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+@keyframes fadeIn{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+
+.text{
+  position: absolute;
+  left: 0;
+  top: 90/@px2rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  .px2px(font-size, 24px);
+}
+.font-box{
+  position: absolute;
+  left: 50%;
+  top: 130/@px2rem;
+  margin-left: -492/2/@px2rem;
+  padding-top: 94/@px2rem;
+  width: 492/@px2rem;
+  height: 234/@px2rem;
+  background: url(../img/bg_font.png) no-repeat;
+  background-size: 100%;
+  text-align: center;
+
+  img{
+    width: 157/@px2rem;
+    height: 112/@px2rem;
+  }
+}
+.btn-rule{
+  position: absolute;
+  left: 50%;
+  top: 388/@px2rem;
+  margin-left: -544/2/@px2rem;
+  width: 544/@px2rem;
+  height: 346.8/@px2rem;
+  // background: url(../img/text.png) no-repeat;
+  // background-size: 100%;
+
+  img{width: 100%;}
+}
+.btn-share{
+  position: absolute;
+  left: 50%;
+  bottom: 100/@px2rem;
+  margin-left: -365/2/@px2rem;
+  width: 365/@px2rem;
+  height: 145/@px2rem;
+  background: url(../img/btn_collect.png) no-repeat;
+  background-size: 100%;
+}
+
+.pBox{
+  position: relative;
+  width: 492/@px2rem;
+  height: 803/@px2rem;
+  background: url(../img/bg_pop.png) center no-repeat;
+  background-size: 100%;
+
+  .cont{
+    padding: 100/@px2rem 54/@px2rem 0;
+    line-height: 48/@px2rem;
+    text-align: center;
+    color: #000;
+    font-weight: 700;
+    .px2px(font-size, 24px);
+  }
+  .qrcode{
+    margin-top: 34/@px2rem;
+    text-align: center;
+
+    img{
+      width: 246/@px2rem;
+      height: 279/@px2rem;
+    }
+  }
+  .btn-iknow{
+    margin: 34/@px2rem auto 0;
+    width: 323/@px2rem;
+    height: 77/@px2rem;
+    background: url(../img/btn_iknow.png) no-repeat;
+    background-size: 100%;
+  }
+}
+#mark_ios{background:url(../img/tips_ios.png) center top no-repeat rgba(0,0,0,.5);}
+#mark_android{background:url(../img/tips_android.png) center top no-repeat rgba(0,0,0,.5);}
+#mark_ios,#mark_android{display: none;z-index:1000;position:fixed;left:0;right:0;top:0;bottom:0;width:100%;height:100%;background-size:100% auto;}

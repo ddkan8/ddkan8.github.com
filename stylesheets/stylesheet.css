@@ -470,6 +470,7 @@ Small Device Styles
   position: absolute;
   left: 0;
   top: 0;
+	border-radius: 4px 4px 0 0;
   width: 230px;
   height: 369px;
   -webkit-transition: all .5s;
@@ -483,10 +484,10 @@ Small Device Styles
   -webkit-transition: all 1s;
   transition: all 1s;
 }
-.main .qrcode:hover{
+.main li:hover .qrcode{
   background-color: rgba(0,0,0,.95);
 }
-.main .qrcode:hover img{
+.main li:hover .qrcode img{
   opacity: 1;
   margin-top: 115px;
   width: 140px;

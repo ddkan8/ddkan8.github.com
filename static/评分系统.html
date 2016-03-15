@@ -1,0 +1,142 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+
+            width: 500px;
+            list-style: none;
+            background-color: darkorange;
+        }
+
+        li {
+            float: left;
+            padding-right: 12px;
+        }
+
+        div {
+            width: 20px;
+            height: 20px;
+            background-color: cadetblue;
+        }
+
+        .defaultActive {
+            background-color: cadetblue;
+        }
+
+        .highActive {
+            background-color: red;
+
+        }
+
+        .lowActive {
+            background-color: gray;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+    <li>
+        <div></div>
+    </li>
+
+</ul>
+<script>
+    window.onload = function () {
+        var oUl = document.getElementsByTagName("ul");
+        var oDiv = document.getElementsByTagName("div");
+        var oLi = document.getElementsByTagName("li");
+        judgSysTem(oUl, oDiv, oLi);
+        for(var n=0;n<oLi.length;n++){
+            this.ss=false;
+        }
+        function judgSysTem(oUl, oDiv, oLi) {
+
+            for (var i = 0; i < oLi.length; i++) {
+                oLi[i].num = i;
+                var That = new Object();
+                var thisNum = 0;
+                oLi[i].onmouseover = function () {
+                    defaState(this.num);
+                    actiState(this.num);
+                };
+                oLi[i].onclick = function () {
+
+                    if (That == this) {
+                        this.ss=!this.ss;
+//                        alert(this.ss);
+                    }else{
+                        That.ss=!That.ss;
+                        this.ss=!this.ss;
+                    };
+                    That = this;
+
+                    thisNum = this.num;
+                    clickState(this.num);
+                };
+                oLi[i].onmouseout = function () {
+//                    alert(That.ss);
+                    if (That.ss == true) {
+                        defaState(thisNum);
+                        clickState(thisNum);
+                    } else {
+                        defaState(0);
+                    }
+                }
+                function defaState(thisNum) {
+                    for (var i = thisNum; i < oLi.length; i++) {
+                        oDiv[i].className = "defaultActive";
+                    }
+                }
+                function actiState(thisNum) {
+                    for (var j = 0; j <= thisNum; j++) {
+                        oDiv[j].className = "highActive";
+                        oDiv[j % 2].className = "lowActive";
+                    }
+                }
+
+                function clickState(thisNum) {
+                    for (var j = 0; j <= thisNum; j++) {
+                        oDiv[j].className = "highActive";
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

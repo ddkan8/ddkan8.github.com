@@ -1,0 +1,20 @@
+.saySlide{position:relative;overflow:hidden;}
+.saySlide img{border:0;}
+#saySlide-box{position:relative;overflow:hidden;}
+#saySlide-box div{position:absolute;top:0;left:0;}
+
+.sayHandles{position:absolute;width:58px;height:79px;cursor:pointer;z-index:2;display:none;}
+.sayHandles-l{left:-10px;}
+.sayHandles-r{right:-10px;}
+/* 
+ * 注意设置 滤镜中（即AlphaImageLoader(src='xxx.png')）图片的相对路径（相对网站根目录），也可以使用绝对路径
+ */
+.sayHandles-default-left{background:url(left_default.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/left_default.png');}
+.sayHandles-active-left{background:url(left_active.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/left_active.png');}
+.sayHandles-default-right{background:url(right_default.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/right_default.png');}
+.sayHandles-active-right{background:url(right_active.png) no-repeat;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='css/right_active.png');}
+.saySlide-opacity-bg{position:absolute;bottom:0;height:40px;width:100%;background:#000;opacity:0.3;filter: alpha(opacity=30);z-index:2;}
+
+#saySlide-bottom-btn{position:absolute;bottom:14px;right:20px;z-index:3;margin:0;padding:0;}
+#saySlide-bottom-btn li{float:left;width:10px;height:10px;font-size:0;overflow:hidden;margin:0 2px;padding:0;cursor:pointer;}
+#saySlide-title{position:absolute;bottom:10px;left:20px;font-size:14px;color:#fff;font-weight:700;z-index:2;}

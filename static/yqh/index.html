@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="email=no" name="format-detection">
+<meta content="no" name="msapplication-tap-highlight">
+<title>邀请函-漫画岛</title>
+<script>!function(){var a="html{overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}",b=document.createElement("style");if(document.getElementsByTagName("head")[0].appendChild(b),b.styleSheet)b.styleSheet.disabled||(b.styleSheet.cssText=a);else try{b.innerHTML=a}catch(c){b.innerText=a}}();!function(a,b){function c(){var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/10;f.style.fontSize=c+"px",k.rem=a.rem=c}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=a.navigator.userAgent,q=(!!p.match(/android/gi),!!p.match(/iphone/gi)),r=q&&!!p.match(/OS 9_3/),s=a.devicePixelRatio;i=q&&!r?s>=3&&(!i||i>=3)?3:s>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var t=e.createElement("div");t.appendChild(g),e.write(t.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));</script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+</head>
+
+<body>
+<div class="loading abs" id="loading">
+
+    <div class='pro-box'>
+      <img src="img/icon_loading.gif" alt="">
+      <div class='pro_div' id='pro_div'>
+        <div class='pro_bg'></div>
+        <div class='pro'></div>
+      </div>
+      <div class='nowloading'>
+        <p class="loading_rate" id="loading_rate">0%</p>
+      </div>
+    </div>
+
+</div>
+
+<div class="page-wrap abs">
+  
+  <audio id="bgmusic" loop="loop" src="img/yequ.mp3" preload="auto"></audio>
+  <div id="cardsound" class="cardsound"><span class="m"></span><span class="m1"></span><span class="m2"></span></div>
+  
+  <div class="page wrap" style='z-index: 2;background-color: #000;'></div>
+
+  <div class="page page1" id="page1" style='display:none;z-index: 2;'>
+    
+    <div class="btm page1-btm abs"></div>
+    <div class="top page1-top abs"></div>
+    <div class="circle abs"></div>
+    
+    <div class="btm abs">
+      <div class="txt-btm abs"></div>
+      <div class="page1-txt abs">
+        <div class="page1-txt1 abs"></div>
+        <div class="page1-txt2 abs">
+          <div class="txt-yao abs"></div>
+          <div class="txt-qing abs"></div>
+          <div class="txt-han abs"></div>
+        </div>
+      </div>
+      <div class="open abs"></div>
+      <div class="cat abs"></div>
+    </div>
+
+    <div class="top abs">
+      <div class="txt-top abs"></div>
+      <div class="logo2 abs"></div>
+    </div>
+
+  </div>
+
+  <div class="swiper-container">
+
+    <div class="swiper-wrapper">
+
+      <div class=" page2 swiper-slide" id="page2">
+
+        <div class="logo abs"></div>
+        <div class="page-txt1 abs"></div>
+        <div class="page-topTxt abs">
+          <div class="lineL abs"></div>
+          <div class="lineR abs"></div>
+          <div class="txt-yqh abs"></div>
+        </div>
+        <div class="item item1 abs">
+          <div class="username abs">
+            <span class="name">冯杰</span><span class="sex">先生</span>
+          </div>
+          <div class="page2-txt1 abs"></div>
+          <div class="btn-map abs">
+            <span class="arr-r abs"></span>
+          </div>
+        </div>
+        <div class="item item2 abs">
+          <div class="map abs"></div>
+          <div class="btn-return abs">
+            <span class="arr-r abs"></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class=" page3 swiper-slide" id="page3">
+
+        <div class="logo abs"></div>
+        <div class="page-txt1 abs"></div>
+        <div class="page-topTxt abs">
+          <div class="lineL abs"></div>
+          <div class="lineR abs"></div>
+          <div class="txt-flow abs"></div>
+        </div>
+        <ul class="flow-box abs">
+          <li><em>1</em><span class="tit">14:00-14:05　开场仪式</span></li>
+          <li><em>2</em><span class="tit">14:05-14:10　致辞</span></li>
+          <li><em>3</em><span class="tit">14:10-14:20　原创漫画梦想计划介绍</span></li>
+          <li><em>4</em><span class="tit">14:30-15:10　嘉宾致辞</span></li>
+          <li><em>5</em><span class="tit">15:10-15:25　原创漫画梦想计划上线仪式</span></li>
+          <li><em>6</em><span class="tit">15:25-15:40　茶歇</span></li>
+          <li><em>7</em><span class="tit">15:45-15:55　签约仪式</span></li>
+          <li><em>8</em><span class="tit">15:55-16:00　结束陈词</span></li>
+        </ul>
+        
+      </div>
+
+      <div class=" page4 swiper-slide" id="page4">
+
+        <div class="page4-top abs"></div>
+        <div class="page4-btm abs"></div>
+        <div class="logo abs"></div>
+
+        <div class="circle abs"></div>       
+        <div class="btm abs">
+          <div class="txt-btm abs"></div>
+        </div>
+        <div class="top abs">
+          <div class="txt-top abs"></div>
+        </div>
+
+        <div class="page4-txt1 abs"></div>
+        <div class="page4-txt2 abs">
+          <div class="txt-gong abs"></div>
+          <div class="txt-xiang abs"></div>
+          <div class="txt-sheng abs"></div>
+          <div class="txt-hui abs"></div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="arr abs"></div>
+
+  </div>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/global.js"></script>
+</body>
+</html>

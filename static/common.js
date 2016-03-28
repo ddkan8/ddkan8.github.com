@@ -18,3 +18,22 @@ function getQuery(name) {
 	if (r != null) return unescape(r[2]);
 	return null;
 }
+
+$(document).ready(function($) {
+  
+  (function($, undefined) {
+
+    $.fn.saySlide = function(options) {
+
+      var defaults = {
+        autoPlay: true
+      };
+
+      var options = $.extend({}, defaults, options);
+      console.log(options.autoPlay)
+
+    };
+    
+  })(jQuery);
+
+});

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+ 
+<head>
+<meta charset="utf-8">
+<title>js密码强度</title>
+<style type="text/css">
+        .pw_letter{ margin-top:5px; font-size: 12px; }
+        .pw_letter label{float: left; margin-right:10px; cursor: default; font-size: 12px; line-height: 16px;;}
+        .pw_letter span{ float: left; display:inline-block; width:30px; height:16px; line-height:16px; text-align:center; color:#FFF; background-color:#ccc; border-left: 1px solid #FFF;}
+        .pw_letter span.pw_strength_color{ background-color:green;}
+ 
+</style>
+</head>
+ 
+<body>
+ 
+<input id="password" type="password" name="password" placeholder="密码" onKeyUp="setPasswordStrength(this.value.trim())">
+<div class="pw_letter"><label>安全程度</label><span class="strength">弱</span><span class="strength">中</span><span class="strength">强</span></div>
+ 
+ 
+<script type="text/javascript">
+/*
+     *密码安全程度
+     *return 1 ：全部为字母或者数字,或者密码长度小于6
+     *return 2 : 字母数字组成，或者字母特殊字符，或者数字和特殊字符
+     *return 3 : 字母和数字和特殊字符
+     */
+String.prototype.passwordStrength=function(){
+if(this.length>0 && this.length<=6) return 1;
+var n1 = (this.search(/[a-zA-Z]/) != -1) ? 1 : 0,
+n2 = (this.search(/[0-9]/) != -1) ? 1 : 0,
+n3 =(this.search(/[\~\`\!\@\#\$\%\^\&\*\(\)\_\+\-\=\[\]|{\}\;\'\:\"\,\.\/\<\>\?]{1,}/) != -1) ? 1 : 0;
+return n1+n2+n3;
+    }
+ 
+String.prototype.trim = String.prototype.trim || function(){
+return this.replace(/^\s+|\s+$/g,"");
+    }
+ 
+function setPasswordStrength(pwd){
+var strength_span = document.getElementsByClassName("strength");
+for(var i=0; i<strength_span.length; i++){
+strength_span.item(i).className="strength";
+        }
+for(var i=0; i<pwd.passwordStrength(); i++){
+document.getElementsByClassName("strength").item(i).className="strength pw_strength_color";
+        }
+    }
+ 
+ 
+</script>
+</body>
+ 
+</html>

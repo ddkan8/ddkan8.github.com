@@ -57,13 +57,15 @@ $(function(){
     setTimeout(function() {
       $('.page1 .circle').css('display', 'block').addClass('act');
     }, 700)
-    $('.active .open').one("webkitAnimationEnd",function(){
-    $('.open').click(function() {
-      $('.page1 .circle').css('display', 'none').removeClass('act');
-      $(this).parents('.page1').removeClass('active').addClass('out');
-      initPage02();
-    });
-    });
+    //$('.active .open').one("webkitAnimationEnd",function(){
+    setTimeout(function() {
+      $('.open').click(function() {
+        $('.page1 .circle').css('display', 'none').removeClass('act');
+        $(this).parents('.page1').removeClass('active').addClass('out');
+        initPage02();
+      });
+    }, 5500)
+    //});
 
   }
 
